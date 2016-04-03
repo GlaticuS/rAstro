@@ -1,4 +1,5 @@
 # rAstro #
-## Простой растровый графический редактор. ##
-### Описание проекта находится в design project ###
-Автор: Гладких Анна
+## Simple bitmap graphic redactor. ##
+### Description is in design project ###
+Author: Anna Gladkikh
+Contacts: vk.com/glaticus
