@@ -18,5 +18,5 @@ void MainWindow::on_actionSet_Color_triggered()
 {
     QColor color;
     color = QColorDialog::getColor(Qt::white, this);
-    ui->graphicsView->setPalette(color);
+    ui->paintingZone->setPalette(color);
 }
