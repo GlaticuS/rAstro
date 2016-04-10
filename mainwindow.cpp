@@ -1,6 +1,8 @@
 #include "mainwindow.h"
+#include "drawingarea.h"
 #include "ui_mainwindow.h"
 #include <QColorDialog>
+#include <QPainter>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,9 +16,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_actionSet_Color_triggered()
+
+void MainWindow::on_actionExit_triggered()
 {
-    QColor color;
-    color = QColorDialog::getColor(Qt::white, this);
-    ui->paintingZone->setPalette(color);
+    exit(0);
+}
+
+void MainWindow::on_actionClear_triggered()
+{
+    DrawingArea area;
+    area.clearImage();
 }
