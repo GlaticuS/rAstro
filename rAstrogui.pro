@@ -14,9 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    drawingarea.cpp
+    drawingarea.cpp \
+    dialognew.cpp
 
 HEADERS  += mainwindow.h \
-    drawingarea.h
+    drawingarea.h \
+    dialognew.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    dialognew.ui

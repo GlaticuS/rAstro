@@ -220,6 +220,9 @@
        <property name="minimum">
         <number>1</number>
        </property>
+       <property name="maximum">
+        <number>99</number>
+       </property>
       </widget>
      </item>
      <item>

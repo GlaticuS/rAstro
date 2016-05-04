@@ -5,6 +5,7 @@
 #include <QColor>
 #include <QImage>
 #include <QPoint>
+#include <QSize>
 
 
 /*Объявить переменные цвета и размера пера;
@@ -20,24 +21,27 @@ public:
 
     void setPenColor(const QColor &newColor);
     void setPenWidth(int newWidth);
+    void setSize(const QSize &size);
 
     bool isModified() const { return modified; }
     QColor penColor() const { return myPenColor; }
     int penWidth() const { return myPenWidth; }
+    QSize imageSize() const{ return myImageSize; }
 
 public slots:
     void clearImage();
+    void fillImage();
 
 protected:
     void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
     void mouseMoveEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
     void mouseReleaseEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
-    void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
+   // void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
 
 private:
     void drawLineTo(const QPoint &endPoint);
-    void resizeImage(QImage *image, const QSize &newSize);
+    void resizeImage(QImage *image);
 
     bool modified;
     bool scribbling;
@@ -45,6 +49,7 @@ private:
     QColor myPenColor;
     QImage image;
     QPoint lastPoint;
+    QSize myImageSize;
 
 };
 

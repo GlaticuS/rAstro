@@ -3,6 +3,7 @@
 #endif
 
 #include "drawingarea.h"
+#include <iostream>
 
 DrawingArea::DrawingArea(QWidget *parent) :
     QWidget(parent)
@@ -11,6 +12,7 @@ DrawingArea::DrawingArea(QWidget *parent) :
     scribbling = false;
     myPenWidth = 1;
     myPenColor = Qt::black;
+    myImageSize = QSize(100, 100);
 }
 
 void DrawingArea::setPenColor(const QColor &newColor)
@@ -54,7 +56,7 @@ void DrawingArea::paintEvent(QPaintEvent *event)
     painter.drawImage(dirtyRect, image, dirtyRect);
 }
 
-void DrawingArea::resizeEvent(QResizeEvent *event)
+/*void DrawingArea::resizeEvent(QResizeEvent *event)
 {
     //if (width() > image.width() || height() > image.height()) {
         int newWidth = qMax(width() + 128, image.width());
@@ -63,10 +65,15 @@ void DrawingArea::resizeEvent(QResizeEvent *event)
         update();
     //}
     QWidget::resizeEvent(event);
+}*/
+
+void DrawingArea::setSize(const QSize &size)
+{
+    myImageSize = size;
+    resizeImage(&image);
 }
 
 void DrawingArea::drawLineTo(const QPoint &endPoint)
-
 {
     QPainter painter(&image);
     painter.setPen(QPen(myPenColor, myPenWidth, Qt::SolidLine, Qt::RoundCap,
@@ -80,21 +87,30 @@ void DrawingArea::drawLineTo(const QPoint &endPoint)
     lastPoint = endPoint;
 }
 
-void DrawingArea::resizeImage(QImage *image, const QSize &newSize)
+void DrawingArea::resizeImage(QImage *image)
 {
-    if (image->size() == newSize)
+    if (image->size() == myImageSize)
         return;
 
-    QImage newImage(newSize, QImage::Format_RGB32);
+    QImage newImage(myImageSize, QImage::Format_RGB32);
     newImage.fill(qRgb(255, 255, 255));
     QPainter painter(&newImage);
     painter.drawImage(QPoint(0, 0), *image);
     *image = newImage;
+    update();
+    std::cout << "resizedImage";
 }
 
 void DrawingArea::clearImage()
 {
     image.fill(qRgb(255, 255, 255));
     modified = true;
-    //update();
+    update();
+}
+
+void DrawingArea::fillImage()
+{
+    image.fill(myPenColor);
+    modified = true;
+    update();
 }
