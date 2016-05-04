@@ -22,6 +22,8 @@ public:
 
 private:
     Ui::DialogNew *ui;
+signals:
+    void NewSize(const QSize &size);
 
 private slots:
     void OkClicked();

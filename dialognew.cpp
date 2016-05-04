@@ -5,6 +5,7 @@
 #include <QPainter>
 #include "drawingarea.h"
 #include <QtWidgets>
+#include "ui_mainwindow.h"
 
 DialogNew::DialogNew(QWidget *parent) :
     QDialog(parent),
@@ -23,10 +24,7 @@ DialogNew::~DialogNew()
 void DialogNew::OkClicked()
 {
     const QSize size(ui->spinBox->value(), ui->spinBox_2->value());
-
-
-    DrawingArea area;
-    area.setSize(size);
+    emit NewSize(size);
 
     close();
 }

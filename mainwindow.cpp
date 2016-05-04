@@ -88,7 +88,11 @@ void MainWindow::on_actionNew_triggered()
     DialogNew *wnd = new DialogNew(this);
     wnd->show();
 
-    const QSize size(100, 100);
-    ui->widget->setSize(size);
+    connect(wnd, SIGNAL(NewSize(QSize)), this, SLOT(NewImageSize(QSize)));
 }
 
+void MainWindow::NewImageSize(const QSize &size)
+{
+    ui->widget->setSize(size);
+    ui->widget->setFixedSize(size);
+}

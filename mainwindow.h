@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSize>
 class DrawingArea;
 
 namespace Ui {
@@ -21,8 +22,6 @@ public:
 private slots:
     void on_actionExit_triggered();
 
-
-
     void on_actionClear_triggered();
 
     void on_actionSet_Color_triggered();
@@ -40,6 +39,8 @@ private slots:
     void on_buttonEraser_clicked(bool checked);
 
     void on_actionNew_triggered();
+
+    void NewImageSize(const QSize &size);
 
 private:
     Ui::MainWindow *ui;
