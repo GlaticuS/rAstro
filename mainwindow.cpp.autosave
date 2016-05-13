@@ -50,7 +50,10 @@ void MainWindow::on_spinBoxLineWidth_valueChanged(int arg1)
 
 void MainWindow::on_buttonPencil_clicked(bool checked)
 {
-    ui->widget->setPencilling(true);
+    if(checked)
+        ui->widget->setPencilling(true);
+    else
+        ui->widget->setPencilling(false);
 }
 
 void MainWindow::on_buttonPaintBucket_clicked(bool checked)

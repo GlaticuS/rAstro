@@ -22,11 +22,14 @@ public:
     void setPenColor(const QColor &newColor);
     void setPenWidth(int newWidth);
     void setSize(const QSize &size);
+    void setPencilling(bool pencilling);
 
     bool isModified() const { return modified; }
     QColor penColor() const { return myPenColor; }
     int penWidth() const { return myPenWidth; }
     QSize imageSize() const{ return myImageSize; }
+    QImage myImage() const{ return image; }
+    //bool isPencil() const { return pencilOn; }
 
 public slots:
     void clearImage();
@@ -45,6 +48,7 @@ private:
 
     bool modified;
     bool scribbling;
+    bool pencilOn;
     int myPenWidth;
     QColor myPenColor;
     QImage image;

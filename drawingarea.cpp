@@ -10,6 +10,7 @@ DrawingArea::DrawingArea(QWidget *parent) :
 {
     modified = false;
     scribbling = false;
+    pencilOn = false;
     myPenWidth = 1;
     myPenColor = Qt::black;
     myImageSize = QSize(100, 100);
@@ -25,9 +26,14 @@ void DrawingArea::setPenWidth(int newWidth)
     myPenWidth = newWidth;
 }
 
+void DrawingArea::setPencilling(bool pencilling)
+{
+    pencilOn = pencilling;
+}
+
 void DrawingArea::mousePressEvent(QMouseEvent *event)
 {
-    if(event->button() == Qt::LeftButton)
+    if(event->button() == Qt::LeftButton && pencilOn)
     {
         lastPoint = event->pos();
         scribbling = true;
@@ -56,16 +62,6 @@ void DrawingArea::paintEvent(QPaintEvent *event)
     painter.drawImage(dirtyRect, image, dirtyRect);
 }
 
-/*void DrawingArea::resizeEvent(QResizeEvent *event)
-{
-    //if (width() > image.width() || height() > image.height()) {
-        int newWidth = qMax(width() + 128, image.width());
-        int newHeight = qMax(height() + 128, image.height());
-        resizeImage(&image, QSize(newWidth, newHeight));
-        update();
-    //}
-    QWidget::resizeEvent(event);
-}*/
 
 void DrawingArea::setSize(const QSize &size)
 {
@@ -98,7 +94,6 @@ void DrawingArea::resizeImage(QImage *image)
     painter.drawImage(QPoint(0, 0), *image);
     *image = newImage;
     update();
-    std::cout << "resizedImage";
 }
 
 void DrawingArea::clearImage()

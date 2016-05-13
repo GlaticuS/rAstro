@@ -332,18 +332,6 @@
     <property name="title">
      <string>Edit</string>
     </property>
-    <addaction name="actionUndo"/>
-    <addaction name="actionRedo"/>
-    <addaction name="separator"/>
-    <addaction name="actionCut"/>
-    <addaction name="actionCopy"/>
-    <addaction name="actionPaste"/>
-    <addaction name="separator"/>
-    <addaction name="actionFlip_Horizontal"/>
-    <addaction name="actionFlip_Vertical"/>
-    <addaction name="separator"/>
-    <addaction name="actionRotate_90_clockwise"/>
-    <addaction name="separator"/>
     <addaction name="actionSet_Color"/>
     <addaction name="actionClear"/>
    </widget>

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QSize>
+#include <QString>
 class DrawingArea;
 
 namespace Ui {
@@ -41,6 +42,7 @@ private slots:
     void on_actionNew_triggered();
 
     void NewImageSize(const QSize &size);
+    void SaveMyFile(const QString &str);
 
 private:
     Ui::MainWindow *ui;
