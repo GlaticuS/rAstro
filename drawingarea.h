@@ -6,12 +6,8 @@
 #include <QImage>
 #include <QPoint>
 #include <QSize>
+#include <QRect>
 
-
-/*Объявить переменные цвета и размера пера;
- * объявить функции, позволяющие рисовать на области;
- * объявить события при нажатии на кнопку мыши
- */
 class DrawingArea : public QWidget
 {
     Q_OBJECT
@@ -22,11 +18,15 @@ public:
     void setPenColor(const QColor &newColor);
     void setPenWidth(int newWidth);
     void setSize(const QSize &size);
+    void setTool(int tool);
+    void setImage(const QImage myImage);
+
 
     bool isModified() const { return modified; }
     QColor penColor() const { return myPenColor; }
     int penWidth() const { return myPenWidth; }
     QSize imageSize() const{ return myImageSize; }
+    QImage myImage() const{ return image; }
 
 public slots:
     void clearImage();
@@ -41,11 +41,15 @@ protected:
 
 private:
     void drawLineTo(const QPoint &endPoint);
+    void drawFigure(QPoint topLeft, QPoint bottomRight);
     void resizeImage(QImage *image);
 
     bool modified;
     bool scribbling;
+    int myTool;
     int myPenWidth;
+    QPoint topLeft;
+    QPoint bottomRight;
     QColor myPenColor;
     QImage image;
     QPoint lastPoint;

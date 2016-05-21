@@ -10,6 +10,7 @@ DrawingArea::DrawingArea(QWidget *parent) :
 {
     modified = false;
     scribbling = false;
+    myTool = 0;
     myPenWidth = 1;
     myPenColor = Qt::black;
     myImageSize = QSize(100, 100);
@@ -25,26 +26,47 @@ void DrawingArea::setPenWidth(int newWidth)
     myPenWidth = newWidth;
 }
 
+void DrawingArea::setTool(int tool)
+{
+    myTool = tool;
+}
+
+void DrawingArea::setImage(const QImage myImage)
+{
+    image = myImage;
+}
+
 void DrawingArea::mousePressEvent(QMouseEvent *event)
 {
-    if(event->button() == Qt::LeftButton)
+    if(event->button() == Qt::LeftButton && (myTool == 1))
     {
         lastPoint = event->pos();
+        scribbling = true;
+    }
+    else if(event->button() == Qt::LeftButton && (myTool == 2 || 3))
+    {
+        topLeft = event->pos();
         scribbling = true;
     }
 }
 
 void DrawingArea::mouseMoveEvent(QMouseEvent *event)
 {
-    if((event->buttons() & Qt::LeftButton) && scribbling)
+    if((event->buttons() & Qt::LeftButton) && scribbling && (myTool == 1))
         drawLineTo(event->pos());
 }
 
 void DrawingArea::mouseReleaseEvent(QMouseEvent *event)
 {
-    if (event->button() == Qt::LeftButton && scribbling)
+    if (event->button() == Qt::LeftButton && scribbling && (myTool == 1))
     {
         drawLineTo(event->pos());
+        scribbling = false;
+    }
+    else if(event->button() == Qt::LeftButton && scribbling && (myTool == 2 || 3))
+    {
+        bottomRight = event->pos();
+        drawFigure(topLeft, bottomRight);
         scribbling = false;
     }
 }
@@ -56,16 +78,6 @@ void DrawingArea::paintEvent(QPaintEvent *event)
     painter.drawImage(dirtyRect, image, dirtyRect);
 }
 
-/*void DrawingArea::resizeEvent(QResizeEvent *event)
-{
-    //if (width() > image.width() || height() > image.height()) {
-        int newWidth = qMax(width() + 128, image.width());
-        int newHeight = qMax(height() + 128, image.height());
-        resizeImage(&image, QSize(newWidth, newHeight));
-        update();
-    //}
-    QWidget::resizeEvent(event);
-}*/
 
 void DrawingArea::setSize(const QSize &size)
 {
@@ -87,6 +99,22 @@ void DrawingArea::drawLineTo(const QPoint &endPoint)
     lastPoint = endPoint;
 }
 
+void DrawingArea::drawFigure(QPoint topLeft, QPoint bottomRight)
+{
+    QPainter painter(&image);
+    painter.setPen(QPen(myPenColor, myPenWidth, Qt::SolidLine, Qt::RoundCap,
+                        Qt::RoundJoin));
+
+    QRect myRect(topLeft, bottomRight);
+
+    if(myTool == 2)
+        painter.drawRect(myRect);
+    if(myTool == 3)
+        painter.drawEllipse(myRect);
+
+    update();
+}
+
 void DrawingArea::resizeImage(QImage *image)
 {
     if (image->size() == myImageSize)
@@ -98,7 +126,6 @@ void DrawingArea::resizeImage(QImage *image)
     painter.drawImage(QPoint(0, 0), *image);
     *image = newImage;
     update();
-    std::cout << "resizedImage";
 }
 
 void DrawingArea::clearImage()
@@ -114,3 +141,12 @@ void DrawingArea::fillImage()
     modified = true;
     update();
 }
+
+/*void DrawingArea::drawRectangle()
+{
+    QPainter painter(&image);
+    painter.setPen(QPen(myPenColor, myPenWidth, Qt::SolidLine, Qt::RoundCap,
+                        Qt::RoundJoin));
+
+    painter.drawRect();
+}*/

@@ -24,95 +24,7 @@
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
-     <item row="1" column="1">
-      <widget class="QToolButton" name="buttonZoom">
-       <property name="toolTip">
-        <string>Zoom</string>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../.icon/png/magnifiying-glass.png</normaloff>../.icon/png/magnifiying-glass.png</iconset>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QToolButton" name="buttonPaintBucket">
-       <property name="toolTip">
-        <string>Paint Bucket</string>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../.icon/png/paint-bucket.png</normaloff>../.icon/png/paint-bucket.png</iconset>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QToolButton" name="buttonEraser">
-       <property name="toolTip">
-        <string>Eraser</string>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../.icon/png/eraser.png</normaloff>../.icon/png/eraser.png</iconset>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QToolButton" name="buttonRectangle">
-       <property name="toolTip">
-        <string>Rectangle</string>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../.icon/png/rectangle.png</normaloff>../.icon/png/rectangle.png</iconset>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QToolButton" name="buttonEllipse">
-       <property name="toolTip">
-        <string>Ellipse</string>
-       </property>
-       <property name="autoFillBackground">
-        <bool>true</bool>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../.icon/png/ellipse.png</normaloff>../.icon/png/ellipse.png</iconset>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
+     <item row="0" column="0">
       <widget class="QToolButton" name="buttonPencil">
        <property name="acceptDrops">
         <bool>false</bool>
@@ -136,43 +48,118 @@
        <property name="autoExclusive">
         <bool>false</bool>
        </property>
+       <property name="popupMode">
+        <enum>QToolButton::DelayedPopup</enum>
+       </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonIconOnly</enum>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">buttonGroup</string>
+       </attribute>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QToolButton" name="buttonArrow">
+      <widget class="QToolButton" name="buttonZoom">
        <property name="toolTip">
-        <string>Move selection</string>
+        <string>Zoom</string>
        </property>
        <property name="text">
         <string>...</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../.icon/png/arrow.png</normaloff>../.icon/png/arrow.png</iconset>
+         <normaloff>../.icon/png/magnifiying-glass.png</normaloff>../.icon/png/magnifiying-glass.png</iconset>
        </property>
        <property name="checkable">
         <bool>true</bool>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">buttonGroup</string>
+       </attribute>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QToolButton" name="buttonRectangleSelection">
+     <item row="1" column="0">
+      <widget class="QToolButton" name="buttonPaintBucket">
        <property name="toolTip">
-        <string>Rectangle select</string>
+        <string>Paint Bucket</string>
        </property>
        <property name="text">
         <string>...</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../.icon/png/allocation.png</normaloff>../.icon/png/allocation.png</iconset>
+         <normaloff>../.icon/png/paint-bucket.png</normaloff>../.icon/png/paint-bucket.png</iconset>
        </property>
        <property name="checkable">
         <bool>true</bool>
        </property>
+       <attribute name="buttonGroup">
+        <string notr="true">buttonGroup</string>
+       </attribute>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QToolButton" name="buttonEraser">
+       <property name="toolTip">
+        <string>Eraser</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../.icon/png/eraser.png</normaloff>../.icon/png/eraser.png</iconset>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">buttonGroup</string>
+       </attribute>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QToolButton" name="buttonRectangle">
+       <property name="toolTip">
+        <string>Rectangle</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../.icon/png/rectangle.png</normaloff>../.icon/png/rectangle.png</iconset>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">buttonGroup</string>
+       </attribute>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QToolButton" name="buttonEllipse">
+       <property name="toolTip">
+        <string>Ellipse</string>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../.icon/png/ellipse.png</normaloff>../.icon/png/ellipse.png</iconset>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">buttonGroup</string>
+       </attribute>
       </widget>
      </item>
     </layout>
@@ -332,18 +319,6 @@
     <property name="title">
      <string>Edit</string>
     </property>
-    <addaction name="actionUndo"/>
-    <addaction name="actionRedo"/>
-    <addaction name="separator"/>
-    <addaction name="actionCut"/>
-    <addaction name="actionCopy"/>
-    <addaction name="actionPaste"/>
-    <addaction name="separator"/>
-    <addaction name="actionFlip_Horizontal"/>
-    <addaction name="actionFlip_Vertical"/>
-    <addaction name="separator"/>
-    <addaction name="actionRotate_90_clockwise"/>
-    <addaction name="separator"/>
     <addaction name="actionSet_Color"/>
     <addaction name="actionClear"/>
    </widget>
@@ -362,31 +337,6 @@
     <bool>false</bool>
    </attribute>
   </widget>
-  <action name="actionSfsdfsd">
-   <property name="text">
-    <string>sfsdfsd</string>
-   </property>
-  </action>
-  <action name="actionKkk">
-   <property name="text">
-    <string>kkk</string>
-   </property>
-  </action>
-  <action name="actionHello">
-   <property name="text">
-    <string>hello</string>
-   </property>
-  </action>
-  <action name="actionHello_2">
-   <property name="text">
-    <string>hello!</string>
-   </property>
-  </action>
-  <action name="actionWorld_2">
-   <property name="text">
-    <string>world!</string>
-   </property>
-  </action>
   <action name="actionNew">
    <property name="text">
     <string>New</string>
@@ -402,36 +352,6 @@
     <string>Save</string>
    </property>
   </action>
-  <action name="actionSave_as">
-   <property name="text">
-    <string>Save as...</string>
-   </property>
-  </action>
-  <action name="actionUndo">
-   <property name="text">
-    <string>Undo</string>
-   </property>
-  </action>
-  <action name="actionRedo">
-   <property name="text">
-    <string>Redo</string>
-   </property>
-  </action>
-  <action name="actionCut">
-   <property name="text">
-    <string>Cut</string>
-   </property>
-  </action>
-  <action name="actionCopy">
-   <property name="text">
-    <string>Copy</string>
-   </property>
-  </action>
-  <action name="actionPaste">
-   <property name="text">
-    <string>Paste</string>
-   </property>
-  </action>
   <action name="actionAbout">
    <property name="text">
     <string>About...</string>
@@ -440,21 +360,6 @@
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
-   </property>
-  </action>
-  <action name="actionFlip_Horizontal">
-   <property name="text">
-    <string>Flip Horizontal</string>
-   </property>
-  </action>
-  <action name="actionFlip_Vertical">
-   <property name="text">
-    <string>Flip Vertical</string>
-   </property>
-  </action>
-  <action name="actionRotate_90_clockwise">
-   <property name="text">
-    <string>Rotate 90 clockwise</string>
    </property>
   </action>
   <action name="actionSet_Color">
@@ -479,4 +384,7 @@
  </customwidgets>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
 </ui>
