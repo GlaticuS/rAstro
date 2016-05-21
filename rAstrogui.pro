@@ -16,13 +16,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     drawingarea.cpp \
     dialognew.cpp \
-    savefile.cpp
+    savefile.cpp \
+    dialogopen.cpp
 
 HEADERS  += mainwindow.h \
     drawingarea.h \
     dialognew.h \
-    savefile.h
+    savefile.h \
+    dialogopen.h
 
 FORMS    += mainwindow.ui \
     dialognew.ui \
-    savefile.ui
+    savefile.ui \
+    dialogopen.ui

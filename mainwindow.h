@@ -43,6 +43,11 @@ private slots:
 
     void NewImageSize(const QSize &size);
     void SaveMyFile(const QString &str);
+    void OpenMyFile(const QString &str);
+
+    void on_buttonRectangle_clicked(bool checked);
+
+    void on_buttonEllipse_clicked(bool checked);
 
 private:
     Ui::MainWindow *ui;

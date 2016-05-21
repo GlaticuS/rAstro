@@ -10,7 +10,7 @@ DrawingArea::DrawingArea(QWidget *parent) :
 {
     modified = false;
     scribbling = false;
-    pencilOn = false;
+    myTool = 0;
     myPenWidth = 1;
     myPenColor = Qt::black;
     myImageSize = QSize(100, 100);
@@ -26,31 +26,47 @@ void DrawingArea::setPenWidth(int newWidth)
     myPenWidth = newWidth;
 }
 
-void DrawingArea::setPencilling(bool pencilling)
+void DrawingArea::setTool(int tool)
 {
-    pencilOn = pencilling;
+    myTool = tool;
+}
+
+void DrawingArea::setImage(const QImage myImage)
+{
+    image = myImage;
 }
 
 void DrawingArea::mousePressEvent(QMouseEvent *event)
 {
-    if(event->button() == Qt::LeftButton && pencilOn)
+    if(event->button() == Qt::LeftButton && (myTool == 1))
     {
         lastPoint = event->pos();
+        scribbling = true;
+    }
+    else if(event->button() == Qt::LeftButton && (myTool == 2 || 3))
+    {
+        topLeft = event->pos();
         scribbling = true;
     }
 }
 
 void DrawingArea::mouseMoveEvent(QMouseEvent *event)
 {
-    if((event->buttons() & Qt::LeftButton) && scribbling)
+    if((event->buttons() & Qt::LeftButton) && scribbling && (myTool == 1))
         drawLineTo(event->pos());
 }
 
 void DrawingArea::mouseReleaseEvent(QMouseEvent *event)
 {
-    if (event->button() == Qt::LeftButton && scribbling)
+    if (event->button() == Qt::LeftButton && scribbling && (myTool == 1))
     {
         drawLineTo(event->pos());
+        scribbling = false;
+    }
+    else if(event->button() == Qt::LeftButton && scribbling && (myTool == 2 || 3))
+    {
+        bottomRight = event->pos();
+        drawFigure(topLeft, bottomRight);
         scribbling = false;
     }
 }
@@ -83,6 +99,22 @@ void DrawingArea::drawLineTo(const QPoint &endPoint)
     lastPoint = endPoint;
 }
 
+void DrawingArea::drawFigure(QPoint topLeft, QPoint bottomRight)
+{
+    QPainter painter(&image);
+    painter.setPen(QPen(myPenColor, myPenWidth, Qt::SolidLine, Qt::RoundCap,
+                        Qt::RoundJoin));
+
+    QRect myRect(topLeft, bottomRight);
+
+    if(myTool == 2)
+        painter.drawRect(myRect);
+    if(myTool == 3)
+        painter.drawEllipse(myRect);
+
+    update();
+}
+
 void DrawingArea::resizeImage(QImage *image)
 {
     if (image->size() == myImageSize)
@@ -109,3 +141,12 @@ void DrawingArea::fillImage()
     modified = true;
     update();
 }
+
+/*void DrawingArea::drawRectangle()
+{
+    QPainter painter(&image);
+    painter.setPen(QPen(myPenColor, myPenWidth, Qt::SolidLine, Qt::RoundCap,
+                        Qt::RoundJoin));
+
+    painter.drawRect();
+}*/
