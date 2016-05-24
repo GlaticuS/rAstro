@@ -21,6 +21,10 @@ DialogNew::~DialogNew()
     delete ui;
 }
 
+/*!
+ * \brief DialogNew::OkClicked Действие при нажатии на клавишу Ok.
+ * Запоминает размеры, установленные в полях Width и Height и отправляет на дальнейшую обработку с помощью NewSize.
+ */
 void DialogNew::OkClicked()
 {
     const QSize size(ui->spinBox->value(), ui->spinBox_2->value());

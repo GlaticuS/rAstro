@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>rAstro: Исходный файл drawingarea.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">rAstro
+   &#160;<span id="projectnumber">0.5</span>
+   </div>
+   <div id="projectbrief">simple bitmap graphic redactor</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="pages.html"><span>Описания</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Макросы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">drawingarea.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="drawingarea_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DRAWINGAREA_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DRAWINGAREA_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QColor&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QImage&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QPoint&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QSize&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QRect&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QBrush&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_drawing_area.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_drawing_area.html">DrawingArea</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_drawing_area.html#a95168b77c2ff299f898fd0966aa21fd6">DrawingArea</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#afe42bde48cab8cefce39df6c6baffceb">setPenColor</a>(<span class="keyword">const</span> QColor &amp;newColor);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#ad79225ca90fc7d2bb3218f00fe3a1af1">setPenWidth</a>(<span class="keywordtype">int</span> newWidth);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#a5c24d1b5264883bc95be51d0534776f8">setSize</a>(<span class="keyword">const</span> QSize &amp;size);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#ae58ff40622f3795130c0d46bf6aa6efc">setTool</a>(<span class="keywordtype">int</span> tool);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#aa62f91056d26319b0c49a96df35c17f9">setImage</a>(<span class="keyword">const</span> QImage <a class="code" href="class_drawing_area.html#a420f3cdf3a9f6df2f65d3a1e1b4c9d4d">myImage</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_drawing_area.html#a727f9acc4083f97aa439eb6a6cb57adc">   31</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_drawing_area.html#a727f9acc4083f97aa439eb6a6cb57adc">isModified</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_drawing_area.html#aec08a04cf32f9c6ddda1c251b5a9533c">modified</a>; }</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_drawing_area.html#a666bda2b4d8fc9bf5ea726f7c4b66df0">   32</a></span>&#160;    QColor <a class="code" href="class_drawing_area.html#a666bda2b4d8fc9bf5ea726f7c4b66df0">penColor</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_drawing_area.html#af15c369bbbaf2ec78a37dbbca638cf0b">myPenColor</a>; }</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_drawing_area.html#a2fbaa03b53f44c06190f72e6aad4f5fa">   33</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_drawing_area.html#a2fbaa03b53f44c06190f72e6aad4f5fa">penWidth</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_drawing_area.html#acc5ff29833418bc205ff697b933b57fa">myPenWidth</a>; }</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_drawing_area.html#af2a4193b01b408d8a9bbba44dfcefb77">   34</a></span>&#160;    QSize <a class="code" href="class_drawing_area.html#af2a4193b01b408d8a9bbba44dfcefb77">imageSize</a>()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> <a class="code" href="class_drawing_area.html#aa317e568b35e031c1afc46e78d3b9ea3">myImageSize</a>; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_drawing_area.html#a420f3cdf3a9f6df2f65d3a1e1b4c9d4d">   35</a></span>&#160;    QImage <a class="code" href="class_drawing_area.html#a420f3cdf3a9f6df2f65d3a1e1b4c9d4d">myImage</a>()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> <a class="code" href="class_drawing_area.html#ae47382bceabaea64325ad6fa8d52c899">image</a>; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#a8f00c8499212f1077d728fec8cbdfbe5">clearImage</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#a1fec4c43bc86139083c3dc6dfa11d30c">fillImage</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#aa1fc7e0984fd5cb177956a894b106cf8">mousePressEvent</a>(QMouseEvent *event) Q_DECL_OVERRIDE;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#a4b4f2dbb4d819d5dd502142f4de4eee8">mouseMoveEvent</a>(QMouseEvent *event) Q_DECL_OVERRIDE;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#ad97c6c8e6e2f444f26b76b73ffa30eea">mouseReleaseEvent</a>(QMouseEvent *event) Q_DECL_OVERRIDE;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#af35f261193f389b319661c5915ffe66f">paintEvent</a>(QPaintEvent *event) Q_DECL_OVERRIDE;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <span class="comment">// void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#ac8a6033e1af8990786b43d080f273a95">drawLineTo</a>(<span class="keyword">const</span> QPoint &amp;endPoint);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#abc85b3053af14aa794ac4fb86f5f4a20">drawFigure</a>(QPoint <a class="code" href="class_drawing_area.html#a10dc7b6502081bd5f9e08ae767f472b6">topLeft</a>, QPoint <a class="code" href="class_drawing_area.html#a469a2ab81eb38f7ceb9ccfc56007303d">bottomRight</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#a7a9652945d3f4c2cc1a6179dcee29d60">resizeImage</a>(QImage *<a class="code" href="class_drawing_area.html#ae47382bceabaea64325ad6fa8d52c899">image</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drawing_area.html#ae6d08829a95a2af49b96defe6c867c5e">fillArea</a>(<span class="keyword">const</span> QPoint &amp;point, QColor act);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_drawing_area.html#aec08a04cf32f9c6ddda1c251b5a9533c">   54</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_drawing_area.html#aec08a04cf32f9c6ddda1c251b5a9533c">modified</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_drawing_area.html#ac47e1a721ed4caaf7c993fde729676eb">   55</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_drawing_area.html#ac47e1a721ed4caaf7c993fde729676eb">scribbling</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_drawing_area.html#a65c9ad1a31ed5c13e8aae18c1603d111">   56</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_drawing_area.html#a65c9ad1a31ed5c13e8aae18c1603d111">myTool</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_drawing_area.html#acc5ff29833418bc205ff697b933b57fa">   57</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_drawing_area.html#acc5ff29833418bc205ff697b933b57fa">myPenWidth</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_drawing_area.html#a10dc7b6502081bd5f9e08ae767f472b6">   58</a></span>&#160;    QPoint <a class="code" href="class_drawing_area.html#a10dc7b6502081bd5f9e08ae767f472b6">topLeft</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_drawing_area.html#a469a2ab81eb38f7ceb9ccfc56007303d">   59</a></span>&#160;    QPoint <a class="code" href="class_drawing_area.html#a469a2ab81eb38f7ceb9ccfc56007303d">bottomRight</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_drawing_area.html#af15c369bbbaf2ec78a37dbbca638cf0b">   60</a></span>&#160;    QColor <a class="code" href="class_drawing_area.html#af15c369bbbaf2ec78a37dbbca638cf0b">myPenColor</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_drawing_area.html#ae47382bceabaea64325ad6fa8d52c899">   61</a></span>&#160;    QImage <a class="code" href="class_drawing_area.html#ae47382bceabaea64325ad6fa8d52c899">image</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_drawing_area.html#afac5aa0317efcc63962b1bc56e79312d">   62</a></span>&#160;    QPoint <a class="code" href="class_drawing_area.html#afac5aa0317efcc63962b1bc56e79312d">lastPoint</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_drawing_area.html#aa317e568b35e031c1afc46e78d3b9ea3">   63</a></span>&#160;    QSize <a class="code" href="class_drawing_area.html#aa317e568b35e031c1afc46e78d3b9ea3">myImageSize</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif // DRAWINGAREA_H</span></div>
+<div class="ttc" id="class_drawing_area_html_a4b4f2dbb4d819d5dd502142f4de4eee8"><div class="ttname"><a href="class_drawing_area.html#a4b4f2dbb4d819d5dd502142f4de4eee8">DrawingArea::mouseMoveEvent</a></div><div class="ttdeci">void mouseMoveEvent(QMouseEvent *event) Q_DECL_OVERRIDE</div><div class="ttdoc">DrawingArea::mouseMoveEvent Действие при движении мышки </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:93</div></div>
+<div class="ttc" id="class_drawing_area_html_a65c9ad1a31ed5c13e8aae18c1603d111"><div class="ttname"><a href="class_drawing_area.html#a65c9ad1a31ed5c13e8aae18c1603d111">DrawingArea::myTool</a></div><div class="ttdeci">int myTool</div><div class="ttdef"><b>Definition:</b> drawingarea.h:56</div></div>
+<div class="ttc" id="class_drawing_area_html_a666bda2b4d8fc9bf5ea726f7c4b66df0"><div class="ttname"><a href="class_drawing_area.html#a666bda2b4d8fc9bf5ea726f7c4b66df0">DrawingArea::penColor</a></div><div class="ttdeci">QColor penColor() const </div><div class="ttdef"><b>Definition:</b> drawingarea.h:32</div></div>
+<div class="ttc" id="class_drawing_area_html_ad97c6c8e6e2f444f26b76b73ffa30eea"><div class="ttname"><a href="class_drawing_area.html#ad97c6c8e6e2f444f26b76b73ffa30eea">DrawingArea::mouseReleaseEvent</a></div><div class="ttdeci">void mouseReleaseEvent(QMouseEvent *event) Q_DECL_OVERRIDE</div><div class="ttdoc">DrawingArea::mouseReleaseEvent Действие при отпускании левой кнопки мышки. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:107</div></div>
+<div class="ttc" id="class_drawing_area_html_a95168b77c2ff299f898fd0966aa21fd6"><div class="ttname"><a href="class_drawing_area.html#a95168b77c2ff299f898fd0966aa21fd6">DrawingArea::DrawingArea</a></div><div class="ttdeci">DrawingArea(QWidget *parent=0)</div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:8</div></div>
+<div class="ttc" id="class_drawing_area_html_af35f261193f389b319661c5915ffe66f"><div class="ttname"><a href="class_drawing_area.html#af35f261193f389b319661c5915ffe66f">DrawingArea::paintEvent</a></div><div class="ttdeci">void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE</div><div class="ttdoc">DrawingArea::paintEvent Действие рисования. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:136</div></div>
+<div class="ttc" id="class_drawing_area_html_a5c24d1b5264883bc95be51d0534776f8"><div class="ttname"><a href="class_drawing_area.html#a5c24d1b5264883bc95be51d0534776f8">DrawingArea::setSize</a></div><div class="ttdeci">void setSize(const QSize &amp;size)</div><div class="ttdoc">DrawingArea::setSize Назначить новый размер полотна. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:149</div></div>
+<div class="ttc" id="class_drawing_area_html"><div class="ttname"><a href="class_drawing_area.html">DrawingArea</a></div><div class="ttdoc">The DrawingArea class Класс, относящийся к различного рода рисованию на полотне. </div><div class="ttdef"><b>Definition:</b> drawingarea.h:17</div></div>
+<div class="ttc" id="class_drawing_area_html_a420f3cdf3a9f6df2f65d3a1e1b4c9d4d"><div class="ttname"><a href="class_drawing_area.html#a420f3cdf3a9f6df2f65d3a1e1b4c9d4d">DrawingArea::myImage</a></div><div class="ttdeci">QImage myImage() const </div><div class="ttdef"><b>Definition:</b> drawingarea.h:35</div></div>
+<div class="ttc" id="class_drawing_area_html_abc85b3053af14aa794ac4fb86f5f4a20"><div class="ttname"><a href="class_drawing_area.html#abc85b3053af14aa794ac4fb86f5f4a20">DrawingArea::drawFigure</a></div><div class="ttdeci">void drawFigure(QPoint topLeft, QPoint bottomRight)</div><div class="ttdoc">DrawingArea::drawFigure Нарисовать фигуру. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:186</div></div>
+<div class="ttc" id="class_drawing_area_html_aa1fc7e0984fd5cb177956a894b106cf8"><div class="ttname"><a href="class_drawing_area.html#aa1fc7e0984fd5cb177956a894b106cf8">DrawingArea::mousePressEvent</a></div><div class="ttdeci">void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE</div><div class="ttdoc">DrawingArea::mousePressEvent Действие при нажатии левой кнопки мыши. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:63</div></div>
+<div class="ttc" id="class_drawing_area_html_ac8a6033e1af8990786b43d080f273a95"><div class="ttname"><a href="class_drawing_area.html#ac8a6033e1af8990786b43d080f273a95">DrawingArea::drawLineTo</a></div><div class="ttdeci">void drawLineTo(const QPoint &amp;endPoint)</div><div class="ttdoc">DrawingArea::drawLineTo Провести линию карандаша. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:162</div></div>
+<div class="ttc" id="class_drawing_area_html_afe42bde48cab8cefce39df6c6baffceb"><div class="ttname"><a href="class_drawing_area.html#afe42bde48cab8cefce39df6c6baffceb">DrawingArea::setPenColor</a></div><div class="ttdeci">void setPenColor(const QColor &amp;newColor)</div><div class="ttdoc">DrawingArea::setPenColor Установить цвет для рисования. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:23</div></div>
+<div class="ttc" id="class_drawing_area_html_aa62f91056d26319b0c49a96df35c17f9"><div class="ttname"><a href="class_drawing_area.html#aa62f91056d26319b0c49a96df35c17f9">DrawingArea::setImage</a></div><div class="ttdeci">void setImage(const QImage myImage)</div><div class="ttdoc">DrawingArea::setImage Установить полотно. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:50</div></div>
+<div class="ttc" id="class_drawing_area_html_acc5ff29833418bc205ff697b933b57fa"><div class="ttname"><a href="class_drawing_area.html#acc5ff29833418bc205ff697b933b57fa">DrawingArea::myPenWidth</a></div><div class="ttdeci">int myPenWidth</div><div class="ttdef"><b>Definition:</b> drawingarea.h:57</div></div>
+<div class="ttc" id="class_drawing_area_html_ad79225ca90fc7d2bb3218f00fe3a1af1"><div class="ttname"><a href="class_drawing_area.html#ad79225ca90fc7d2bb3218f00fe3a1af1">DrawingArea::setPenWidth</a></div><div class="ttdeci">void setPenWidth(int newWidth)</div><div class="ttdoc">DrawingArea::setPenWidth Установить толщину линий. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:32</div></div>
+<div class="ttc" id="class_drawing_area_html_a10dc7b6502081bd5f9e08ae767f472b6"><div class="ttname"><a href="class_drawing_area.html#a10dc7b6502081bd5f9e08ae767f472b6">DrawingArea::topLeft</a></div><div class="ttdeci">QPoint topLeft</div><div class="ttdef"><b>Definition:</b> drawingarea.h:58</div></div>
+<div class="ttc" id="class_drawing_area_html_af15c369bbbaf2ec78a37dbbca638cf0b"><div class="ttname"><a href="class_drawing_area.html#af15c369bbbaf2ec78a37dbbca638cf0b">DrawingArea::myPenColor</a></div><div class="ttdeci">QColor myPenColor</div><div class="ttdef"><b>Definition:</b> drawingarea.h:60</div></div>
+<div class="ttc" id="class_drawing_area_html_a2fbaa03b53f44c06190f72e6aad4f5fa"><div class="ttname"><a href="class_drawing_area.html#a2fbaa03b53f44c06190f72e6aad4f5fa">DrawingArea::penWidth</a></div><div class="ttdeci">int penWidth() const </div><div class="ttdef"><b>Definition:</b> drawingarea.h:33</div></div>
+<div class="ttc" id="class_drawing_area_html_af2a4193b01b408d8a9bbba44dfcefb77"><div class="ttname"><a href="class_drawing_area.html#af2a4193b01b408d8a9bbba44dfcefb77">DrawingArea::imageSize</a></div><div class="ttdeci">QSize imageSize() const </div><div class="ttdef"><b>Definition:</b> drawingarea.h:34</div></div>
+<div class="ttc" id="class_drawing_area_html_a7a9652945d3f4c2cc1a6179dcee29d60"><div class="ttname"><a href="class_drawing_area.html#a7a9652945d3f4c2cc1a6179dcee29d60">DrawingArea::resizeImage</a></div><div class="ttdeci">void resizeImage(QImage *image)</div><div class="ttdoc">DrawingArea::resizeImage Изменить размер полотна. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:208</div></div>
+<div class="ttc" id="class_drawing_area_html_a1fec4c43bc86139083c3dc6dfa11d30c"><div class="ttname"><a href="class_drawing_area.html#a1fec4c43bc86139083c3dc6dfa11d30c">DrawingArea::fillImage</a></div><div class="ttdeci">void fillImage()</div><div class="ttdoc">DrawingArea::fillImage Залить полотно. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:238</div></div>
+<div class="ttc" id="class_drawing_area_html_a469a2ab81eb38f7ceb9ccfc56007303d"><div class="ttname"><a href="class_drawing_area.html#a469a2ab81eb38f7ceb9ccfc56007303d">DrawingArea::bottomRight</a></div><div class="ttdeci">QPoint bottomRight</div><div class="ttdef"><b>Definition:</b> drawingarea.h:59</div></div>
+<div class="ttc" id="class_drawing_area_html_ac47e1a721ed4caaf7c993fde729676eb"><div class="ttname"><a href="class_drawing_area.html#ac47e1a721ed4caaf7c993fde729676eb">DrawingArea::scribbling</a></div><div class="ttdeci">bool scribbling</div><div class="ttdef"><b>Definition:</b> drawingarea.h:55</div></div>
+<div class="ttc" id="class_drawing_area_html_aec08a04cf32f9c6ddda1c251b5a9533c"><div class="ttname"><a href="class_drawing_area.html#aec08a04cf32f9c6ddda1c251b5a9533c">DrawingArea::modified</a></div><div class="ttdeci">bool modified</div><div class="ttdef"><b>Definition:</b> drawingarea.h:54</div></div>
+<div class="ttc" id="class_drawing_area_html_ae47382bceabaea64325ad6fa8d52c899"><div class="ttname"><a href="class_drawing_area.html#ae47382bceabaea64325ad6fa8d52c899">DrawingArea::image</a></div><div class="ttdeci">QImage image</div><div class="ttdef"><b>Definition:</b> drawingarea.h:61</div></div>
+<div class="ttc" id="class_drawing_area_html_aa317e568b35e031c1afc46e78d3b9ea3"><div class="ttname"><a href="class_drawing_area.html#aa317e568b35e031c1afc46e78d3b9ea3">DrawingArea::myImageSize</a></div><div class="ttdeci">QSize myImageSize</div><div class="ttdef"><b>Definition:</b> drawingarea.h:63</div></div>
+<div class="ttc" id="class_drawing_area_html_a727f9acc4083f97aa439eb6a6cb57adc"><div class="ttname"><a href="class_drawing_area.html#a727f9acc4083f97aa439eb6a6cb57adc">DrawingArea::isModified</a></div><div class="ttdeci">bool isModified() const </div><div class="ttdef"><b>Definition:</b> drawingarea.h:31</div></div>
+<div class="ttc" id="class_drawing_area_html_ae58ff40622f3795130c0d46bf6aa6efc"><div class="ttname"><a href="class_drawing_area.html#ae58ff40622f3795130c0d46bf6aa6efc">DrawingArea::setTool</a></div><div class="ttdeci">void setTool(int tool)</div><div class="ttdoc">DrawingArea::setTool Установить номер инструмента для рисования. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:41</div></div>
+<div class="ttc" id="class_drawing_area_html_ae6d08829a95a2af49b96defe6c867c5e"><div class="ttname"><a href="class_drawing_area.html#ae6d08829a95a2af49b96defe6c867c5e">DrawingArea::fillArea</a></div><div class="ttdeci">void fillArea(const QPoint &amp;point, QColor act)</div><div class="ttdoc">DrawingArea::fillArea - Залить область. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:254</div></div>
+<div class="ttc" id="class_drawing_area_html_afac5aa0317efcc63962b1bc56e79312d"><div class="ttname"><a href="class_drawing_area.html#afac5aa0317efcc63962b1bc56e79312d">DrawingArea::lastPoint</a></div><div class="ttdeci">QPoint lastPoint</div><div class="ttdef"><b>Definition:</b> drawingarea.h:62</div></div>
+<div class="ttc" id="class_drawing_area_html_a8f00c8499212f1077d728fec8cbdfbe5"><div class="ttname"><a href="class_drawing_area.html#a8f00c8499212f1077d728fec8cbdfbe5">DrawingArea::clearImage</a></div><div class="ttdeci">void clearImage()</div><div class="ttdoc">DrawingArea::clearImage Очистить полотно. </div><div class="ttdef"><b>Definition:</b> drawingarea.cpp:226</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по rAstro. Последние изменения: Вт 24 Май 2016 23:38:53. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

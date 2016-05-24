@@ -1,0 +1,72 @@
+.TH "SaveFile" 3 "Вт 24 Май 2016" "Version 0.5" "rAstro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SaveFile \- 
+.PP
+The \fBSaveFile\fP class Реализует диалоговое окно сохранения файла\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <savefile\&.h>\fP
+.PP
+Базовые классы:QDialog\&.
+.SS "Сигналы"
+
+.in +1c
+.ti -1c
+.RI "void \fBFilePath\fP (const QString &str)"
+.br
+.in -1c
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "\fBSaveFile\fP (QWidget *parent=0)"
+.br
+.ti -1c
+.RI "\fB~SaveFile\fP ()"
+.br
+.in -1c
+.SS "Закрытые слоты"
+
+.in +1c
+.ti -1c
+.RI "void \fBOkClicked\fP ()"
+.br
+.RI "\fI\fBSaveFile::OkClicked\fP Действие при нажатии на кнопку Ok\&. \fP"
+.in -1c
+.SS "Закрытые данные"
+
+.in +1c
+.ti -1c
+.RI "Ui::SaveFile * \fBui\fP"
+.br
+.in -1c
+.SH "Подробное описание"
+.PP 
+The \fBSaveFile\fP class Реализует диалоговое окно сохранения файла\&. 
+.SH "Конструктор(ы)"
+.PP 
+.SS "SaveFile::SaveFile (QWidget *parent = \fC0\fP)\fC [explicit]\fP"
+
+.SS "SaveFile::~SaveFile ()"
+
+.SH "Методы"
+.PP 
+.SS "void SaveFile::FilePath (const QString &str)\fC [signal]\fP"
+
+.SS "void SaveFile::OkClicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSaveFile::OkClicked\fP Действие при нажатии на кнопку Ok\&. Вызывает сигнал FilePath, куда записывает строку - путь сохранения, полученную из области ввода\&. 
+.SH "Данные класса"
+.PP 
+.SS "Ui::SaveFile* SaveFile::ui\fC [private]\fP"
+
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для rAstro из исходного текста\&.

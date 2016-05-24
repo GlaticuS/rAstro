@@ -1,0 +1,345 @@
+.TH "DrawingArea" 3 "Вт 24 Май 2016" "Version 0.5" "rAstro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DrawingArea \- 
+.PP
+The \fBDrawingArea\fP class Класс, относящийся к различного рода рисованию на полотне\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <drawingarea\&.h>\fP
+.PP
+Базовые классы:QWidget\&.
+.SS "Открытые слоты"
+
+.in +1c
+.ti -1c
+.RI "void \fBclearImage\fP ()"
+.br
+.RI "\fI\fBDrawingArea::clearImage\fP Очистить полотно\&. \fP"
+.ti -1c
+.RI "void \fBfillImage\fP ()"
+.br
+.RI "\fI\fBDrawingArea::fillImage\fP Залить полотно\&. \fP"
+.in -1c
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "\fBDrawingArea\fP (QWidget *parent=0)"
+.br
+.ti -1c
+.RI "void \fBsetPenColor\fP (const QColor &newColor)"
+.br
+.RI "\fI\fBDrawingArea::setPenColor\fP Установить цвет для рисования\&. \fP"
+.ti -1c
+.RI "void \fBsetPenWidth\fP (int newWidth)"
+.br
+.RI "\fI\fBDrawingArea::setPenWidth\fP Установить толщину линий\&. \fP"
+.ti -1c
+.RI "void \fBsetSize\fP (const QSize &size)"
+.br
+.RI "\fI\fBDrawingArea::setSize\fP Назначить новый размер полотна\&. \fP"
+.ti -1c
+.RI "void \fBsetTool\fP (int tool)"
+.br
+.RI "\fI\fBDrawingArea::setTool\fP Установить номер инструмента для рисования\&. \fP"
+.ti -1c
+.RI "void \fBsetImage\fP (const QImage \fBmyImage\fP)"
+.br
+.RI "\fI\fBDrawingArea::setImage\fP Установить полотно\&. \fP"
+.ti -1c
+.RI "bool \fBisModified\fP () const "
+.br
+.ti -1c
+.RI "QColor \fBpenColor\fP () const "
+.br
+.ti -1c
+.RI "int \fBpenWidth\fP () const "
+.br
+.ti -1c
+.RI "QSize \fBimageSize\fP () const "
+.br
+.ti -1c
+.RI "QImage \fBmyImage\fP () const "
+.br
+.in -1c
+.SS "Защищенные члены"
+
+.in +1c
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QMouseEvent *event) Q_DECL_OVERRIDE"
+.br
+.RI "\fI\fBDrawingArea::mousePressEvent\fP Действие при нажатии левой кнопки мыши\&. \fP"
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QMouseEvent *event) Q_DECL_OVERRIDE"
+.br
+.RI "\fI\fBDrawingArea::mouseMoveEvent\fP Действие при движении мышки \fP"
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QMouseEvent *event) Q_DECL_OVERRIDE"
+.br
+.RI "\fI\fBDrawingArea::mouseReleaseEvent\fP Действие при отпускании левой кнопки мышки\&. \fP"
+.ti -1c
+.RI "void \fBpaintEvent\fP (QPaintEvent *event) Q_DECL_OVERRIDE"
+.br
+.RI "\fI\fBDrawingArea::paintEvent\fP Действие рисования\&. \fP"
+.in -1c
+.SS "Закрытые члены"
+
+.in +1c
+.ti -1c
+.RI "void \fBdrawLineTo\fP (const QPoint &endPoint)"
+.br
+.RI "\fI\fBDrawingArea::drawLineTo\fP Провести линию карандаша\&. \fP"
+.ti -1c
+.RI "void \fBdrawFigure\fP (QPoint \fBtopLeft\fP, QPoint \fBbottomRight\fP)"
+.br
+.RI "\fI\fBDrawingArea::drawFigure\fP Нарисовать фигуру\&. \fP"
+.ti -1c
+.RI "void \fBresizeImage\fP (QImage *\fBimage\fP)"
+.br
+.RI "\fI\fBDrawingArea::resizeImage\fP Изменить размер полотна\&. \fP"
+.ti -1c
+.RI "void \fBfillArea\fP (const QPoint &point, QColor act)"
+.br
+.RI "\fI\fBDrawingArea::fillArea\fP - Залить область\&. \fP"
+.in -1c
+.SS "Закрытые данные"
+
+.in +1c
+.ti -1c
+.RI "bool \fBmodified\fP"
+.br
+.ti -1c
+.RI "bool \fBscribbling\fP"
+.br
+.ti -1c
+.RI "int \fBmyTool\fP"
+.br
+.ti -1c
+.RI "int \fBmyPenWidth\fP"
+.br
+.ti -1c
+.RI "QPoint \fBtopLeft\fP"
+.br
+.ti -1c
+.RI "QPoint \fBbottomRight\fP"
+.br
+.ti -1c
+.RI "QColor \fBmyPenColor\fP"
+.br
+.ti -1c
+.RI "QImage \fBimage\fP"
+.br
+.ti -1c
+.RI "QPoint \fBlastPoint\fP"
+.br
+.ti -1c
+.RI "QSize \fBmyImageSize\fP"
+.br
+.in -1c
+.SH "Подробное описание"
+.PP 
+The \fBDrawingArea\fP class Класс, относящийся к различного рода рисованию на полотне\&. 
+
+Реализует функции Карандаш, Прямоугольник, Эллипс, Ластик\&. Можно выбрать цвет и толщину линий\&. 
+.SH "Конструктор(ы)"
+.PP 
+.SS "DrawingArea::DrawingArea (QWidget *parent = \fC0\fP)"
+
+.SH "Методы"
+.PP 
+.SS "void DrawingArea::clearImage ()\fC [slot]\fP"
+
+.PP
+\fBDrawingArea::clearImage\fP Очистить полотно\&. Заливает всё полотно белым цветом\&. 
+.SS "void DrawingArea::drawFigure (QPointtopLeft, QPointbottomRight)\fC [private]\fP"
+
+.PP
+\fBDrawingArea::drawFigure\fP Нарисовать фигуру\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fItopLeft\fP Координата верхнего левого угла\&. 
+.br
+\fIbottomRight\fP Координата нижнего правого угла\&.
+.RE
+.PP
+Рисует одну из двух фигур на выбор - Прямоугольник или Эллипс\&. Выбор зависит от значения переменной myTool\&. Координаты верхнего левого и нижнего правого угла задают размеры прямоугольника\&. Для эллипса задается размер прямоугольника, внутрь которого будет вписан эллипс\&. 
+.SS "void DrawingArea::drawLineTo (const QPoint &endPoint)\fC [private]\fP"
+
+.PP
+\fBDrawingArea::drawLineTo\fP Провести линию карандаша\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIendPoint\fP Конечная точка рисования\&.
+.RE
+.PP
+Рисует линию от начальной точки до конечной, используя цвет и ширину линий, заданные пользователем\&. Рисует попиксельно\&. 
+.SS "void DrawingArea::fillArea (const QPoint &point, QColoract)\fC [private]\fP"
+
+.PP
+\fBDrawingArea::fillArea\fP - Залить область\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIpoint\fP Точка начала заливки\&. 
+.br
+\fIact\fP Цвет области, которую нужно залить\&.
+.RE
+.PP
+Заливает область пользовательским цветом, ограниченную линией другого цвета\&. Для заливки используется floodFill алгоритм, использующий очередь из точек и продвигающийся по четырем направлениям\&. 
+.SS "void DrawingArea::fillImage ()\fC [slot]\fP"
+
+.PP
+\fBDrawingArea::fillImage\fP Залить полотно\&. Заливает всё полотно пользовательским цветом\&. 
+.SS "QSize DrawingArea::imageSize () const\fC [inline]\fP"
+
+.SS "bool DrawingArea::isModified () const\fC [inline]\fP"
+
+.SS "void DrawingArea::mouseMoveEvent (QMouseEvent *event)\fC [protected]\fP"
+
+.PP
+\fBDrawingArea::mouseMoveEvent\fP Действие при движении мышки 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIevent\fP Элемент действия\&.
+.RE
+.PP
+Движение мышки нам необходимо при рисовании карандашом\&. 
+.SS "void DrawingArea::mousePressEvent (QMouseEvent *event)\fC [protected]\fP"
+
+.PP
+\fBDrawingArea::mousePressEvent\fP Действие при нажатии левой кнопки мыши\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIevent\fP Элемент действия\&.
+.RE
+.PP
+Проверяет переменную myTool и по её номеру подбирает действие, которое следует совершить с изображением\&. Объявляет переменную scribbling == true и задаёт некоторые переменные, впоследствие использующиеся функциями инструментов\&. 
+.SS "void DrawingArea::mouseReleaseEvent (QMouseEvent *event)\fC [protected]\fP"
+
+.PP
+\fBDrawingArea::mouseReleaseEvent\fP Действие при отпускании левой кнопки мышки\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIevent\fP Элемент действия
+.RE
+.PP
+Проверяет переменную myTool и по её номеру подбирает действие, которое следует совершить с изображением\&. Задаёт функцию для обработки действия и после её совершения объявляет переменную scribbling = false\&. 
+.SS "QImage DrawingArea::myImage () const\fC [inline]\fP"
+
+.SS "void DrawingArea::paintEvent (QPaintEvent *event)\fC [protected]\fP"
+
+.PP
+\fBDrawingArea::paintEvent\fP Действие рисования\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIevent\fP Элемент действия\&. 
+.RE
+.PP
+
+.SS "QColor DrawingArea::penColor () const\fC [inline]\fP"
+
+.SS "int DrawingArea::penWidth () const\fC [inline]\fP"
+
+.SS "void DrawingArea::resizeImage (QImage *image)\fC [private]\fP"
+
+.PP
+\fBDrawingArea::resizeImage\fP Изменить размер полотна\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIimage\fP Полотно\&.
+.RE
+.PP
+Изменяет размер полотна на новый, заданный в myImageSize\&. 
+.SS "void DrawingArea::setImage (const QImagemyImage)"
+
+.PP
+\fBDrawingArea::setImage\fP Установить полотно\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fImyImage\fP Полотно\&. 
+.RE
+.PP
+
+.SS "void DrawingArea::setPenColor (const QColor &newColor)"
+
+.PP
+\fBDrawingArea::setPenColor\fP Установить цвет для рисования\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fInewColor\fP Новый цвет, выбираемый в специальном диалоговом окне\&. 
+.RE
+.PP
+
+.SS "void DrawingArea::setPenWidth (intnewWidth)"
+
+.PP
+\fBDrawingArea::setPenWidth\fP Установить толщину линий\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fInewWidth\fP Новая ширина, устанавливаемая с помощью счётчика\&. 
+.RE
+.PP
+
+.SS "void DrawingArea::setSize (const QSize &size)"
+
+.PP
+\fBDrawingArea::setSize\fP Назначить новый размер полотна\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIsize\fP Размер
+.RE
+.PP
+Определяет переменную myImageSize как size и изменяет размер полотна посредством функции resizeImage\&. 
+.SS "void DrawingArea::setTool (inttool)"
+
+.PP
+\fBDrawingArea::setTool\fP Установить номер инструмента для рисования\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fItool\fP Номер инструмента для рисования\&. 
+.RE
+.PP
+
+.SH "Данные класса"
+.PP 
+.SS "QPoint DrawingArea::bottomRight\fC [private]\fP"
+
+.SS "QImage DrawingArea::image\fC [private]\fP"
+
+.SS "QPoint DrawingArea::lastPoint\fC [private]\fP"
+
+.SS "bool DrawingArea::modified\fC [private]\fP"
+
+.SS "QSize DrawingArea::myImageSize\fC [private]\fP"
+
+.SS "QColor DrawingArea::myPenColor\fC [private]\fP"
+
+.SS "int DrawingArea::myPenWidth\fC [private]\fP"
+
+.SS "int DrawingArea::myTool\fC [private]\fP"
+
+.SS "bool DrawingArea::scribbling\fC [private]\fP"
+
+.SS "QPoint DrawingArea::topLeft\fC [private]\fP"
+
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для rAstro из исходного текста\&.

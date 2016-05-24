@@ -17,13 +17,15 @@ SOURCES += main.cpp\
     drawingarea.cpp \
     dialognew.cpp \
     savefile.cpp \
-    dialogopen.cpp
+    dialogopen.cpp \
+    2dgraph.cpp
 
 HEADERS  += mainwindow.h \
     drawingarea.h \
     dialognew.h \
     savefile.h \
-    dialogopen.h
+    dialogopen.h \
+    2dgraph.h
 
 FORMS    += mainwindow.ui \
     dialognew.ui \

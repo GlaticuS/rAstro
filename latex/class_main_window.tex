@@ -1,0 +1,439 @@
+\hypertarget{class_main_window}{\section{Класс Main\+Window}
+\label{class_main_window}\index{Main\+Window@{Main\+Window}}
+}
+
+
+The \hyperlink{class_main_window}{Main\+Window} class Класс основного окна для взаимодействия с пользователем.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+Базовые классы\+:Q\+Main\+Window.
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{Main\+Window} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{Main\+Window\+::\+Main\+Window} класс основного диалогового окна \end{DoxyCompactList}\item 
+\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window} ()
+\end{DoxyCompactItemize}
+\subsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_main_window_ab4487c4b02224acd4a0193d38b704ddb}{on\+\_\+action\+Exit\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_ab4487c4b02224acd4a0193d38b704ddb}{Main\+Window\+::on\+\_\+action\+Exit\+\_\+triggered} Действие при нажатии на Exit. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a7add49b8afd676505acef34d5483c576}{on\+\_\+action\+Clear\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_a7add49b8afd676505acef34d5483c576}{Main\+Window\+::on\+\_\+action\+Clear\+\_\+triggered} Очистка полотна. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ad34e6ed9fb10f0b3672b3d642930ff8c}{on\+\_\+action\+Set\+\_\+\+Color\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_ad34e6ed9fb10f0b3672b3d642930ff8c}{Main\+Window\+::on\+\_\+action\+Set\+\_\+\+Color\+\_\+triggered} Выбрать цвет ручки. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a543d9229c9505b042a250aaeebb48385}{on\+\_\+spin\+Box\+Line\+Width\+\_\+value\+Changed} (int arg1)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_a543d9229c9505b042a250aaeebb48385}{Main\+Window\+::on\+\_\+spin\+Box\+Line\+Width\+\_\+value\+Changed} Изменение размера ручки. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ac32e6173b0d1047aec96c7692090495a}{on\+\_\+button\+Pencil\+\_\+clicked} (bool checked)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_ac32e6173b0d1047aec96c7692090495a}{Main\+Window\+::on\+\_\+button\+Pencil\+\_\+clicked} Клавиша для инструмента \char`\"{}Карандаш\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_af354b0d573d73369d2d0ad53e5d483fa}{on\+\_\+button\+Paint\+Bucket\+\_\+clicked} (bool checked)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_af354b0d573d73369d2d0ad53e5d483fa}{Main\+Window\+::on\+\_\+button\+Paint\+Bucket\+\_\+clicked} Клавиша для инструмента \char`\"{}Заливка\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a48ed0a16f674e38e0e2a24274852a9af}{on\+\_\+action\+Open\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_a48ed0a16f674e38e0e2a24274852a9af}{Main\+Window\+::on\+\_\+action\+Open\+\_\+triggered} Открыть существующий файл. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ad550c61cfa05c7e528dedc6cf636ed10}{on\+\_\+action\+Save\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_ad550c61cfa05c7e528dedc6cf636ed10}{Main\+Window\+::on\+\_\+action\+Save\+\_\+triggered} Сохранить изображение. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a00233c80edbf8e0a6c43b4f0131d72d1}{on\+\_\+button\+Eraser\+\_\+clicked} (bool checked)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_a00233c80edbf8e0a6c43b4f0131d72d1}{Main\+Window\+::on\+\_\+button\+Eraser\+\_\+clicked} Действие при нажатии на Ластик. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_aed8d4c16aaa87ae02a2de2edd5fc91c7}{on\+\_\+action\+New\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_aed8d4c16aaa87ae02a2de2edd5fc91c7}{Main\+Window\+::on\+\_\+action\+New\+\_\+triggered} Действие при нажатии на New. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ac8fb265fce472c4bd780594cb8d4f6ba}{New\+Image\+Size} (const Q\+Size \&size)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_ac8fb265fce472c4bd780594cb8d4f6ba}{Main\+Window\+::\+New\+Image\+Size} Задать новый размер полотна. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ad847255358c94e17c5c128e3054ee59f}{Save\+My\+File} (const Q\+String \&str)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_ad847255358c94e17c5c128e3054ee59f}{Main\+Window\+::\+Save\+My\+File} Сохранить изображение с полотна. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_af7a4a93fe3b09dad4f0d5512367b1ab6}{Open\+My\+File} (const Q\+String \&str)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_af7a4a93fe3b09dad4f0d5512367b1ab6}{Main\+Window\+::\+Open\+My\+File} Загрузить изображение на полотно. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ad8b548a052731d90a75f3d5890eb2509}{on\+\_\+button\+Rectangle\+\_\+clicked} (bool checked)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_ad8b548a052731d90a75f3d5890eb2509}{Main\+Window\+::on\+\_\+button\+Rectangle\+\_\+clicked} Действие при нажатии на кнопку Прямоугольник. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a41b4343982dab5ba73d9a78d0b1744ea}{on\+\_\+button\+Ellipse\+\_\+clicked} (bool checked)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_a41b4343982dab5ba73d9a78d0b1744ea}{Main\+Window\+::on\+\_\+button\+Ellipse\+\_\+clicked} Действие при нажатии на кнопку Эллипс. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a41953d7e1666db10a02b5bc5cea428b7}{on\+\_\+action\+Flip\+\_\+\+Horizontal\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_a41953d7e1666db10a02b5bc5cea428b7}{Main\+Window\+::on\+\_\+action\+Flip\+\_\+\+Horizontal\+\_\+triggered} Действие при нажатии на Flip Horizontal. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_af22425cb6431dde120a5600dc8fc12cd}{on\+\_\+action\+Rotate\+\_\+2\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_af22425cb6431dde120a5600dc8fc12cd}{Main\+Window\+::on\+\_\+action\+Rotate\+\_\+2\+\_\+triggered} Действие при нажатии на Rotate. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a0afe6cf3aedc8b8c1538e2d2fad20419}{on\+\_\+action\+Flip\+\_\+\+Vertical\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_a0afe6cf3aedc8b8c1538e2d2fad20419}{Main\+Window\+::on\+\_\+action\+Flip\+\_\+\+Vertical\+\_\+triggered} Действие при нажатии на Flip Vertical. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a62a84e467acdc89e7ca7dc23e7ba3a06}{on\+\_\+action\+Flip\+\_\+\+Both\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_a62a84e467acdc89e7ca7dc23e7ba3a06}{Main\+Window\+::on\+\_\+action\+Flip\+\_\+\+Both\+\_\+triggered} Действие при нажатии Flip Both. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_af5e879453e86142ec7d2ef0bd9d7942e}{on\+\_\+action\+Blur\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_af5e879453e86142ec7d2ef0bd9d7942e}{Main\+Window\+::on\+\_\+action\+Blur\+\_\+triggered} Действие при нажатии на Blur. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ab800a26f2166a3abc44e56b6c20e73ce}{on\+\_\+action\+Sharpness\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_ab800a26f2166a3abc44e56b6c20e73ce}{Main\+Window\+::on\+\_\+action\+Sharpness\+\_\+triggered} Действие при нажатии Sharpness. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a4f3b679e3802857430db0effee297a60}{on\+\_\+action\+Brightness\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_a4f3b679e3802857430db0effee297a60}{Main\+Window\+::on\+\_\+action\+Brightness\+\_\+triggered} Действие при нажатии на Brightness. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a5a583208f704ea57cb6212c77ece08ed}{on\+\_\+action\+Darkness\+\_\+triggered} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_a5a583208f704ea57cb6212c77ece08ed}{Main\+Window\+::on\+\_\+action\+Darkness\+\_\+triggered} Действие при нажатии на Darkness. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_aaeb851f4787104e51c22651f0f7b3941}{on\+\_\+double\+Spin\+Box\+\_\+value\+Changed} (double arg1)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_main_window_aaeb851f4787104e51c22651f0f7b3941}{Main\+Window\+::on\+\_\+double\+Spin\+Box\+\_\+value\+Changed} Действие при изменении счётчика Zoom'а. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Main\+Window $\ast$ \hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+The \hyperlink{class_main_window}{Main\+Window} class Класс основного окна для взаимодействия с пользователем. 
+
+Реализует окно приложения, включающее в себя полотно, группу инструментов слева, меню, позволяющее осуществлять различные функции с изображением. 
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{\index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
+\index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
+\subsubsection[{Main\+Window}]{\setlength{\rightskip}{0pt plus 5cm}Main\+Window\+::\+Main\+Window (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}
+
+
+\hyperlink{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{Main\+Window\+::\+Main\+Window} класс основного диалогового окна 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\index{Main\+Window@{Main\+Window}!````~Main\+Window@{$\sim$\+Main\+Window}}
+\index{````~Main\+Window@{$\sim$\+Main\+Window}!Main\+Window@{Main\+Window}}
+\subsubsection[{$\sim$\+Main\+Window}]{\setlength{\rightskip}{0pt plus 5cm}Main\+Window\+::$\sim$\+Main\+Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}
+
+
+\subsection{Методы}
+\hypertarget{class_main_window_ac8fb265fce472c4bd780594cb8d4f6ba}{\index{Main\+Window@{Main\+Window}!New\+Image\+Size@{New\+Image\+Size}}
+\index{New\+Image\+Size@{New\+Image\+Size}!Main\+Window@{Main\+Window}}
+\subsubsection[{New\+Image\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::\+New\+Image\+Size (
+\begin{DoxyParamCaption}
+\item[{const Q\+Size \&}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_ac8fb265fce472c4bd780594cb8d4f6ba}
+
+
+\hyperlink{class_main_window_ac8fb265fce472c4bd780594cb8d4f6ba}{Main\+Window\+::\+New\+Image\+Size} Задать новый размер полотна. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em size} & Новый размер.\\
+\hline
+\end{DoxyParams}
+Подстраивает размер виджета под новый размер полотна. \hypertarget{class_main_window_af5e879453e86142ec7d2ef0bd9d7942e}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Blur\+\_\+triggered@{on\+\_\+action\+Blur\+\_\+triggered}}
+\index{on\+\_\+action\+Blur\+\_\+triggered@{on\+\_\+action\+Blur\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Blur\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Blur\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_af5e879453e86142ec7d2ef0bd9d7942e}
+
+
+\hyperlink{class_main_window_af5e879453e86142ec7d2ef0bd9d7942e}{Main\+Window\+::on\+\_\+action\+Blur\+\_\+triggered} Действие при нажатии на Blur. 
+
+При нажатии изображение слегка размывается. (Функции предоставлены библиотекой 2\+D графики от Евтеевой А.) \hypertarget{class_main_window_a4f3b679e3802857430db0effee297a60}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Brightness\+\_\+triggered@{on\+\_\+action\+Brightness\+\_\+triggered}}
+\index{on\+\_\+action\+Brightness\+\_\+triggered@{on\+\_\+action\+Brightness\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Brightness\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Brightness\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a4f3b679e3802857430db0effee297a60}
+
+
+\hyperlink{class_main_window_a4f3b679e3802857430db0effee297a60}{Main\+Window\+::on\+\_\+action\+Brightness\+\_\+triggered} Действие при нажатии на Brightness. 
+
+При нажатии увеличивается яркость изображения. (Функции предоставлены библиотекой 2\+D графики от Евтеевой А.) \hypertarget{class_main_window_a7add49b8afd676505acef34d5483c576}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Clear\+\_\+triggered@{on\+\_\+action\+Clear\+\_\+triggered}}
+\index{on\+\_\+action\+Clear\+\_\+triggered@{on\+\_\+action\+Clear\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Clear\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Clear\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a7add49b8afd676505acef34d5483c576}
+
+
+\hyperlink{class_main_window_a7add49b8afd676505acef34d5483c576}{Main\+Window\+::on\+\_\+action\+Clear\+\_\+triggered} Очистка полотна. 
+
+При нажатии на Clear очищаем полотно. \hypertarget{class_main_window_a5a583208f704ea57cb6212c77ece08ed}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Darkness\+\_\+triggered@{on\+\_\+action\+Darkness\+\_\+triggered}}
+\index{on\+\_\+action\+Darkness\+\_\+triggered@{on\+\_\+action\+Darkness\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Darkness\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Darkness\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a5a583208f704ea57cb6212c77ece08ed}
+
+
+\hyperlink{class_main_window_a5a583208f704ea57cb6212c77ece08ed}{Main\+Window\+::on\+\_\+action\+Darkness\+\_\+triggered} Действие при нажатии на Darkness. 
+
+При нажатии изображение становится темнее, уменьшается яркость. (Функции предоставлены библиотекой 2\+D графики от Евтеевой А.) \hypertarget{class_main_window_ab4487c4b02224acd4a0193d38b704ddb}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Exit\+\_\+triggered@{on\+\_\+action\+Exit\+\_\+triggered}}
+\index{on\+\_\+action\+Exit\+\_\+triggered@{on\+\_\+action\+Exit\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Exit\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Exit\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_ab4487c4b02224acd4a0193d38b704ddb}
+
+
+\hyperlink{class_main_window_ab4487c4b02224acd4a0193d38b704ddb}{Main\+Window\+::on\+\_\+action\+Exit\+\_\+triggered} Действие при нажатии на Exit. 
+
+При нажатии на Exit выходим из программы. \hypertarget{class_main_window_a62a84e467acdc89e7ca7dc23e7ba3a06}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Flip\+\_\+\+Both\+\_\+triggered@{on\+\_\+action\+Flip\+\_\+\+Both\+\_\+triggered}}
+\index{on\+\_\+action\+Flip\+\_\+\+Both\+\_\+triggered@{on\+\_\+action\+Flip\+\_\+\+Both\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Flip\+\_\+\+Both\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Flip\+\_\+\+Both\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a62a84e467acdc89e7ca7dc23e7ba3a06}
+
+
+\hyperlink{class_main_window_a62a84e467acdc89e7ca7dc23e7ba3a06}{Main\+Window\+::on\+\_\+action\+Flip\+\_\+\+Both\+\_\+triggered} Действие при нажатии Flip Both. 
+
+При нажатии изображение отражается относительно обеих осей -\/ вертикальной и горизонтальной. (Функции предоставлены библиотекой 2\+D графики от Евтеевой А.) \hypertarget{class_main_window_a41953d7e1666db10a02b5bc5cea428b7}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Flip\+\_\+\+Horizontal\+\_\+triggered@{on\+\_\+action\+Flip\+\_\+\+Horizontal\+\_\+triggered}}
+\index{on\+\_\+action\+Flip\+\_\+\+Horizontal\+\_\+triggered@{on\+\_\+action\+Flip\+\_\+\+Horizontal\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Flip\+\_\+\+Horizontal\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Flip\+\_\+\+Horizontal\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a41953d7e1666db10a02b5bc5cea428b7}
+
+
+\hyperlink{class_main_window_a41953d7e1666db10a02b5bc5cea428b7}{Main\+Window\+::on\+\_\+action\+Flip\+\_\+\+Horizontal\+\_\+triggered} Действие при нажатии на Flip Horizontal. 
+
+При нажатии изображение отражается относительно горизонтальной оси. (Функции предоставлены библиотекой 2\+D графики от Евтеевой А.) \hypertarget{class_main_window_a0afe6cf3aedc8b8c1538e2d2fad20419}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Flip\+\_\+\+Vertical\+\_\+triggered@{on\+\_\+action\+Flip\+\_\+\+Vertical\+\_\+triggered}}
+\index{on\+\_\+action\+Flip\+\_\+\+Vertical\+\_\+triggered@{on\+\_\+action\+Flip\+\_\+\+Vertical\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Flip\+\_\+\+Vertical\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Flip\+\_\+\+Vertical\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a0afe6cf3aedc8b8c1538e2d2fad20419}
+
+
+\hyperlink{class_main_window_a0afe6cf3aedc8b8c1538e2d2fad20419}{Main\+Window\+::on\+\_\+action\+Flip\+\_\+\+Vertical\+\_\+triggered} Действие при нажатии на Flip Vertical. 
+
+При нажатии изображение отражается относительно вертикальной оси. (Функции предоставлены библиотекой 2\+D графики от Евтеевой А.) \hypertarget{class_main_window_aed8d4c16aaa87ae02a2de2edd5fc91c7}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+New\+\_\+triggered@{on\+\_\+action\+New\+\_\+triggered}}
+\index{on\+\_\+action\+New\+\_\+triggered@{on\+\_\+action\+New\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+New\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+New\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_aed8d4c16aaa87ae02a2de2edd5fc91c7}
+
+
+\hyperlink{class_main_window_aed8d4c16aaa87ae02a2de2edd5fc91c7}{Main\+Window\+::on\+\_\+action\+New\+\_\+triggered} Действие при нажатии на New. 
+
+Открывает диалоговое окно для создания нового полотна. \hypertarget{class_main_window_a48ed0a16f674e38e0e2a24274852a9af}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Open\+\_\+triggered@{on\+\_\+action\+Open\+\_\+triggered}}
+\index{on\+\_\+action\+Open\+\_\+triggered@{on\+\_\+action\+Open\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Open\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Open\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a48ed0a16f674e38e0e2a24274852a9af}
+
+
+\hyperlink{class_main_window_a48ed0a16f674e38e0e2a24274852a9af}{Main\+Window\+::on\+\_\+action\+Open\+\_\+triggered} Открыть существующий файл. 
+
+Вызывает диалоговое окно, куда нужно ввести абсолютный путь до файла. Файл может быть в любом формате растровых изображений. \hypertarget{class_main_window_af22425cb6431dde120a5600dc8fc12cd}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Rotate\+\_\+2\+\_\+triggered@{on\+\_\+action\+Rotate\+\_\+2\+\_\+triggered}}
+\index{on\+\_\+action\+Rotate\+\_\+2\+\_\+triggered@{on\+\_\+action\+Rotate\+\_\+2\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Rotate\+\_\+2\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Rotate\+\_\+2\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_af22425cb6431dde120a5600dc8fc12cd}
+
+
+\hyperlink{class_main_window_af22425cb6431dde120a5600dc8fc12cd}{Main\+Window\+::on\+\_\+action\+Rotate\+\_\+2\+\_\+triggered} Действие при нажатии на Rotate. 
+
+При нажатии изображение поворачивается на 90 градусов против часовой стрелки. (Функции предоставлены библиотекой 2\+D графики от Евтеевой А.) \hypertarget{class_main_window_ad550c61cfa05c7e528dedc6cf636ed10}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Save\+\_\+triggered@{on\+\_\+action\+Save\+\_\+triggered}}
+\index{on\+\_\+action\+Save\+\_\+triggered@{on\+\_\+action\+Save\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Save\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Save\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_ad550c61cfa05c7e528dedc6cf636ed10}
+
+
+\hyperlink{class_main_window_ad550c61cfa05c7e528dedc6cf636ed10}{Main\+Window\+::on\+\_\+action\+Save\+\_\+triggered} Сохранить изображение. 
+
+При нажатии на Save вызывает диалоговое окно, куда нужно ввести абсолютный путь к сохраняемому изображению в любом формате растровых изображений. \hypertarget{class_main_window_ad34e6ed9fb10f0b3672b3d642930ff8c}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Set\+\_\+\+Color\+\_\+triggered@{on\+\_\+action\+Set\+\_\+\+Color\+\_\+triggered}}
+\index{on\+\_\+action\+Set\+\_\+\+Color\+\_\+triggered@{on\+\_\+action\+Set\+\_\+\+Color\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Set\+\_\+\+Color\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Set\+\_\+\+Color\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_ad34e6ed9fb10f0b3672b3d642930ff8c}
+
+
+\hyperlink{class_main_window_ad34e6ed9fb10f0b3672b3d642930ff8c}{Main\+Window\+::on\+\_\+action\+Set\+\_\+\+Color\+\_\+triggered} Выбрать цвет ручки. 
+
+При нажатии открывается меню для выбора цвета ручки. \hypertarget{class_main_window_ab800a26f2166a3abc44e56b6c20e73ce}{\index{Main\+Window@{Main\+Window}!on\+\_\+action\+Sharpness\+\_\+triggered@{on\+\_\+action\+Sharpness\+\_\+triggered}}
+\index{on\+\_\+action\+Sharpness\+\_\+triggered@{on\+\_\+action\+Sharpness\+\_\+triggered}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+action\+Sharpness\+\_\+triggered}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+action\+Sharpness\+\_\+triggered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_ab800a26f2166a3abc44e56b6c20e73ce}
+
+
+\hyperlink{class_main_window_ab800a26f2166a3abc44e56b6c20e73ce}{Main\+Window\+::on\+\_\+action\+Sharpness\+\_\+triggered} Действие при нажатии Sharpness. 
+
+При нажатии изображение делается более чётким. (Функции предоставлены библиотекой 2\+D графики от Евтеевой А.) \hypertarget{class_main_window_a41b4343982dab5ba73d9a78d0b1744ea}{\index{Main\+Window@{Main\+Window}!on\+\_\+button\+Ellipse\+\_\+clicked@{on\+\_\+button\+Ellipse\+\_\+clicked}}
+\index{on\+\_\+button\+Ellipse\+\_\+clicked@{on\+\_\+button\+Ellipse\+\_\+clicked}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+button\+Ellipse\+\_\+clicked}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+button\+Ellipse\+\_\+clicked (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a41b4343982dab5ba73d9a78d0b1744ea}
+
+
+\hyperlink{class_main_window_a41b4343982dab5ba73d9a78d0b1744ea}{Main\+Window\+::on\+\_\+button\+Ellipse\+\_\+clicked} Действие при нажатии на кнопку Эллипс. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em checked} & Нажатие.\\
+\hline
+\end{DoxyParams}
+Если клавиша нажата, то назначаем номер инструмента 3. \hypertarget{class_main_window_a00233c80edbf8e0a6c43b4f0131d72d1}{\index{Main\+Window@{Main\+Window}!on\+\_\+button\+Eraser\+\_\+clicked@{on\+\_\+button\+Eraser\+\_\+clicked}}
+\index{on\+\_\+button\+Eraser\+\_\+clicked@{on\+\_\+button\+Eraser\+\_\+clicked}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+button\+Eraser\+\_\+clicked}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+button\+Eraser\+\_\+clicked (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a00233c80edbf8e0a6c43b4f0131d72d1}
+
+
+\hyperlink{class_main_window_a00233c80edbf8e0a6c43b4f0131d72d1}{Main\+Window\+::on\+\_\+button\+Eraser\+\_\+clicked} Действие при нажатии на Ластик. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em checked} & Нажатие.\\
+\hline
+\end{DoxyParams}
+Если кнопка нажата, то задействован инструмент Ластик -\/ Карандаш белого(стандартного) цвета. \hypertarget{class_main_window_af354b0d573d73369d2d0ad53e5d483fa}{\index{Main\+Window@{Main\+Window}!on\+\_\+button\+Paint\+Bucket\+\_\+clicked@{on\+\_\+button\+Paint\+Bucket\+\_\+clicked}}
+\index{on\+\_\+button\+Paint\+Bucket\+\_\+clicked@{on\+\_\+button\+Paint\+Bucket\+\_\+clicked}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+button\+Paint\+Bucket\+\_\+clicked}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+button\+Paint\+Bucket\+\_\+clicked (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_af354b0d573d73369d2d0ad53e5d483fa}
+
+
+\hyperlink{class_main_window_af354b0d573d73369d2d0ad53e5d483fa}{Main\+Window\+::on\+\_\+button\+Paint\+Bucket\+\_\+clicked} Клавиша для инструмента \char`\"{}Заливка\char`\"{}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em checked} & Нажатие.\\
+\hline
+\end{DoxyParams}
+Если клавиша нажата, то назначаем номер инструмента 4. \hypertarget{class_main_window_ac32e6173b0d1047aec96c7692090495a}{\index{Main\+Window@{Main\+Window}!on\+\_\+button\+Pencil\+\_\+clicked@{on\+\_\+button\+Pencil\+\_\+clicked}}
+\index{on\+\_\+button\+Pencil\+\_\+clicked@{on\+\_\+button\+Pencil\+\_\+clicked}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+button\+Pencil\+\_\+clicked}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+button\+Pencil\+\_\+clicked (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_ac32e6173b0d1047aec96c7692090495a}
+
+
+\hyperlink{class_main_window_ac32e6173b0d1047aec96c7692090495a}{Main\+Window\+::on\+\_\+button\+Pencil\+\_\+clicked} Клавиша для инструмента \char`\"{}Карандаш\char`\"{}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em checked} & Нажатие клавиши.\\
+\hline
+\end{DoxyParams}
+Если клавиша нажата, то назначаем номер инструмента 1. \hypertarget{class_main_window_ad8b548a052731d90a75f3d5890eb2509}{\index{Main\+Window@{Main\+Window}!on\+\_\+button\+Rectangle\+\_\+clicked@{on\+\_\+button\+Rectangle\+\_\+clicked}}
+\index{on\+\_\+button\+Rectangle\+\_\+clicked@{on\+\_\+button\+Rectangle\+\_\+clicked}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+button\+Rectangle\+\_\+clicked}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+button\+Rectangle\+\_\+clicked (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_ad8b548a052731d90a75f3d5890eb2509}
+
+
+\hyperlink{class_main_window_ad8b548a052731d90a75f3d5890eb2509}{Main\+Window\+::on\+\_\+button\+Rectangle\+\_\+clicked} Действие при нажатии на кнопку Прямоугольник. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em checked} & Нажатие.\\
+\hline
+\end{DoxyParams}
+Если клавиша нажата, то назначаем номер инструмента 2. \hypertarget{class_main_window_aaeb851f4787104e51c22651f0f7b3941}{\index{Main\+Window@{Main\+Window}!on\+\_\+double\+Spin\+Box\+\_\+value\+Changed@{on\+\_\+double\+Spin\+Box\+\_\+value\+Changed}}
+\index{on\+\_\+double\+Spin\+Box\+\_\+value\+Changed@{on\+\_\+double\+Spin\+Box\+\_\+value\+Changed}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+double\+Spin\+Box\+\_\+value\+Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+double\+Spin\+Box\+\_\+value\+Changed (
+\begin{DoxyParamCaption}
+\item[{double}]{arg1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_aaeb851f4787104e51c22651f0f7b3941}
+
+
+\hyperlink{class_main_window_aaeb851f4787104e51c22651f0f7b3941}{Main\+Window\+::on\+\_\+double\+Spin\+Box\+\_\+value\+Changed} Действие при изменении счётчика Zoom'а. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em arg1} & Увеличение в arg1 раз.\\
+\hline
+\end{DoxyParams}
+Посредством счётчика можно увеличивать/уменьшать изображение. (Функции предоставлены библиотекой 2\+D графики от Евтеевой А.) \hypertarget{class_main_window_a543d9229c9505b042a250aaeebb48385}{\index{Main\+Window@{Main\+Window}!on\+\_\+spin\+Box\+Line\+Width\+\_\+value\+Changed@{on\+\_\+spin\+Box\+Line\+Width\+\_\+value\+Changed}}
+\index{on\+\_\+spin\+Box\+Line\+Width\+\_\+value\+Changed@{on\+\_\+spin\+Box\+Line\+Width\+\_\+value\+Changed}!Main\+Window@{Main\+Window}}
+\subsubsection[{on\+\_\+spin\+Box\+Line\+Width\+\_\+value\+Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::on\+\_\+spin\+Box\+Line\+Width\+\_\+value\+Changed (
+\begin{DoxyParamCaption}
+\item[{int}]{arg1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_a543d9229c9505b042a250aaeebb48385}
+
+
+\hyperlink{class_main_window_a543d9229c9505b042a250aaeebb48385}{Main\+Window\+::on\+\_\+spin\+Box\+Line\+Width\+\_\+value\+Changed} Изменение размера ручки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em arg1} & Размер ручки. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_af7a4a93fe3b09dad4f0d5512367b1ab6}{\index{Main\+Window@{Main\+Window}!Open\+My\+File@{Open\+My\+File}}
+\index{Open\+My\+File@{Open\+My\+File}!Main\+Window@{Main\+Window}}
+\subsubsection[{Open\+My\+File}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::\+Open\+My\+File (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_af7a4a93fe3b09dad4f0d5512367b1ab6}
+
+
+\hyperlink{class_main_window_af7a4a93fe3b09dad4f0d5512367b1ab6}{Main\+Window\+::\+Open\+My\+File} Загрузить изображение на полотно. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em str} & Абсолютный путь к файлу.\\
+\hline
+\end{DoxyParams}
+Загружает изображение на полотно для дальнейшего его редактирования. \hypertarget{class_main_window_ad847255358c94e17c5c128e3054ee59f}{\index{Main\+Window@{Main\+Window}!Save\+My\+File@{Save\+My\+File}}
+\index{Save\+My\+File@{Save\+My\+File}!Main\+Window@{Main\+Window}}
+\subsubsection[{Save\+My\+File}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::\+Save\+My\+File (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_main_window_ad847255358c94e17c5c128e3054ee59f}
+
+
+\hyperlink{class_main_window_ad847255358c94e17c5c128e3054ee59f}{Main\+Window\+::\+Save\+My\+File} Сохранить изображение с полотна. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em str} & Абсолютный путь к файлу.\\
+\hline
+\end{DoxyParams}
+Сохраняет изображение в формате B\+M\+P. 
+
+\subsection{Данные класса}
+\hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}{\index{Main\+Window@{Main\+Window}!ui@{ui}}
+\index{ui@{ui}!Main\+Window@{Main\+Window}}
+\subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}}\label{class_main_window_a35466a70ed47252a0191168126a352a5}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mainwindow_8h}{mainwindow.\+h}\item 
+\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}\end{DoxyCompactItemize}

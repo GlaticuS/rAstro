@@ -227,31 +227,28 @@
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinBoxZoom">
-       <property name="suffix">
-        <string>%</string>
-       </property>
-       <property name="prefix">
-        <string/>
-       </property>
-       <property name="minimum">
-        <number>50</number>
-       </property>
-       <property name="maximum">
-        <number>300</number>
-       </property>
-       <property name="singleStep">
-        <number>50</number>
-       </property>
-       <property name="value">
-        <number>100</number>
+      <widget class="Line" name="line_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="Line" name="line_3">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
+      <widget class="QDoubleSpinBox" name="doubleSpinBox">
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>0.500000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>3.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.500000000000000</double>
+       </property>
+       <property name="value">
+        <double>1.000000000000000</double>
        </property>
       </widget>
      </item>
@@ -319,8 +316,24 @@
     <property name="title">
      <string>Edit</string>
     </property>
+    <widget class="QMenu" name="menuFilter">
+     <property name="title">
+      <string>Filter</string>
+     </property>
+     <addaction name="actionBlur"/>
+     <addaction name="actionSharpness"/>
+     <addaction name="actionBrightness"/>
+     <addaction name="actionDarkness"/>
+    </widget>
     <addaction name="actionSet_Color"/>
     <addaction name="actionClear"/>
+    <addaction name="separator"/>
+    <addaction name="actionFlip_Horizontal"/>
+    <addaction name="actionFlip_Vertical"/>
+    <addaction name="actionFlip_Both"/>
+    <addaction name="separator"/>
+    <addaction name="actionRotate_2"/>
+    <addaction name="menuFilter"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -370,6 +383,51 @@
   <action name="actionClear">
    <property name="text">
     <string>Clear</string>
+   </property>
+  </action>
+  <action name="actionRotate">
+   <property name="text">
+    <string>Rotate</string>
+   </property>
+  </action>
+  <action name="actionFlip_Horizontal">
+   <property name="text">
+    <string>Flip Horizontal</string>
+   </property>
+  </action>
+  <action name="actionFlip_Vertical">
+   <property name="text">
+    <string>Flip Vertical</string>
+   </property>
+  </action>
+  <action name="actionFlip_Both">
+   <property name="text">
+    <string>Flip Both</string>
+   </property>
+  </action>
+  <action name="actionRotate_2">
+   <property name="text">
+    <string>Rotate</string>
+   </property>
+  </action>
+  <action name="actionBlur">
+   <property name="text">
+    <string>Blur</string>
+   </property>
+  </action>
+  <action name="actionSharpness">
+   <property name="text">
+    <string>Sharpness</string>
+   </property>
+  </action>
+  <action name="actionBrightness">
+   <property name="text">
+    <string>Brightness</string>
+   </property>
+  </action>
+  <action name="actionDarkness">
+   <property name="text">
+    <string>Darkness</string>
    </property>
   </action>
  </widget>

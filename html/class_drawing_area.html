@@ -1,0 +1,1006 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>rAstro: Класс DrawingArea</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">rAstro
+   &#160;<span id="projectnumber">0.5</span>
+   </div>
+   <div id="projectbrief">simple bitmap graphic redactor</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="pages.html"><span>Описания</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Макросы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-slots">Открытые слоты</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="class_drawing_area-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс DrawingArea</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="class_drawing_area.html" title="The DrawingArea class Класс, относящийся к различного рода рисованию на полотне. ">DrawingArea</a> class Класс, относящийся к различного рода рисованию на полотне.  
+ <a href="class_drawing_area.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="drawingarea_8h_source.html">drawingarea.h</a>&gt;</code></p>
+
+<p>Базовые классы:QWidget.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Открытые слоты</h2></td></tr>
+<tr class="memitem:a8f00c8499212f1077d728fec8cbdfbe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a8f00c8499212f1077d728fec8cbdfbe5">clearImage</a> ()</td></tr>
+<tr class="memdesc:a8f00c8499212f1077d728fec8cbdfbe5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#a8f00c8499212f1077d728fec8cbdfbe5" title="DrawingArea::clearImage Очистить полотно. ">DrawingArea::clearImage</a> Очистить полотно.  <a href="#a8f00c8499212f1077d728fec8cbdfbe5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8f00c8499212f1077d728fec8cbdfbe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fec4c43bc86139083c3dc6dfa11d30c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a1fec4c43bc86139083c3dc6dfa11d30c">fillImage</a> ()</td></tr>
+<tr class="memdesc:a1fec4c43bc86139083c3dc6dfa11d30c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#a1fec4c43bc86139083c3dc6dfa11d30c" title="DrawingArea::fillImage Залить полотно. ">DrawingArea::fillImage</a> Залить полотно.  <a href="#a1fec4c43bc86139083c3dc6dfa11d30c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1fec4c43bc86139083c3dc6dfa11d30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a95168b77c2ff299f898fd0966aa21fd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a95168b77c2ff299f898fd0966aa21fd6">DrawingArea</a> (QWidget *parent=0)</td></tr>
+<tr class="separator:a95168b77c2ff299f898fd0966aa21fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe42bde48cab8cefce39df6c6baffceb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#afe42bde48cab8cefce39df6c6baffceb">setPenColor</a> (const QColor &amp;newColor)</td></tr>
+<tr class="memdesc:afe42bde48cab8cefce39df6c6baffceb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#afe42bde48cab8cefce39df6c6baffceb" title="DrawingArea::setPenColor Установить цвет для рисования. ">DrawingArea::setPenColor</a> Установить цвет для рисования.  <a href="#afe42bde48cab8cefce39df6c6baffceb">Подробнее...</a><br /></td></tr>
+<tr class="separator:afe42bde48cab8cefce39df6c6baffceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad79225ca90fc7d2bb3218f00fe3a1af1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#ad79225ca90fc7d2bb3218f00fe3a1af1">setPenWidth</a> (int newWidth)</td></tr>
+<tr class="memdesc:ad79225ca90fc7d2bb3218f00fe3a1af1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#ad79225ca90fc7d2bb3218f00fe3a1af1" title="DrawingArea::setPenWidth Установить толщину линий. ">DrawingArea::setPenWidth</a> Установить толщину линий.  <a href="#ad79225ca90fc7d2bb3218f00fe3a1af1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad79225ca90fc7d2bb3218f00fe3a1af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c24d1b5264883bc95be51d0534776f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a5c24d1b5264883bc95be51d0534776f8">setSize</a> (const QSize &amp;size)</td></tr>
+<tr class="memdesc:a5c24d1b5264883bc95be51d0534776f8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#a5c24d1b5264883bc95be51d0534776f8" title="DrawingArea::setSize Назначить новый размер полотна. ">DrawingArea::setSize</a> Назначить новый размер полотна.  <a href="#a5c24d1b5264883bc95be51d0534776f8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5c24d1b5264883bc95be51d0534776f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58ff40622f3795130c0d46bf6aa6efc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#ae58ff40622f3795130c0d46bf6aa6efc">setTool</a> (int tool)</td></tr>
+<tr class="memdesc:ae58ff40622f3795130c0d46bf6aa6efc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#ae58ff40622f3795130c0d46bf6aa6efc" title="DrawingArea::setTool Установить номер инструмента для рисования. ">DrawingArea::setTool</a> Установить номер инструмента для рисования.  <a href="#ae58ff40622f3795130c0d46bf6aa6efc">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae58ff40622f3795130c0d46bf6aa6efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62f91056d26319b0c49a96df35c17f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#aa62f91056d26319b0c49a96df35c17f9">setImage</a> (const QImage <a class="el" href="class_drawing_area.html#a420f3cdf3a9f6df2f65d3a1e1b4c9d4d">myImage</a>)</td></tr>
+<tr class="memdesc:aa62f91056d26319b0c49a96df35c17f9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#aa62f91056d26319b0c49a96df35c17f9" title="DrawingArea::setImage Установить полотно. ">DrawingArea::setImage</a> Установить полотно.  <a href="#aa62f91056d26319b0c49a96df35c17f9">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa62f91056d26319b0c49a96df35c17f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727f9acc4083f97aa439eb6a6cb57adc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a727f9acc4083f97aa439eb6a6cb57adc">isModified</a> () const </td></tr>
+<tr class="separator:a727f9acc4083f97aa439eb6a6cb57adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a666bda2b4d8fc9bf5ea726f7c4b66df0"><td class="memItemLeft" align="right" valign="top">QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a666bda2b4d8fc9bf5ea726f7c4b66df0">penColor</a> () const </td></tr>
+<tr class="separator:a666bda2b4d8fc9bf5ea726f7c4b66df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fbaa03b53f44c06190f72e6aad4f5fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a2fbaa03b53f44c06190f72e6aad4f5fa">penWidth</a> () const </td></tr>
+<tr class="separator:a2fbaa03b53f44c06190f72e6aad4f5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2a4193b01b408d8a9bbba44dfcefb77"><td class="memItemLeft" align="right" valign="top">QSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#af2a4193b01b408d8a9bbba44dfcefb77">imageSize</a> () const </td></tr>
+<tr class="separator:af2a4193b01b408d8a9bbba44dfcefb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a420f3cdf3a9f6df2f65d3a1e1b4c9d4d"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a420f3cdf3a9f6df2f65d3a1e1b4c9d4d">myImage</a> () const </td></tr>
+<tr class="separator:a420f3cdf3a9f6df2f65d3a1e1b4c9d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:aa1fc7e0984fd5cb177956a894b106cf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#aa1fc7e0984fd5cb177956a894b106cf8">mousePressEvent</a> (QMouseEvent *event) Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:aa1fc7e0984fd5cb177956a894b106cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#aa1fc7e0984fd5cb177956a894b106cf8" title="DrawingArea::mousePressEvent Действие при нажатии левой кнопки мыши. ">DrawingArea::mousePressEvent</a> Действие при нажатии левой кнопки мыши.  <a href="#aa1fc7e0984fd5cb177956a894b106cf8">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa1fc7e0984fd5cb177956a894b106cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b4f2dbb4d819d5dd502142f4de4eee8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a4b4f2dbb4d819d5dd502142f4de4eee8">mouseMoveEvent</a> (QMouseEvent *event) Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a4b4f2dbb4d819d5dd502142f4de4eee8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#a4b4f2dbb4d819d5dd502142f4de4eee8" title="DrawingArea::mouseMoveEvent Действие при движении мышки ">DrawingArea::mouseMoveEvent</a> Действие при движении мышки  <a href="#a4b4f2dbb4d819d5dd502142f4de4eee8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4b4f2dbb4d819d5dd502142f4de4eee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97c6c8e6e2f444f26b76b73ffa30eea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#ad97c6c8e6e2f444f26b76b73ffa30eea">mouseReleaseEvent</a> (QMouseEvent *event) Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:ad97c6c8e6e2f444f26b76b73ffa30eea"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#ad97c6c8e6e2f444f26b76b73ffa30eea" title="DrawingArea::mouseReleaseEvent Действие при отпускании левой кнопки мышки. ">DrawingArea::mouseReleaseEvent</a> Действие при отпускании левой кнопки мышки.  <a href="#ad97c6c8e6e2f444f26b76b73ffa30eea">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad97c6c8e6e2f444f26b76b73ffa30eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35f261193f389b319661c5915ffe66f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#af35f261193f389b319661c5915ffe66f">paintEvent</a> (QPaintEvent *event) Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:af35f261193f389b319661c5915ffe66f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#af35f261193f389b319661c5915ffe66f" title="DrawingArea::paintEvent Действие рисования. ">DrawingArea::paintEvent</a> Действие рисования.  <a href="#af35f261193f389b319661c5915ffe66f">Подробнее...</a><br /></td></tr>
+<tr class="separator:af35f261193f389b319661c5915ffe66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:ac8a6033e1af8990786b43d080f273a95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#ac8a6033e1af8990786b43d080f273a95">drawLineTo</a> (const QPoint &amp;endPoint)</td></tr>
+<tr class="memdesc:ac8a6033e1af8990786b43d080f273a95"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#ac8a6033e1af8990786b43d080f273a95" title="DrawingArea::drawLineTo Провести линию карандаша. ">DrawingArea::drawLineTo</a> Провести линию карандаша.  <a href="#ac8a6033e1af8990786b43d080f273a95">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac8a6033e1af8990786b43d080f273a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc85b3053af14aa794ac4fb86f5f4a20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#abc85b3053af14aa794ac4fb86f5f4a20">drawFigure</a> (QPoint <a class="el" href="class_drawing_area.html#a10dc7b6502081bd5f9e08ae767f472b6">topLeft</a>, QPoint <a class="el" href="class_drawing_area.html#a469a2ab81eb38f7ceb9ccfc56007303d">bottomRight</a>)</td></tr>
+<tr class="memdesc:abc85b3053af14aa794ac4fb86f5f4a20"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#abc85b3053af14aa794ac4fb86f5f4a20" title="DrawingArea::drawFigure Нарисовать фигуру. ">DrawingArea::drawFigure</a> Нарисовать фигуру.  <a href="#abc85b3053af14aa794ac4fb86f5f4a20">Подробнее...</a><br /></td></tr>
+<tr class="separator:abc85b3053af14aa794ac4fb86f5f4a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a9652945d3f4c2cc1a6179dcee29d60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a7a9652945d3f4c2cc1a6179dcee29d60">resizeImage</a> (QImage *<a class="el" href="class_drawing_area.html#ae47382bceabaea64325ad6fa8d52c899">image</a>)</td></tr>
+<tr class="memdesc:a7a9652945d3f4c2cc1a6179dcee29d60"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#a7a9652945d3f4c2cc1a6179dcee29d60" title="DrawingArea::resizeImage Изменить размер полотна. ">DrawingArea::resizeImage</a> Изменить размер полотна.  <a href="#a7a9652945d3f4c2cc1a6179dcee29d60">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7a9652945d3f4c2cc1a6179dcee29d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d08829a95a2af49b96defe6c867c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#ae6d08829a95a2af49b96defe6c867c5e">fillArea</a> (const QPoint &amp;point, QColor act)</td></tr>
+<tr class="memdesc:ae6d08829a95a2af49b96defe6c867c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_drawing_area.html#ae6d08829a95a2af49b96defe6c867c5e" title="DrawingArea::fillArea - Залить область. ">DrawingArea::fillArea</a> - Залить область.  <a href="#ae6d08829a95a2af49b96defe6c867c5e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae6d08829a95a2af49b96defe6c867c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:aec08a04cf32f9c6ddda1c251b5a9533c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#aec08a04cf32f9c6ddda1c251b5a9533c">modified</a></td></tr>
+<tr class="separator:aec08a04cf32f9c6ddda1c251b5a9533c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47e1a721ed4caaf7c993fde729676eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#ac47e1a721ed4caaf7c993fde729676eb">scribbling</a></td></tr>
+<tr class="separator:ac47e1a721ed4caaf7c993fde729676eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c9ad1a31ed5c13e8aae18c1603d111"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a65c9ad1a31ed5c13e8aae18c1603d111">myTool</a></td></tr>
+<tr class="separator:a65c9ad1a31ed5c13e8aae18c1603d111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc5ff29833418bc205ff697b933b57fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#acc5ff29833418bc205ff697b933b57fa">myPenWidth</a></td></tr>
+<tr class="separator:acc5ff29833418bc205ff697b933b57fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10dc7b6502081bd5f9e08ae767f472b6"><td class="memItemLeft" align="right" valign="top">QPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a10dc7b6502081bd5f9e08ae767f472b6">topLeft</a></td></tr>
+<tr class="separator:a10dc7b6502081bd5f9e08ae767f472b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469a2ab81eb38f7ceb9ccfc56007303d"><td class="memItemLeft" align="right" valign="top">QPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#a469a2ab81eb38f7ceb9ccfc56007303d">bottomRight</a></td></tr>
+<tr class="separator:a469a2ab81eb38f7ceb9ccfc56007303d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af15c369bbbaf2ec78a37dbbca638cf0b"><td class="memItemLeft" align="right" valign="top">QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#af15c369bbbaf2ec78a37dbbca638cf0b">myPenColor</a></td></tr>
+<tr class="separator:af15c369bbbaf2ec78a37dbbca638cf0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae47382bceabaea64325ad6fa8d52c899"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#ae47382bceabaea64325ad6fa8d52c899">image</a></td></tr>
+<tr class="separator:ae47382bceabaea64325ad6fa8d52c899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac5aa0317efcc63962b1bc56e79312d"><td class="memItemLeft" align="right" valign="top">QPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#afac5aa0317efcc63962b1bc56e79312d">lastPoint</a></td></tr>
+<tr class="separator:afac5aa0317efcc63962b1bc56e79312d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa317e568b35e031c1afc46e78d3b9ea3"><td class="memItemLeft" align="right" valign="top">QSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_area.html#aa317e568b35e031c1afc46e78d3b9ea3">myImageSize</a></td></tr>
+<tr class="separator:aa317e568b35e031c1afc46e78d3b9ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>The <a class="el" href="class_drawing_area.html" title="The DrawingArea class Класс, относящийся к различного рода рисованию на полотне. ">DrawingArea</a> class Класс, относящийся к различного рода рисованию на полотне. </p>
+<p>Реализует функции Карандаш, Прямоугольник, Эллипс, Ластик. Можно выбрать цвет и толщину линий. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a class="anchor" id="a95168b77c2ff299f898fd0966aa21fd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DrawingArea::DrawingArea </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a class="anchor" id="a8f00c8499212f1077d728fec8cbdfbe5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::clearImage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#a8f00c8499212f1077d728fec8cbdfbe5" title="DrawingArea::clearImage Очистить полотно. ">DrawingArea::clearImage</a> Очистить полотно. </p>
+<p>Заливает всё полотно белым цветом. </p>
+
+</div>
+</div>
+<a class="anchor" id="abc85b3053af14aa794ac4fb86f5f4a20"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::drawFigure </td>
+          <td>(</td>
+          <td class="paramtype">QPoint&#160;</td>
+          <td class="paramname"><em>topLeft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QPoint&#160;</td>
+          <td class="paramname"><em>bottomRight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#abc85b3053af14aa794ac4fb86f5f4a20" title="DrawingArea::drawFigure Нарисовать фигуру. ">DrawingArea::drawFigure</a> Нарисовать фигуру. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">topLeft</td><td>Координата верхнего левого угла. </td></tr>
+    <tr><td class="paramname">bottomRight</td><td>Координата нижнего правого угла.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Рисует одну из двух фигур на выбор - Прямоугольник или Эллипс. Выбор зависит от значения переменной myTool. Координаты верхнего левого и нижнего правого угла задают размеры прямоугольника. Для эллипса задается размер прямоугольника, внутрь которого будет вписан эллипс. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac8a6033e1af8990786b43d080f273a95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::drawLineTo </td>
+          <td>(</td>
+          <td class="paramtype">const QPoint &amp;&#160;</td>
+          <td class="paramname"><em>endPoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#ac8a6033e1af8990786b43d080f273a95" title="DrawingArea::drawLineTo Провести линию карандаша. ">DrawingArea::drawLineTo</a> Провести линию карандаша. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">endPoint</td><td>Конечная точка рисования.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Рисует линию от начальной точки до конечной, используя цвет и ширину линий, заданные пользователем. Рисует попиксельно. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae6d08829a95a2af49b96defe6c867c5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::fillArea </td>
+          <td>(</td>
+          <td class="paramtype">const QPoint &amp;&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QColor&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#ae6d08829a95a2af49b96defe6c867c5e" title="DrawingArea::fillArea - Залить область. ">DrawingArea::fillArea</a> - Залить область. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>Точка начала заливки. </td></tr>
+    <tr><td class="paramname">act</td><td>Цвет области, которую нужно залить.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Заливает область пользовательским цветом, ограниченную линией другого цвета. Для заливки используется floodFill алгоритм, использующий очередь из точек и продвигающийся по четырем направлениям. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1fec4c43bc86139083c3dc6dfa11d30c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::fillImage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#a1fec4c43bc86139083c3dc6dfa11d30c" title="DrawingArea::fillImage Залить полотно. ">DrawingArea::fillImage</a> Залить полотно. </p>
+<p>Заливает всё полотно пользовательским цветом. </p>
+
+</div>
+</div>
+<a class="anchor" id="af2a4193b01b408d8a9bbba44dfcefb77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSize DrawingArea::imageSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a727f9acc4083f97aa439eb6a6cb57adc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DrawingArea::isModified </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4b4f2dbb4d819d5dd502142f4de4eee8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::mouseMoveEvent </td>
+          <td>(</td>
+          <td class="paramtype">QMouseEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#a4b4f2dbb4d819d5dd502142f4de4eee8" title="DrawingArea::mouseMoveEvent Действие при движении мышки ">DrawingArea::mouseMoveEvent</a> Действие при движении мышки </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Элемент действия.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Движение мышки нам необходимо при рисовании карандашом. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa1fc7e0984fd5cb177956a894b106cf8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::mousePressEvent </td>
+          <td>(</td>
+          <td class="paramtype">QMouseEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#aa1fc7e0984fd5cb177956a894b106cf8" title="DrawingArea::mousePressEvent Действие при нажатии левой кнопки мыши. ">DrawingArea::mousePressEvent</a> Действие при нажатии левой кнопки мыши. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Элемент действия.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Проверяет переменную myTool и по её номеру подбирает действие, которое следует совершить с изображением. Объявляет переменную scribbling == true и задаёт некоторые переменные, впоследствие использующиеся функциями инструментов. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad97c6c8e6e2f444f26b76b73ffa30eea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::mouseReleaseEvent </td>
+          <td>(</td>
+          <td class="paramtype">QMouseEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#ad97c6c8e6e2f444f26b76b73ffa30eea" title="DrawingArea::mouseReleaseEvent Действие при отпускании левой кнопки мышки. ">DrawingArea::mouseReleaseEvent</a> Действие при отпускании левой кнопки мышки. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Элемент действия</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Проверяет переменную myTool и по её номеру подбирает действие, которое следует совершить с изображением. Задаёт функцию для обработки действия и после её совершения объявляет переменную scribbling = false. </p>
+
+</div>
+</div>
+<a class="anchor" id="a420f3cdf3a9f6df2f65d3a1e1b4c9d4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QImage DrawingArea::myImage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af35f261193f389b319661c5915ffe66f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::paintEvent </td>
+          <td>(</td>
+          <td class="paramtype">QPaintEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#af35f261193f389b319661c5915ffe66f" title="DrawingArea::paintEvent Действие рисования. ">DrawingArea::paintEvent</a> Действие рисования. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Элемент действия. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a666bda2b4d8fc9bf5ea726f7c4b66df0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QColor DrawingArea::penColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2fbaa03b53f44c06190f72e6aad4f5fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DrawingArea::penWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7a9652945d3f4c2cc1a6179dcee29d60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::resizeImage </td>
+          <td>(</td>
+          <td class="paramtype">QImage *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#a7a9652945d3f4c2cc1a6179dcee29d60" title="DrawingArea::resizeImage Изменить размер полотна. ">DrawingArea::resizeImage</a> Изменить размер полотна. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Полотно.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Изменяет размер полотна на новый, заданный в myImageSize. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa62f91056d26319b0c49a96df35c17f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::setImage </td>
+          <td>(</td>
+          <td class="paramtype">const QImage&#160;</td>
+          <td class="paramname"><em>myImage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#aa62f91056d26319b0c49a96df35c17f9" title="DrawingArea::setImage Установить полотно. ">DrawingArea::setImage</a> Установить полотно. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">myImage</td><td>Полотно. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afe42bde48cab8cefce39df6c6baffceb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::setPenColor </td>
+          <td>(</td>
+          <td class="paramtype">const QColor &amp;&#160;</td>
+          <td class="paramname"><em>newColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#afe42bde48cab8cefce39df6c6baffceb" title="DrawingArea::setPenColor Установить цвет для рисования. ">DrawingArea::setPenColor</a> Установить цвет для рисования. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newColor</td><td>Новый цвет, выбираемый в специальном диалоговом окне. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad79225ca90fc7d2bb3218f00fe3a1af1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::setPenWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>newWidth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#ad79225ca90fc7d2bb3218f00fe3a1af1" title="DrawingArea::setPenWidth Установить толщину линий. ">DrawingArea::setPenWidth</a> Установить толщину линий. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newWidth</td><td>Новая ширина, устанавливаемая с помощью счётчика. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c24d1b5264883bc95be51d0534776f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::setSize </td>
+          <td>(</td>
+          <td class="paramtype">const QSize &amp;&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#a5c24d1b5264883bc95be51d0534776f8" title="DrawingArea::setSize Назначить новый размер полотна. ">DrawingArea::setSize</a> Назначить новый размер полотна. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>Размер</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Определяет переменную myImageSize как size и изменяет размер полотна посредством функции resizeImage. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae58ff40622f3795130c0d46bf6aa6efc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawingArea::setTool </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tool</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_drawing_area.html#ae58ff40622f3795130c0d46bf6aa6efc" title="DrawingArea::setTool Установить номер инструмента для рисования. ">DrawingArea::setTool</a> Установить номер инструмента для рисования. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tool</td><td>Номер инструмента для рисования. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a class="anchor" id="a469a2ab81eb38f7ceb9ccfc56007303d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPoint DrawingArea::bottomRight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae47382bceabaea64325ad6fa8d52c899"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QImage DrawingArea::image</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afac5aa0317efcc63962b1bc56e79312d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPoint DrawingArea::lastPoint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aec08a04cf32f9c6ddda1c251b5a9533c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DrawingArea::modified</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa317e568b35e031c1afc46e78d3b9ea3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSize DrawingArea::myImageSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af15c369bbbaf2ec78a37dbbca638cf0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QColor DrawingArea::myPenColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acc5ff29833418bc205ff697b933b57fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DrawingArea::myPenWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a65c9ad1a31ed5c13e8aae18c1603d111"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DrawingArea::myTool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac47e1a721ed4caaf7c993fde729676eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DrawingArea::scribbling</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a10dc7b6502081bd5f9e08ae767f472b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPoint DrawingArea::topLeft</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="drawingarea_8h_source.html">drawingarea.h</a></li>
+<li><a class="el" href="drawingarea_8cpp.html">drawingarea.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по rAstro. Последние изменения: Вт 24 Май 2016 23:38:53. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

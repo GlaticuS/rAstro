@@ -7,6 +7,9 @@ namespace Ui {
 class DialogOpen;
 }
 
+/*!
+ * \brief The DialogOpen class Реализует диалоговое окно открытия файла.
+ */
 class DialogOpen : public QDialog
 {
     Q_OBJECT
@@ -19,6 +22,7 @@ private:
     Ui::DialogOpen *ui;
 signals:
     void FilePath(const QString &str);
+
 private slots:
     void OkClicked();
 };

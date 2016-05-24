@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['okclicked',['OkClicked',['../class_dialog_new.html#a9466ba40cff2d02221d90cf585bcb8ae',1,'DialogNew::OkClicked()'],['../class_dialog_open.html#adbe6cc3198d1caabd959554d1d61b5de',1,'DialogOpen::OkClicked()'],['../class_save_file.html#a74a877a8da4af716b28bd85ade6307ca',1,'SaveFile::OkClicked()']]],
+  ['on_5factionblur_5ftriggered',['on_actionBlur_triggered',['../class_main_window.html#af5e879453e86142ec7d2ef0bd9d7942e',1,'MainWindow']]],
+  ['on_5factionbrightness_5ftriggered',['on_actionBrightness_triggered',['../class_main_window.html#a4f3b679e3802857430db0effee297a60',1,'MainWindow']]],
+  ['on_5factionclear_5ftriggered',['on_actionClear_triggered',['../class_main_window.html#a7add49b8afd676505acef34d5483c576',1,'MainWindow']]],
+  ['on_5factiondarkness_5ftriggered',['on_actionDarkness_triggered',['../class_main_window.html#a5a583208f704ea57cb6212c77ece08ed',1,'MainWindow']]],
+  ['on_5factionexit_5ftriggered',['on_actionExit_triggered',['../class_main_window.html#ab4487c4b02224acd4a0193d38b704ddb',1,'MainWindow']]],
+  ['on_5factionflip_5fboth_5ftriggered',['on_actionFlip_Both_triggered',['../class_main_window.html#a62a84e467acdc89e7ca7dc23e7ba3a06',1,'MainWindow']]],
+  ['on_5factionflip_5fhorizontal_5ftriggered',['on_actionFlip_Horizontal_triggered',['../class_main_window.html#a41953d7e1666db10a02b5bc5cea428b7',1,'MainWindow']]],
+  ['on_5factionflip_5fvertical_5ftriggered',['on_actionFlip_Vertical_triggered',['../class_main_window.html#a0afe6cf3aedc8b8c1538e2d2fad20419',1,'MainWindow']]],
+  ['on_5factionnew_5ftriggered',['on_actionNew_triggered',['../class_main_window.html#aed8d4c16aaa87ae02a2de2edd5fc91c7',1,'MainWindow']]],
+  ['on_5factionopen_5ftriggered',['on_actionOpen_triggered',['../class_main_window.html#a48ed0a16f674e38e0e2a24274852a9af',1,'MainWindow']]],
+  ['on_5factionrotate_5f2_5ftriggered',['on_actionRotate_2_triggered',['../class_main_window.html#af22425cb6431dde120a5600dc8fc12cd',1,'MainWindow']]],
+  ['on_5factionsave_5ftriggered',['on_actionSave_triggered',['../class_main_window.html#ad550c61cfa05c7e528dedc6cf636ed10',1,'MainWindow']]],
+  ['on_5factionset_5fcolor_5ftriggered',['on_actionSet_Color_triggered',['../class_main_window.html#ad34e6ed9fb10f0b3672b3d642930ff8c',1,'MainWindow']]],
+  ['on_5factionsharpness_5ftriggered',['on_actionSharpness_triggered',['../class_main_window.html#ab800a26f2166a3abc44e56b6c20e73ce',1,'MainWindow']]],
+  ['on_5fbuttonellipse_5fclicked',['on_buttonEllipse_clicked',['../class_main_window.html#a41b4343982dab5ba73d9a78d0b1744ea',1,'MainWindow']]],
+  ['on_5fbuttoneraser_5fclicked',['on_buttonEraser_clicked',['../class_main_window.html#a00233c80edbf8e0a6c43b4f0131d72d1',1,'MainWindow']]],
+  ['on_5fbuttonpaintbucket_5fclicked',['on_buttonPaintBucket_clicked',['../class_main_window.html#af354b0d573d73369d2d0ad53e5d483fa',1,'MainWindow']]],
+  ['on_5fbuttonpencil_5fclicked',['on_buttonPencil_clicked',['../class_main_window.html#ac32e6173b0d1047aec96c7692090495a',1,'MainWindow']]],
+  ['on_5fbuttonrectangle_5fclicked',['on_buttonRectangle_clicked',['../class_main_window.html#ad8b548a052731d90a75f3d5890eb2509',1,'MainWindow']]],
+  ['on_5fdoublespinbox_5fvaluechanged',['on_doubleSpinBox_valueChanged',['../class_main_window.html#aaeb851f4787104e51c22651f0f7b3941',1,'MainWindow']]],
+  ['on_5fspinboxlinewidth_5fvaluechanged',['on_spinBoxLineWidth_valueChanged',['../class_main_window.html#a543d9229c9505b042a250aaeebb48385',1,'MainWindow']]],
+  ['openmyfile',['OpenMyFile',['../class_main_window.html#af7a4a93fe3b09dad4f0d5512367b1ab6',1,'MainWindow']]]
+];

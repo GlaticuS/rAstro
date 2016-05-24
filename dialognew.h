@@ -9,6 +9,9 @@ namespace Ui {
 class DialogNew;
 }
 
+/*!
+ * \brief The DialogNew class Реализует диалоговое окно создания нового файла.
+ */
 class DialogNew : public QDialog
 {
     Q_OBJECT

@@ -1,0 +1,336 @@
+.TH "2dgraph.cpp" 3 "Вт 24 Май 2016" "Version 0.5" "rAstro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+2dgraph.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <iomanip>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <cstdlib>\fP
+.br
+\fC#include <ctime>\fP
+.br
+\fC#include <cassert>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+
+.SS "Классы"
+
+.in +1c
+.ti -1c
+.RI "struct \fBtagBITMAPFILEHEADER\fP"
+.br
+.ti -1c
+.RI "struct \fBtagBITMAPINFOHEADER\fP"
+.br
+.ti -1c
+.RI "struct \fBtagRGBTRIPLE\fP"
+.br
+.ti -1c
+.RI "struct \fBRGB_data\fP"
+.br
+.ti -1c
+.RI "struct \fBBFH\fP"
+.br
+.ti -1c
+.RI "struct \fBBIH\fP"
+.br
+.in -1c
+.SS "Макросы"
+
+.in +1c
+.ti -1c
+.RI "#define \fBWINAPI\fP"
+.br
+.ti -1c
+.RI "#define \fBMAX_PATH\fP   PATH_MAX"
+.br
+.ti -1c
+.RI "#define \fBmin\fP(a, b)   (((a) < (b)) ? (a) : (b))"
+.br
+.ti -1c
+.RI "#define \fBmax\fP(a, b)   (((a) > (b)) ? (a) : (b))"
+.br
+.in -1c
+.SS "Определения типов"
+
+.in +1c
+.ti -1c
+.RI "typedef short \fBWCHAR\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBHANDLE\fP"
+.br
+.ti -1c
+.RI "typedef unsigned char \fBBYTE\fP"
+.br
+.ti -1c
+.RI "typedef unsigned short \fBWORD\fP"
+.br
+.ti -1c
+.RI "typedef unsigned int \fBBOOL\fP"
+.br
+.ti -1c
+.RI "typedef int \fBLONG\fP"
+.br
+.ti -1c
+.RI "typedef unsigned char \fBbyte\fP"
+.br
+.ti -1c
+.RI "typedef std::uint32_t \fBDWORD\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBtagRGBTRIPLE\fP \fBRGBTRIPLE\fP"
+.br
+.in -1c
+.SS "Функции"
+
+.in +1c
+.ti -1c
+.RI "struct \fBtagBITMAPFILEHEADER\fP \fB__attribute__\fP ((packed)) BITMAPFILEHEADER"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBloadBMP\fP (const char *fname, int &mx, int &my)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP \fBnormalizeRGBT\fP (int rgbtRed, int rgbtGreen, int rgbtBlue)"
+.br
+.ti -1c
+.RI "bool \fBsaveBMP\fP (const char *fname, \fBRGBTRIPLE\fP *v, int mx, int my)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBex\fP (\fBRGBTRIPLE\fP *v, int &mx, int &my, float x1, float y1)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBreflectionY\fP (\fBRGBTRIPLE\fP *v, int mx, int my)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBreflectionX\fP (\fBRGBTRIPLE\fP *v, int mx, int my)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBreflectionXY\fP (\fBRGBTRIPLE\fP *v, int mx, int my)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBrot\fP (\fBRGBTRIPLE\fP *v, int &mx, int &my, int r)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBmatrixConvolution\fP (\fBRGBTRIPLE\fP *v, int mx, int my, int matrix[3][3], int div)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBmatrixConvolution1\fP (\fBRGBTRIPLE\fP *v, int mx, int my, double matrix[3][3], int div)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBscale\fP (\fBRGBTRIPLE\fP *v, int &mx, int &my, float z)"
+.br
+.ti -1c
+.RI "void \fBmyFlipHorizontal\fP (const char filename[])"
+.br
+.ti -1c
+.RI "void \fBmyFlipVertical\fP (const char filename[])"
+.br
+.ti -1c
+.RI "void \fBmyFlipBoth\fP (const char filename[])"
+.br
+.ti -1c
+.RI "void \fBmyRotate\fP (const char filename[])"
+.br
+.ti -1c
+.RI "void \fBmyBlurFilter\fP (const char filename[])"
+.br
+.ti -1c
+.RI "void \fBmySharpnessFilter\fP (const char filename[])"
+.br
+.ti -1c
+.RI "void \fBmyBrightFilter\fP (const char filename[])"
+.br
+.ti -1c
+.RI "void \fBmyDarkFilter\fP (const char filename[])"
+.br
+.ti -1c
+.RI "void \fBmyZoom\fP (const char filename[], float z)"
+.br
+.in -1c
+.SS "Переменные"
+
+.in +1c
+.ti -1c
+.RI "\fBWORD\fP \fBbfType\fP"
+.br
+.ti -1c
+.RI "\fBDWORD\fP \fBbfSize\fP"
+.br
+.ti -1c
+.RI "\fBWORD\fP \fBbfReserved1\fP"
+.br
+.ti -1c
+.RI "\fBWORD\fP \fBbfReserved2\fP"
+.br
+.ti -1c
+.RI "\fBDWORD\fP \fBbfOffBits\fP"
+.br
+.ti -1c
+.RI "\fBDWORD\fP \fBbiSize\fP"
+.br
+.ti -1c
+.RI "\fBLONG\fP \fBbiWidth\fP"
+.br
+.ti -1c
+.RI "\fBLONG\fP \fBbiHeight\fP"
+.br
+.ti -1c
+.RI "\fBWORD\fP \fBbiPlanes\fP"
+.br
+.ti -1c
+.RI "\fBWORD\fP \fBbiBitCount\fP"
+.br
+.ti -1c
+.RI "\fBDWORD\fP \fBbiCompress\fP"
+.br
+.ti -1c
+.RI "\fBDWORD\fP \fBbiSizeImage\fP"
+.br
+.ti -1c
+.RI "\fBLONG\fP \fBbiXPelsPerMeter\fP"
+.br
+.ti -1c
+.RI "\fBLONG\fP \fBbiYPelsPerMeter\fP"
+.br
+.ti -1c
+.RI "\fBDWORD\fP \fBbiClrUsed\fP"
+.br
+.ti -1c
+.RI "\fBDWORD\fP \fBbiClrImportant\fP"
+.br
+.ti -1c
+.RI "struct \fBBFH\fP \fBbh\fP"
+.br
+.ti -1c
+.RI "struct \fBBIH\fP \fBbih\fP"
+.br
+.in -1c
+.SH "Макросы"
+.PP 
+.SS "#define max(a, b)   (((a) > (b)) ? (a) : (b))"
+
+.SS "#define MAX_PATH   PATH_MAX"
+
+.SS "#define min(a, b)   (((a) < (b)) ? (a) : (b))"
+
+.SS "#define WINAPI"
+
+.SH "Типы"
+.PP 
+.SS "typedef unsigned int \fBBOOL\fP"
+
+.SS "typedef unsigned char \fBBYTE\fP"
+
+.SS "typedef unsigned char \fBbyte\fP"
+
+.SS "typedef std::uint32_t \fBDWORD\fP"
+
+.SS "typedef void* \fBHANDLE\fP"
+
+.SS "typedef int \fBLONG\fP"
+
+.SS "typedef struct \fBtagRGBTRIPLE\fP  \fBRGBTRIPLE\fP"
+
+.SS "typedef short \fBWCHAR\fP"
+
+.SS "typedef unsigned short \fBWORD\fP"
+
+.SH "Функции"
+.PP 
+.SS "struct \fBtagBITMAPINFOHEADER\fP __attribute__ ((packed))"
+
+.SS "\fBRGBTRIPLE\fP* ex (\fBRGBTRIPLE\fP *v, int &mx, int &my, floatx1, floaty1)"
+
+.SS "\fBRGBTRIPLE\fP* loadBMP (const char *fname, int &mx, int &my)"
+
+.SS "\fBRGBTRIPLE\fP* matrixConvolution (\fBRGBTRIPLE\fP *v, intmx, intmy, intmatrix[3][3], intdiv)"
+
+.SS "\fBRGBTRIPLE\fP* matrixConvolution1 (\fBRGBTRIPLE\fP *v, intmx, intmy, doublematrix[3][3], intdiv)"
+
+.SS "void myBlurFilter (const charfilename[])"
+
+.SS "void myBrightFilter (const charfilename[])"
+
+.SS "void myDarkFilter (const charfilename[])"
+
+.SS "void myFlipBoth (const charfilename[])"
+
+.SS "void myFlipHorizontal (const charfilename[])"
+
+.SS "void myFlipVertical (const charfilename[])"
+
+.SS "void myRotate (const charfilename[])"
+
+.SS "void mySharpnessFilter (const charfilename[])"
+
+.SS "void myZoom (const charfilename[], floatz)"
+
+.SS "\fBRGBTRIPLE\fP normalizeRGBT (intrgbtRed, intrgbtGreen, intrgbtBlue)"
+
+.SS "\fBRGBTRIPLE\fP* reflectionX (\fBRGBTRIPLE\fP *v, intmx, intmy)"
+
+.SS "\fBRGBTRIPLE\fP* reflectionXY (\fBRGBTRIPLE\fP *v, intmx, intmy)"
+
+.SS "\fBRGBTRIPLE\fP* reflectionY (\fBRGBTRIPLE\fP *v, intmx, intmy)"
+
+.SS "\fBRGBTRIPLE\fP* rot (\fBRGBTRIPLE\fP *v, int &mx, int &my, intr)"
+
+.SS "bool saveBMP (const char *fname, \fBRGBTRIPLE\fP *v, intmx, intmy)"
+
+.SS "\fBRGBTRIPLE\fP* scale (\fBRGBTRIPLE\fP *v, int &mx, int &my, floatz)"
+
+.SH "Переменные"
+.PP 
+.SS "\fBDWORD\fP bfOffBits"
+
+.SS "\fBWORD\fP bfReserved1"
+
+.SS "\fBWORD\fP bfReserved2"
+
+.SS "\fBDWORD\fP bfSize"
+
+.SS "\fBWORD\fP bfType"
+
+.SS "struct \fBBFH\fP  bh"
+
+.SS "\fBWORD\fP biBitCount"
+
+.SS "\fBDWORD\fP biClrImportant"
+
+.SS "\fBDWORD\fP biClrUsed"
+
+.SS "\fBDWORD\fP biCompress"
+
+.SS "struct \fBBIH\fP  bih"
+
+.SS "\fBLONG\fP biHeight"
+
+.SS "\fBWORD\fP biPlanes"
+
+.SS "\fBDWORD\fP biSize"
+
+.SS "\fBDWORD\fP biSizeImage"
+
+.SS "\fBLONG\fP biWidth"
+
+.SS "\fBLONG\fP biXPelsPerMeter"
+
+.SS "\fBLONG\fP biYPelsPerMeter"
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для rAstro из исходного текста\&.

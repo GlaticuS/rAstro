@@ -1,0 +1,329 @@
+.TH "MainWindow" 3 "Вт 24 Май 2016" "Version 0.5" "rAstro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MainWindow \- 
+.PP
+The \fBMainWindow\fP class Класс основного окна для взаимодействия с пользователем\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mainwindow\&.h>\fP
+.PP
+Базовые классы:QMainWindow\&.
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "\fBMainWindow\fP (QWidget *parent=0)"
+.br
+.RI "\fI\fBMainWindow::MainWindow\fP класс основного диалогового окна \fP"
+.ti -1c
+.RI "\fB~MainWindow\fP ()"
+.br
+.in -1c
+.SS "Закрытые слоты"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_actionExit_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionExit_triggered\fP Действие при нажатии на Exit\&. \fP"
+.ti -1c
+.RI "void \fBon_actionClear_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionClear_triggered\fP Очистка полотна\&. \fP"
+.ti -1c
+.RI "void \fBon_actionSet_Color_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionSet_Color_triggered\fP Выбрать цвет ручки\&. \fP"
+.ti -1c
+.RI "void \fBon_spinBoxLineWidth_valueChanged\fP (int arg1)"
+.br
+.RI "\fI\fBMainWindow::on_spinBoxLineWidth_valueChanged\fP Изменение размера ручки\&. \fP"
+.ti -1c
+.RI "void \fBon_buttonPencil_clicked\fP (bool checked)"
+.br
+.RI "\fI\fBMainWindow::on_buttonPencil_clicked\fP Клавиша для инструмента 'Карандаш'\&. \fP"
+.ti -1c
+.RI "void \fBon_buttonPaintBucket_clicked\fP (bool checked)"
+.br
+.RI "\fI\fBMainWindow::on_buttonPaintBucket_clicked\fP Клавиша для инструмента 'Заливка'\&. \fP"
+.ti -1c
+.RI "void \fBon_actionOpen_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionOpen_triggered\fP Открыть существующий файл\&. \fP"
+.ti -1c
+.RI "void \fBon_actionSave_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionSave_triggered\fP Сохранить изображение\&. \fP"
+.ti -1c
+.RI "void \fBon_buttonEraser_clicked\fP (bool checked)"
+.br
+.RI "\fI\fBMainWindow::on_buttonEraser_clicked\fP Действие при нажатии на Ластик\&. \fP"
+.ti -1c
+.RI "void \fBon_actionNew_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionNew_triggered\fP Действие при нажатии на New\&. \fP"
+.ti -1c
+.RI "void \fBNewImageSize\fP (const QSize &size)"
+.br
+.RI "\fI\fBMainWindow::NewImageSize\fP Задать новый размер полотна\&. \fP"
+.ti -1c
+.RI "void \fBSaveMyFile\fP (const QString &str)"
+.br
+.RI "\fI\fBMainWindow::SaveMyFile\fP Сохранить изображение с полотна\&. \fP"
+.ti -1c
+.RI "void \fBOpenMyFile\fP (const QString &str)"
+.br
+.RI "\fI\fBMainWindow::OpenMyFile\fP Загрузить изображение на полотно\&. \fP"
+.ti -1c
+.RI "void \fBon_buttonRectangle_clicked\fP (bool checked)"
+.br
+.RI "\fI\fBMainWindow::on_buttonRectangle_clicked\fP Действие при нажатии на кнопку Прямоугольник\&. \fP"
+.ti -1c
+.RI "void \fBon_buttonEllipse_clicked\fP (bool checked)"
+.br
+.RI "\fI\fBMainWindow::on_buttonEllipse_clicked\fP Действие при нажатии на кнопку Эллипс\&. \fP"
+.ti -1c
+.RI "void \fBon_actionFlip_Horizontal_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionFlip_Horizontal_triggered\fP Действие при нажатии на Flip Horizontal\&. \fP"
+.ti -1c
+.RI "void \fBon_actionRotate_2_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionRotate_2_triggered\fP Действие при нажатии на Rotate\&. \fP"
+.ti -1c
+.RI "void \fBon_actionFlip_Vertical_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionFlip_Vertical_triggered\fP Действие при нажатии на Flip Vertical\&. \fP"
+.ti -1c
+.RI "void \fBon_actionFlip_Both_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionFlip_Both_triggered\fP Действие при нажатии Flip Both\&. \fP"
+.ti -1c
+.RI "void \fBon_actionBlur_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionBlur_triggered\fP Действие при нажатии на Blur\&. \fP"
+.ti -1c
+.RI "void \fBon_actionSharpness_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionSharpness_triggered\fP Действие при нажатии Sharpness\&. \fP"
+.ti -1c
+.RI "void \fBon_actionBrightness_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionBrightness_triggered\fP Действие при нажатии на Brightness\&. \fP"
+.ti -1c
+.RI "void \fBon_actionDarkness_triggered\fP ()"
+.br
+.RI "\fI\fBMainWindow::on_actionDarkness_triggered\fP Действие при нажатии на Darkness\&. \fP"
+.ti -1c
+.RI "void \fBon_doubleSpinBox_valueChanged\fP (double arg1)"
+.br
+.RI "\fI\fBMainWindow::on_doubleSpinBox_valueChanged\fP Действие при изменении счётчика Zoom'а\&. \fP"
+.in -1c
+.SS "Закрытые данные"
+
+.in +1c
+.ti -1c
+.RI "Ui::MainWindow * \fBui\fP"
+.br
+.in -1c
+.SH "Подробное описание"
+.PP 
+The \fBMainWindow\fP class Класс основного окна для взаимодействия с пользователем\&. 
+
+Реализует окно приложения, включающее в себя полотно, группу инструментов слева, меню, позволяющее осуществлять различные функции с изображением\&. 
+.SH "Конструктор(ы)"
+.PP 
+.SS "MainWindow::MainWindow (QWidget *parent = \fC0\fP)\fC [explicit]\fP"
+
+.PP
+\fBMainWindow::MainWindow\fP класс основного диалогового окна 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SS "MainWindow::~MainWindow ()"
+
+.SH "Методы"
+.PP 
+.SS "void MainWindow::NewImageSize (const QSize &size)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::NewImageSize\fP Задать новый размер полотна\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIsize\fP Новый размер\&.
+.RE
+.PP
+Подстраивает размер виджета под новый размер полотна\&. 
+.SS "void MainWindow::on_actionBlur_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionBlur_triggered\fP Действие при нажатии на Blur\&. При нажатии изображение слегка размывается\&. (Функции предоставлены библиотекой 2D графики от Евтеевой А\&.) 
+.SS "void MainWindow::on_actionBrightness_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionBrightness_triggered\fP Действие при нажатии на Brightness\&. При нажатии увеличивается яркость изображения\&. (Функции предоставлены библиотекой 2D графики от Евтеевой А\&.) 
+.SS "void MainWindow::on_actionClear_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionClear_triggered\fP Очистка полотна\&. При нажатии на Clear очищаем полотно\&. 
+.SS "void MainWindow::on_actionDarkness_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionDarkness_triggered\fP Действие при нажатии на Darkness\&. При нажатии изображение становится темнее, уменьшается яркость\&. (Функции предоставлены библиотекой 2D графики от Евтеевой А\&.) 
+.SS "void MainWindow::on_actionExit_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionExit_triggered\fP Действие при нажатии на Exit\&. При нажатии на Exit выходим из программы\&. 
+.SS "void MainWindow::on_actionFlip_Both_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionFlip_Both_triggered\fP Действие при нажатии Flip Both\&. При нажатии изображение отражается относительно обеих осей - вертикальной и горизонтальной\&. (Функции предоставлены библиотекой 2D графики от Евтеевой А\&.) 
+.SS "void MainWindow::on_actionFlip_Horizontal_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionFlip_Horizontal_triggered\fP Действие при нажатии на Flip Horizontal\&. При нажатии изображение отражается относительно горизонтальной оси\&. (Функции предоставлены библиотекой 2D графики от Евтеевой А\&.) 
+.SS "void MainWindow::on_actionFlip_Vertical_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionFlip_Vertical_triggered\fP Действие при нажатии на Flip Vertical\&. При нажатии изображение отражается относительно вертикальной оси\&. (Функции предоставлены библиотекой 2D графики от Евтеевой А\&.) 
+.SS "void MainWindow::on_actionNew_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionNew_triggered\fP Действие при нажатии на New\&. Открывает диалоговое окно для создания нового полотна\&. 
+.SS "void MainWindow::on_actionOpen_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionOpen_triggered\fP Открыть существующий файл\&. Вызывает диалоговое окно, куда нужно ввести абсолютный путь до файла\&. Файл может быть в любом формате растровых изображений\&. 
+.SS "void MainWindow::on_actionRotate_2_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionRotate_2_triggered\fP Действие при нажатии на Rotate\&. При нажатии изображение поворачивается на 90 градусов против часовой стрелки\&. (Функции предоставлены библиотекой 2D графики от Евтеевой А\&.) 
+.SS "void MainWindow::on_actionSave_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionSave_triggered\fP Сохранить изображение\&. При нажатии на Save вызывает диалоговое окно, куда нужно ввести абсолютный путь к сохраняемому изображению в любом формате растровых изображений\&. 
+.SS "void MainWindow::on_actionSet_Color_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionSet_Color_triggered\fP Выбрать цвет ручки\&. При нажатии открывается меню для выбора цвета ручки\&. 
+.SS "void MainWindow::on_actionSharpness_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_actionSharpness_triggered\fP Действие при нажатии Sharpness\&. При нажатии изображение делается более чётким\&. (Функции предоставлены библиотекой 2D графики от Евтеевой А\&.) 
+.SS "void MainWindow::on_buttonEllipse_clicked (boolchecked)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_buttonEllipse_clicked\fP Действие при нажатии на кнопку Эллипс\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIchecked\fP Нажатие\&.
+.RE
+.PP
+Если клавиша нажата, то назначаем номер инструмента 3\&. 
+.SS "void MainWindow::on_buttonEraser_clicked (boolchecked)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_buttonEraser_clicked\fP Действие при нажатии на Ластик\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIchecked\fP Нажатие\&.
+.RE
+.PP
+Если кнопка нажата, то задействован инструмент Ластик - Карандаш белого(стандартного) цвета\&. 
+.SS "void MainWindow::on_buttonPaintBucket_clicked (boolchecked)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_buttonPaintBucket_clicked\fP Клавиша для инструмента 'Заливка'\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIchecked\fP Нажатие\&.
+.RE
+.PP
+Если клавиша нажата, то назначаем номер инструмента 4\&. 
+.SS "void MainWindow::on_buttonPencil_clicked (boolchecked)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_buttonPencil_clicked\fP Клавиша для инструмента 'Карандаш'\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIchecked\fP Нажатие клавиши\&.
+.RE
+.PP
+Если клавиша нажата, то назначаем номер инструмента 1\&. 
+.SS "void MainWindow::on_buttonRectangle_clicked (boolchecked)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_buttonRectangle_clicked\fP Действие при нажатии на кнопку Прямоугольник\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIchecked\fP Нажатие\&.
+.RE
+.PP
+Если клавиша нажата, то назначаем номер инструмента 2\&. 
+.SS "void MainWindow::on_doubleSpinBox_valueChanged (doublearg1)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_doubleSpinBox_valueChanged\fP Действие при изменении счётчика Zoom'а\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIarg1\fP Увеличение в arg1 раз\&.
+.RE
+.PP
+Посредством счётчика можно увеличивать/уменьшать изображение\&. (Функции предоставлены библиотекой 2D графики от Евтеевой А\&.) 
+.SS "void MainWindow::on_spinBoxLineWidth_valueChanged (intarg1)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::on_spinBoxLineWidth_valueChanged\fP Изменение размера ручки\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIarg1\fP Размер ручки\&. 
+.RE
+.PP
+
+.SS "void MainWindow::OpenMyFile (const QString &str)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::OpenMyFile\fP Загрузить изображение на полотно\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIstr\fP Абсолютный путь к файлу\&.
+.RE
+.PP
+Загружает изображение на полотно для дальнейшего его редактирования\&. 
+.SS "void MainWindow::SaveMyFile (const QString &str)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMainWindow::SaveMyFile\fP Сохранить изображение с полотна\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIstr\fP Абсолютный путь к файлу\&.
+.RE
+.PP
+Сохраняет изображение в формате BMP\&. 
+.SH "Данные класса"
+.PP 
+.SS "Ui::MainWindow* MainWindow::ui\fC [private]\fP"
+
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для rAstro из исходного текста\&.

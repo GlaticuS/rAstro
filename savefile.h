@@ -8,6 +8,9 @@ namespace Ui {
 class SaveFile;
 }
 
+/*!
+ * \brief The SaveFile class Реализует диалоговое окно сохранения файла.
+ */
 class SaveFile : public QDialog
 {
     Q_OBJECT

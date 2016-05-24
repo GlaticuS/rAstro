@@ -1,0 +1,91 @@
+\hypertarget{class_save_file}{\section{Класс Save\+File}
+\label{class_save_file}\index{Save\+File@{Save\+File}}
+}
+
+
+The \hyperlink{class_save_file}{Save\+File} class Реализует диалоговое окно сохранения файла.  
+
+
+
+
+{\ttfamily \#include $<$savefile.\+h$>$}
+
+
+
+Базовые классы\+:Q\+Dialog.
+
+\subsection*{Сигналы}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_save_file_a4df0bd52aab6682c0a80e47f1e66f9db}{File\+Path} (const Q\+String \&str)
+\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_save_file_a6b41835ff1cd13b9f81f0470f189acaa}{Save\+File} (Q\+Widget $\ast$parent=0)
+\item 
+\hyperlink{class_save_file_af144af2e58780d777827c9d705e44daa}{$\sim$\+Save\+File} ()
+\end{DoxyCompactItemize}
+\subsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_save_file_a74a877a8da4af716b28bd85ade6307ca}{Ok\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_save_file_a74a877a8da4af716b28bd85ade6307ca}{Save\+File\+::\+Ok\+Clicked} Действие при нажатии на кнопку Ok. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Save\+File $\ast$ \hyperlink{class_save_file_a9ee717810fa8bfb5235bdf7c65280b73}{ui}
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+The \hyperlink{class_save_file}{Save\+File} class Реализует диалоговое окно сохранения файла. 
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_save_file_a6b41835ff1cd13b9f81f0470f189acaa}{\index{Save\+File@{Save\+File}!Save\+File@{Save\+File}}
+\index{Save\+File@{Save\+File}!Save\+File@{Save\+File}}
+\subsubsection[{Save\+File}]{\setlength{\rightskip}{0pt plus 5cm}Save\+File\+::\+Save\+File (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_save_file_a6b41835ff1cd13b9f81f0470f189acaa}
+\hypertarget{class_save_file_af144af2e58780d777827c9d705e44daa}{\index{Save\+File@{Save\+File}!````~Save\+File@{$\sim$\+Save\+File}}
+\index{````~Save\+File@{$\sim$\+Save\+File}!Save\+File@{Save\+File}}
+\subsubsection[{$\sim$\+Save\+File}]{\setlength{\rightskip}{0pt plus 5cm}Save\+File\+::$\sim$\+Save\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_save_file_af144af2e58780d777827c9d705e44daa}
+
+
+\subsection{Методы}
+\hypertarget{class_save_file_a4df0bd52aab6682c0a80e47f1e66f9db}{\index{Save\+File@{Save\+File}!File\+Path@{File\+Path}}
+\index{File\+Path@{File\+Path}!Save\+File@{Save\+File}}
+\subsubsection[{File\+Path}]{\setlength{\rightskip}{0pt plus 5cm}void Save\+File\+::\+File\+Path (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_save_file_a4df0bd52aab6682c0a80e47f1e66f9db}
+\hypertarget{class_save_file_a74a877a8da4af716b28bd85ade6307ca}{\index{Save\+File@{Save\+File}!Ok\+Clicked@{Ok\+Clicked}}
+\index{Ok\+Clicked@{Ok\+Clicked}!Save\+File@{Save\+File}}
+\subsubsection[{Ok\+Clicked}]{\setlength{\rightskip}{0pt plus 5cm}void Save\+File\+::\+Ok\+Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}}\label{class_save_file_a74a877a8da4af716b28bd85ade6307ca}
+
+
+\hyperlink{class_save_file_a74a877a8da4af716b28bd85ade6307ca}{Save\+File\+::\+Ok\+Clicked} Действие при нажатии на кнопку Ok. 
+
+Вызывает сигнал File\+Path, куда записывает строку -\/ путь сохранения, полученную из области ввода. 
+
+\subsection{Данные класса}
+\hypertarget{class_save_file_a9ee717810fa8bfb5235bdf7c65280b73}{\index{Save\+File@{Save\+File}!ui@{ui}}
+\index{ui@{ui}!Save\+File@{Save\+File}}
+\subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Save\+File$\ast$ Save\+File\+::ui\hspace{0.3cm}{\ttfamily [private]}}}\label{class_save_file_a9ee717810fa8bfb5235bdf7c65280b73}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{savefile_8h}{savefile.\+h}\item 
+\hyperlink{savefile_8cpp}{savefile.\+cpp}\end{DoxyCompactItemize}

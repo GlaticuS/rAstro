@@ -1,0 +1,421 @@
+\hypertarget{class_drawing_area}{\section{Класс Drawing\+Area}
+\label{class_drawing_area}\index{Drawing\+Area@{Drawing\+Area}}
+}
+
+
+The \hyperlink{class_drawing_area}{Drawing\+Area} class Класс, относящийся к различного рода рисованию на полотне.  
+
+
+
+
+{\ttfamily \#include $<$drawingarea.\+h$>$}
+
+
+
+Базовые классы\+:Q\+Widget.
+
+\subsection*{Открытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_drawing_area_a8f00c8499212f1077d728fec8cbdfbe5}{clear\+Image} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_a8f00c8499212f1077d728fec8cbdfbe5}{Drawing\+Area\+::clear\+Image} Очистить полотно. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_area_a1fec4c43bc86139083c3dc6dfa11d30c}{fill\+Image} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_a1fec4c43bc86139083c3dc6dfa11d30c}{Drawing\+Area\+::fill\+Image} Залить полотно. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_drawing_area_a95168b77c2ff299f898fd0966aa21fd6}{Drawing\+Area} (Q\+Widget $\ast$parent=0)
+\item 
+void \hyperlink{class_drawing_area_afe42bde48cab8cefce39df6c6baffceb}{set\+Pen\+Color} (const Q\+Color \&new\+Color)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_afe42bde48cab8cefce39df6c6baffceb}{Drawing\+Area\+::set\+Pen\+Color} Установить цвет для рисования. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_area_ad79225ca90fc7d2bb3218f00fe3a1af1}{set\+Pen\+Width} (int new\+Width)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_ad79225ca90fc7d2bb3218f00fe3a1af1}{Drawing\+Area\+::set\+Pen\+Width} Установить толщину линий. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_area_a5c24d1b5264883bc95be51d0534776f8}{set\+Size} (const Q\+Size \&size)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_a5c24d1b5264883bc95be51d0534776f8}{Drawing\+Area\+::set\+Size} Назначить новый размер полотна. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_area_ae58ff40622f3795130c0d46bf6aa6efc}{set\+Tool} (int tool)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_ae58ff40622f3795130c0d46bf6aa6efc}{Drawing\+Area\+::set\+Tool} Установить номер инструмента для рисования. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_area_aa62f91056d26319b0c49a96df35c17f9}{set\+Image} (const Q\+Image \hyperlink{class_drawing_area_a420f3cdf3a9f6df2f65d3a1e1b4c9d4d}{my\+Image})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_aa62f91056d26319b0c49a96df35c17f9}{Drawing\+Area\+::set\+Image} Установить полотно. \end{DoxyCompactList}\item 
+bool \hyperlink{class_drawing_area_a727f9acc4083f97aa439eb6a6cb57adc}{is\+Modified} () const 
+\item 
+Q\+Color \hyperlink{class_drawing_area_a666bda2b4d8fc9bf5ea726f7c4b66df0}{pen\+Color} () const 
+\item 
+int \hyperlink{class_drawing_area_a2fbaa03b53f44c06190f72e6aad4f5fa}{pen\+Width} () const 
+\item 
+Q\+Size \hyperlink{class_drawing_area_af2a4193b01b408d8a9bbba44dfcefb77}{image\+Size} () const 
+\item 
+Q\+Image \hyperlink{class_drawing_area_a420f3cdf3a9f6df2f65d3a1e1b4c9d4d}{my\+Image} () const 
+\end{DoxyCompactItemize}
+\subsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_drawing_area_aa1fc7e0984fd5cb177956a894b106cf8}{mouse\+Press\+Event} (Q\+Mouse\+Event $\ast$event) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+D\+E
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_aa1fc7e0984fd5cb177956a894b106cf8}{Drawing\+Area\+::mouse\+Press\+Event} Действие при нажатии левой кнопки мыши. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_area_a4b4f2dbb4d819d5dd502142f4de4eee8}{mouse\+Move\+Event} (Q\+Mouse\+Event $\ast$event) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+D\+E
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_a4b4f2dbb4d819d5dd502142f4de4eee8}{Drawing\+Area\+::mouse\+Move\+Event} Действие при движении мышки \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_area_ad97c6c8e6e2f444f26b76b73ffa30eea}{mouse\+Release\+Event} (Q\+Mouse\+Event $\ast$event) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+D\+E
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_ad97c6c8e6e2f444f26b76b73ffa30eea}{Drawing\+Area\+::mouse\+Release\+Event} Действие при отпускании левой кнопки мышки. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_area_af35f261193f389b319661c5915ffe66f}{paint\+Event} (Q\+Paint\+Event $\ast$event) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+D\+E
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_af35f261193f389b319661c5915ffe66f}{Drawing\+Area\+::paint\+Event} Действие рисования. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_drawing_area_ac8a6033e1af8990786b43d080f273a95}{draw\+Line\+To} (const Q\+Point \&end\+Point)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_ac8a6033e1af8990786b43d080f273a95}{Drawing\+Area\+::draw\+Line\+To} Провести линию карандаша. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_area_abc85b3053af14aa794ac4fb86f5f4a20}{draw\+Figure} (Q\+Point \hyperlink{class_drawing_area_a10dc7b6502081bd5f9e08ae767f472b6}{top\+Left}, Q\+Point \hyperlink{class_drawing_area_a469a2ab81eb38f7ceb9ccfc56007303d}{bottom\+Right})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_abc85b3053af14aa794ac4fb86f5f4a20}{Drawing\+Area\+::draw\+Figure} Нарисовать фигуру. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_area_a7a9652945d3f4c2cc1a6179dcee29d60}{resize\+Image} (Q\+Image $\ast$\hyperlink{class_drawing_area_ae47382bceabaea64325ad6fa8d52c899}{image})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_a7a9652945d3f4c2cc1a6179dcee29d60}{Drawing\+Area\+::resize\+Image} Изменить размер полотна. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawing_area_ae6d08829a95a2af49b96defe6c867c5e}{fill\+Area} (const Q\+Point \&point, Q\+Color act)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_drawing_area_ae6d08829a95a2af49b96defe6c867c5e}{Drawing\+Area\+::fill\+Area} -\/ Залить область. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_drawing_area_aec08a04cf32f9c6ddda1c251b5a9533c}{modified}
+\item 
+bool \hyperlink{class_drawing_area_ac47e1a721ed4caaf7c993fde729676eb}{scribbling}
+\item 
+int \hyperlink{class_drawing_area_a65c9ad1a31ed5c13e8aae18c1603d111}{my\+Tool}
+\item 
+int \hyperlink{class_drawing_area_acc5ff29833418bc205ff697b933b57fa}{my\+Pen\+Width}
+\item 
+Q\+Point \hyperlink{class_drawing_area_a10dc7b6502081bd5f9e08ae767f472b6}{top\+Left}
+\item 
+Q\+Point \hyperlink{class_drawing_area_a469a2ab81eb38f7ceb9ccfc56007303d}{bottom\+Right}
+\item 
+Q\+Color \hyperlink{class_drawing_area_af15c369bbbaf2ec78a37dbbca638cf0b}{my\+Pen\+Color}
+\item 
+Q\+Image \hyperlink{class_drawing_area_ae47382bceabaea64325ad6fa8d52c899}{image}
+\item 
+Q\+Point \hyperlink{class_drawing_area_afac5aa0317efcc63962b1bc56e79312d}{last\+Point}
+\item 
+Q\+Size \hyperlink{class_drawing_area_aa317e568b35e031c1afc46e78d3b9ea3}{my\+Image\+Size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+The \hyperlink{class_drawing_area}{Drawing\+Area} class Класс, относящийся к различного рода рисованию на полотне. 
+
+Реализует функции Карандаш, Прямоугольник, Эллипс, Ластик. Можно выбрать цвет и толщину линий. 
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_drawing_area_a95168b77c2ff299f898fd0966aa21fd6}{\index{Drawing\+Area@{Drawing\+Area}!Drawing\+Area@{Drawing\+Area}}
+\index{Drawing\+Area@{Drawing\+Area}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{Drawing\+Area}]{\setlength{\rightskip}{0pt plus 5cm}Drawing\+Area\+::\+Drawing\+Area (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_drawing_area_a95168b77c2ff299f898fd0966aa21fd6}
+
+
+\subsection{Методы}
+\hypertarget{class_drawing_area_a8f00c8499212f1077d728fec8cbdfbe5}{\index{Drawing\+Area@{Drawing\+Area}!clear\+Image@{clear\+Image}}
+\index{clear\+Image@{clear\+Image}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{clear\+Image}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::clear\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_drawing_area_a8f00c8499212f1077d728fec8cbdfbe5}
+
+
+\hyperlink{class_drawing_area_a8f00c8499212f1077d728fec8cbdfbe5}{Drawing\+Area\+::clear\+Image} Очистить полотно. 
+
+Заливает всё полотно белым цветом. \hypertarget{class_drawing_area_abc85b3053af14aa794ac4fb86f5f4a20}{\index{Drawing\+Area@{Drawing\+Area}!draw\+Figure@{draw\+Figure}}
+\index{draw\+Figure@{draw\+Figure}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{draw\+Figure}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::draw\+Figure (
+\begin{DoxyParamCaption}
+\item[{Q\+Point}]{top\+Left, }
+\item[{Q\+Point}]{bottom\+Right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_abc85b3053af14aa794ac4fb86f5f4a20}
+
+
+\hyperlink{class_drawing_area_abc85b3053af14aa794ac4fb86f5f4a20}{Drawing\+Area\+::draw\+Figure} Нарисовать фигуру. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em top\+Left} & Координата верхнего левого угла. \\
+\hline
+{\em bottom\+Right} & Координата нижнего правого угла.\\
+\hline
+\end{DoxyParams}
+Рисует одну из двух фигур на выбор -\/ Прямоугольник или Эллипс. Выбор зависит от значения переменной my\+Tool. Координаты верхнего левого и нижнего правого угла задают размеры прямоугольника. Для эллипса задается размер прямоугольника, внутрь которого будет вписан эллипс. \hypertarget{class_drawing_area_ac8a6033e1af8990786b43d080f273a95}{\index{Drawing\+Area@{Drawing\+Area}!draw\+Line\+To@{draw\+Line\+To}}
+\index{draw\+Line\+To@{draw\+Line\+To}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{draw\+Line\+To}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::draw\+Line\+To (
+\begin{DoxyParamCaption}
+\item[{const Q\+Point \&}]{end\+Point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_ac8a6033e1af8990786b43d080f273a95}
+
+
+\hyperlink{class_drawing_area_ac8a6033e1af8990786b43d080f273a95}{Drawing\+Area\+::draw\+Line\+To} Провести линию карандаша. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em end\+Point} & Конечная точка рисования.\\
+\hline
+\end{DoxyParams}
+Рисует линию от начальной точки до конечной, используя цвет и ширину линий, заданные пользователем. Рисует попиксельно. \hypertarget{class_drawing_area_ae6d08829a95a2af49b96defe6c867c5e}{\index{Drawing\+Area@{Drawing\+Area}!fill\+Area@{fill\+Area}}
+\index{fill\+Area@{fill\+Area}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{fill\+Area}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::fill\+Area (
+\begin{DoxyParamCaption}
+\item[{const Q\+Point \&}]{point, }
+\item[{Q\+Color}]{act}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_ae6d08829a95a2af49b96defe6c867c5e}
+
+
+\hyperlink{class_drawing_area_ae6d08829a95a2af49b96defe6c867c5e}{Drawing\+Area\+::fill\+Area} -\/ Залить область. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em point} & Точка начала заливки. \\
+\hline
+{\em act} & Цвет области, которую нужно залить.\\
+\hline
+\end{DoxyParams}
+Заливает область пользовательским цветом, ограниченную линией другого цвета. Для заливки используется flood\+Fill алгоритм, использующий очередь из точек и продвигающийся по четырем направлениям. \hypertarget{class_drawing_area_a1fec4c43bc86139083c3dc6dfa11d30c}{\index{Drawing\+Area@{Drawing\+Area}!fill\+Image@{fill\+Image}}
+\index{fill\+Image@{fill\+Image}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{fill\+Image}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::fill\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_drawing_area_a1fec4c43bc86139083c3dc6dfa11d30c}
+
+
+\hyperlink{class_drawing_area_a1fec4c43bc86139083c3dc6dfa11d30c}{Drawing\+Area\+::fill\+Image} Залить полотно. 
+
+Заливает всё полотно пользовательским цветом. \hypertarget{class_drawing_area_af2a4193b01b408d8a9bbba44dfcefb77}{\index{Drawing\+Area@{Drawing\+Area}!image\+Size@{image\+Size}}
+\index{image\+Size@{image\+Size}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{image\+Size}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Size Drawing\+Area\+::image\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_drawing_area_af2a4193b01b408d8a9bbba44dfcefb77}
+\hypertarget{class_drawing_area_a727f9acc4083f97aa439eb6a6cb57adc}{\index{Drawing\+Area@{Drawing\+Area}!is\+Modified@{is\+Modified}}
+\index{is\+Modified@{is\+Modified}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{is\+Modified}]{\setlength{\rightskip}{0pt plus 5cm}bool Drawing\+Area\+::is\+Modified (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_drawing_area_a727f9acc4083f97aa439eb6a6cb57adc}
+\hypertarget{class_drawing_area_a4b4f2dbb4d819d5dd502142f4de4eee8}{\index{Drawing\+Area@{Drawing\+Area}!mouse\+Move\+Event@{mouse\+Move\+Event}}
+\index{mouse\+Move\+Event@{mouse\+Move\+Event}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{mouse\+Move\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::mouse\+Move\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_drawing_area_a4b4f2dbb4d819d5dd502142f4de4eee8}
+
+
+\hyperlink{class_drawing_area_a4b4f2dbb4d819d5dd502142f4de4eee8}{Drawing\+Area\+::mouse\+Move\+Event} Действие при движении мышки 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em event} & Элемент действия.\\
+\hline
+\end{DoxyParams}
+Движение мышки нам необходимо при рисовании карандашом. \hypertarget{class_drawing_area_aa1fc7e0984fd5cb177956a894b106cf8}{\index{Drawing\+Area@{Drawing\+Area}!mouse\+Press\+Event@{mouse\+Press\+Event}}
+\index{mouse\+Press\+Event@{mouse\+Press\+Event}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{mouse\+Press\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::mouse\+Press\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_drawing_area_aa1fc7e0984fd5cb177956a894b106cf8}
+
+
+\hyperlink{class_drawing_area_aa1fc7e0984fd5cb177956a894b106cf8}{Drawing\+Area\+::mouse\+Press\+Event} Действие при нажатии левой кнопки мыши. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em event} & Элемент действия.\\
+\hline
+\end{DoxyParams}
+Проверяет переменную my\+Tool и по её номеру подбирает действие, которое следует совершить с изображением. Объявляет переменную scribbling == true и задаёт некоторые переменные, впоследствие использующиеся функциями инструментов. \hypertarget{class_drawing_area_ad97c6c8e6e2f444f26b76b73ffa30eea}{\index{Drawing\+Area@{Drawing\+Area}!mouse\+Release\+Event@{mouse\+Release\+Event}}
+\index{mouse\+Release\+Event@{mouse\+Release\+Event}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{mouse\+Release\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::mouse\+Release\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_drawing_area_ad97c6c8e6e2f444f26b76b73ffa30eea}
+
+
+\hyperlink{class_drawing_area_ad97c6c8e6e2f444f26b76b73ffa30eea}{Drawing\+Area\+::mouse\+Release\+Event} Действие при отпускании левой кнопки мышки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em event} & Элемент действия\\
+\hline
+\end{DoxyParams}
+Проверяет переменную my\+Tool и по её номеру подбирает действие, которое следует совершить с изображением. Задаёт функцию для обработки действия и после её совершения объявляет переменную scribbling = false. \hypertarget{class_drawing_area_a420f3cdf3a9f6df2f65d3a1e1b4c9d4d}{\index{Drawing\+Area@{Drawing\+Area}!my\+Image@{my\+Image}}
+\index{my\+Image@{my\+Image}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{my\+Image}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Drawing\+Area\+::my\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_drawing_area_a420f3cdf3a9f6df2f65d3a1e1b4c9d4d}
+\hypertarget{class_drawing_area_af35f261193f389b319661c5915ffe66f}{\index{Drawing\+Area@{Drawing\+Area}!paint\+Event@{paint\+Event}}
+\index{paint\+Event@{paint\+Event}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{paint\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::paint\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Paint\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_drawing_area_af35f261193f389b319661c5915ffe66f}
+
+
+\hyperlink{class_drawing_area_af35f261193f389b319661c5915ffe66f}{Drawing\+Area\+::paint\+Event} Действие рисования. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em event} & Элемент действия. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawing_area_a666bda2b4d8fc9bf5ea726f7c4b66df0}{\index{Drawing\+Area@{Drawing\+Area}!pen\+Color@{pen\+Color}}
+\index{pen\+Color@{pen\+Color}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{pen\+Color}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Color Drawing\+Area\+::pen\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_drawing_area_a666bda2b4d8fc9bf5ea726f7c4b66df0}
+\hypertarget{class_drawing_area_a2fbaa03b53f44c06190f72e6aad4f5fa}{\index{Drawing\+Area@{Drawing\+Area}!pen\+Width@{pen\+Width}}
+\index{pen\+Width@{pen\+Width}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{pen\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Drawing\+Area\+::pen\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_drawing_area_a2fbaa03b53f44c06190f72e6aad4f5fa}
+\hypertarget{class_drawing_area_a7a9652945d3f4c2cc1a6179dcee29d60}{\index{Drawing\+Area@{Drawing\+Area}!resize\+Image@{resize\+Image}}
+\index{resize\+Image@{resize\+Image}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{resize\+Image}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::resize\+Image (
+\begin{DoxyParamCaption}
+\item[{Q\+Image $\ast$}]{image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_a7a9652945d3f4c2cc1a6179dcee29d60}
+
+
+\hyperlink{class_drawing_area_a7a9652945d3f4c2cc1a6179dcee29d60}{Drawing\+Area\+::resize\+Image} Изменить размер полотна. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em image} & Полотно.\\
+\hline
+\end{DoxyParams}
+Изменяет размер полотна на новый, заданный в my\+Image\+Size. \hypertarget{class_drawing_area_aa62f91056d26319b0c49a96df35c17f9}{\index{Drawing\+Area@{Drawing\+Area}!set\+Image@{set\+Image}}
+\index{set\+Image@{set\+Image}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{set\+Image}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::set\+Image (
+\begin{DoxyParamCaption}
+\item[{const Q\+Image}]{my\+Image}
+\end{DoxyParamCaption}
+)}}\label{class_drawing_area_aa62f91056d26319b0c49a96df35c17f9}
+
+
+\hyperlink{class_drawing_area_aa62f91056d26319b0c49a96df35c17f9}{Drawing\+Area\+::set\+Image} Установить полотно. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em my\+Image} & Полотно. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawing_area_afe42bde48cab8cefce39df6c6baffceb}{\index{Drawing\+Area@{Drawing\+Area}!set\+Pen\+Color@{set\+Pen\+Color}}
+\index{set\+Pen\+Color@{set\+Pen\+Color}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{set\+Pen\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::set\+Pen\+Color (
+\begin{DoxyParamCaption}
+\item[{const Q\+Color \&}]{new\+Color}
+\end{DoxyParamCaption}
+)}}\label{class_drawing_area_afe42bde48cab8cefce39df6c6baffceb}
+
+
+\hyperlink{class_drawing_area_afe42bde48cab8cefce39df6c6baffceb}{Drawing\+Area\+::set\+Pen\+Color} Установить цвет для рисования. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em new\+Color} & Новый цвет, выбираемый в специальном диалоговом окне. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawing_area_ad79225ca90fc7d2bb3218f00fe3a1af1}{\index{Drawing\+Area@{Drawing\+Area}!set\+Pen\+Width@{set\+Pen\+Width}}
+\index{set\+Pen\+Width@{set\+Pen\+Width}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{set\+Pen\+Width}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::set\+Pen\+Width (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Width}
+\end{DoxyParamCaption}
+)}}\label{class_drawing_area_ad79225ca90fc7d2bb3218f00fe3a1af1}
+
+
+\hyperlink{class_drawing_area_ad79225ca90fc7d2bb3218f00fe3a1af1}{Drawing\+Area\+::set\+Pen\+Width} Установить толщину линий. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em new\+Width} & Новая ширина, устанавливаемая с помощью счётчика. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_drawing_area_a5c24d1b5264883bc95be51d0534776f8}{\index{Drawing\+Area@{Drawing\+Area}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{set\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{const Q\+Size \&}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_drawing_area_a5c24d1b5264883bc95be51d0534776f8}
+
+
+\hyperlink{class_drawing_area_a5c24d1b5264883bc95be51d0534776f8}{Drawing\+Area\+::set\+Size} Назначить новый размер полотна. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em size} & Размер\\
+\hline
+\end{DoxyParams}
+Определяет переменную my\+Image\+Size как size и изменяет размер полотна посредством функции resize\+Image. \hypertarget{class_drawing_area_ae58ff40622f3795130c0d46bf6aa6efc}{\index{Drawing\+Area@{Drawing\+Area}!set\+Tool@{set\+Tool}}
+\index{set\+Tool@{set\+Tool}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{set\+Tool}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Area\+::set\+Tool (
+\begin{DoxyParamCaption}
+\item[{int}]{tool}
+\end{DoxyParamCaption}
+)}}\label{class_drawing_area_ae58ff40622f3795130c0d46bf6aa6efc}
+
+
+\hyperlink{class_drawing_area_ae58ff40622f3795130c0d46bf6aa6efc}{Drawing\+Area\+::set\+Tool} Установить номер инструмента для рисования. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em tool} & Номер инструмента для рисования. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Данные класса}
+\hypertarget{class_drawing_area_a469a2ab81eb38f7ceb9ccfc56007303d}{\index{Drawing\+Area@{Drawing\+Area}!bottom\+Right@{bottom\+Right}}
+\index{bottom\+Right@{bottom\+Right}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{bottom\+Right}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Drawing\+Area\+::bottom\+Right\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_a469a2ab81eb38f7ceb9ccfc56007303d}
+\hypertarget{class_drawing_area_ae47382bceabaea64325ad6fa8d52c899}{\index{Drawing\+Area@{Drawing\+Area}!image@{image}}
+\index{image@{image}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image Drawing\+Area\+::image\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_ae47382bceabaea64325ad6fa8d52c899}
+\hypertarget{class_drawing_area_afac5aa0317efcc63962b1bc56e79312d}{\index{Drawing\+Area@{Drawing\+Area}!last\+Point@{last\+Point}}
+\index{last\+Point@{last\+Point}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{last\+Point}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Drawing\+Area\+::last\+Point\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_afac5aa0317efcc63962b1bc56e79312d}
+\hypertarget{class_drawing_area_aec08a04cf32f9c6ddda1c251b5a9533c}{\index{Drawing\+Area@{Drawing\+Area}!modified@{modified}}
+\index{modified@{modified}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{modified}]{\setlength{\rightskip}{0pt plus 5cm}bool Drawing\+Area\+::modified\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_aec08a04cf32f9c6ddda1c251b5a9533c}
+\hypertarget{class_drawing_area_aa317e568b35e031c1afc46e78d3b9ea3}{\index{Drawing\+Area@{Drawing\+Area}!my\+Image\+Size@{my\+Image\+Size}}
+\index{my\+Image\+Size@{my\+Image\+Size}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{my\+Image\+Size}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Size Drawing\+Area\+::my\+Image\+Size\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_aa317e568b35e031c1afc46e78d3b9ea3}
+\hypertarget{class_drawing_area_af15c369bbbaf2ec78a37dbbca638cf0b}{\index{Drawing\+Area@{Drawing\+Area}!my\+Pen\+Color@{my\+Pen\+Color}}
+\index{my\+Pen\+Color@{my\+Pen\+Color}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{my\+Pen\+Color}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Color Drawing\+Area\+::my\+Pen\+Color\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_af15c369bbbaf2ec78a37dbbca638cf0b}
+\hypertarget{class_drawing_area_acc5ff29833418bc205ff697b933b57fa}{\index{Drawing\+Area@{Drawing\+Area}!my\+Pen\+Width@{my\+Pen\+Width}}
+\index{my\+Pen\+Width@{my\+Pen\+Width}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{my\+Pen\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Drawing\+Area\+::my\+Pen\+Width\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_acc5ff29833418bc205ff697b933b57fa}
+\hypertarget{class_drawing_area_a65c9ad1a31ed5c13e8aae18c1603d111}{\index{Drawing\+Area@{Drawing\+Area}!my\+Tool@{my\+Tool}}
+\index{my\+Tool@{my\+Tool}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{my\+Tool}]{\setlength{\rightskip}{0pt plus 5cm}int Drawing\+Area\+::my\+Tool\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_a65c9ad1a31ed5c13e8aae18c1603d111}
+\hypertarget{class_drawing_area_ac47e1a721ed4caaf7c993fde729676eb}{\index{Drawing\+Area@{Drawing\+Area}!scribbling@{scribbling}}
+\index{scribbling@{scribbling}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{scribbling}]{\setlength{\rightskip}{0pt plus 5cm}bool Drawing\+Area\+::scribbling\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_ac47e1a721ed4caaf7c993fde729676eb}
+\hypertarget{class_drawing_area_a10dc7b6502081bd5f9e08ae767f472b6}{\index{Drawing\+Area@{Drawing\+Area}!top\+Left@{top\+Left}}
+\index{top\+Left@{top\+Left}!Drawing\+Area@{Drawing\+Area}}
+\subsubsection[{top\+Left}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Point Drawing\+Area\+::top\+Left\hspace{0.3cm}{\ttfamily [private]}}}\label{class_drawing_area_a10dc7b6502081bd5f9e08ae767f472b6}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{drawingarea_8h}{drawingarea.\+h}\item 
+\hyperlink{drawingarea_8cpp}{drawingarea.\+cpp}\end{DoxyCompactItemize}

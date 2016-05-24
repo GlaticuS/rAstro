@@ -16,8 +16,14 @@ DialogOpen::~DialogOpen()
     delete ui;
 }
 
+/*!
+ * \brief DialogOpen::OkClicked Действие при нажатии на клавишу Ok.
+ * При нажатии на клавишу, считывается путь к файлу из строки ввода и отправляется на
+ * дальнейшую обработку в FilePath.
+ */
 void DialogOpen::OkClicked()
 {
     emit FilePath(ui->lineEdit->text());
+
     close();
 }

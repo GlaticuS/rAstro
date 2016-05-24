@@ -16,6 +16,11 @@ SaveFile::~SaveFile()
     delete ui;
 }
 
+/*!
+ * \brief SaveFile::OkClicked Действие при нажатии на кнопку Ok.
+ *
+ * Вызывает сигнал FilePath, куда записывает строку - путь сохранения, полученную из области ввода.
+ */
 void SaveFile::OkClicked()
 {
     emit FilePath(ui->lineEdit->text());

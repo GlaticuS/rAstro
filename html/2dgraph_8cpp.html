@@ -1,0 +1,1225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>rAstro: Файл 2dgraph.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">rAstro
+   &#160;<span id="projectnumber">0.5</span>
+   </div>
+   <div id="projectbrief">simple bitmap graphic redactor</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="pages.html"><span>Описания</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Макросы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Страницы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл 2dgraph.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_b_i_t_m_a_p_f_i_l_e_h_e_a_d_e_r.html">tagBITMAPFILEHEADER</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_b_i_t_m_a_p_i_n_f_o_h_e_a_d_e_r.html">tagBITMAPINFOHEADER</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtag_r_g_b_t_r_i_p_l_e.html">tagRGBTRIPLE</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_g_b__data.html">RGB_data</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_b_f_h.html">BFH</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_b_i_h.html">BIH</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a9aa60e1ead64be77ad551e745cbfd4d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a9aa60e1ead64be77ad551e745cbfd4d3">WINAPI</a></td></tr>
+<tr class="separator:a9aa60e1ead64be77ad551e745cbfd4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99ded389af74001a6298fc9e44e74e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#ab99ded389af74001a6298fc9e44e74e5">MAX_PATH</a>&#160;&#160;&#160;PATH_MAX</td></tr>
+<tr class="separator:ab99ded389af74001a6298fc9e44e74e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6afabdc09a49a433ee19d8a9486056d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#ac6afabdc09a49a433ee19d8a9486056d">min</a>(a, b)&#160;&#160;&#160;(((a) &lt; (b)) ? (a) : (b))</td></tr>
+<tr class="separator:ac6afabdc09a49a433ee19d8a9486056d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe776513b24d84b39af8ab0930fef7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#affe776513b24d84b39af8ab0930fef7f">max</a>(a, b)&#160;&#160;&#160;(((a) &gt; (b)) ? (a) : (b))</td></tr>
+<tr class="separator:affe776513b24d84b39af8ab0930fef7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a397080a7c61d90f2fc7d7d085b903cf3"><td class="memItemLeft" align="right" valign="top">typedef short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a397080a7c61d90f2fc7d7d085b903cf3">WCHAR</a></td></tr>
+<tr class="separator:a397080a7c61d90f2fc7d7d085b903cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8c0374618b33785ccb02f74bcfebc46"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#aa8c0374618b33785ccb02f74bcfebc46">HANDLE</a></td></tr>
+<tr class="separator:aa8c0374618b33785ccb02f74bcfebc46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ae1dab0fb4b072a66584546209e7d58"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a></td></tr>
+<tr class="separator:a4ae1dab0fb4b072a66584546209e7d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a197942eefa7db30960ae396d68339b97"><td class="memItemLeft" align="right" valign="top">typedef unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a></td></tr>
+<tr class="separator:a197942eefa7db30960ae396d68339b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3247c51e4e3de674affb32998e133e2"><td class="memItemLeft" align="right" valign="top">typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#ac3247c51e4e3de674affb32998e133e2">BOOL</a></td></tr>
+<tr class="separator:ac3247c51e4e3de674affb32998e133e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9154c0d0c21af4686624543215b4e5f2"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a9154c0d0c21af4686624543215b4e5f2">LONG</a></td></tr>
+<tr class="separator:a9154c0d0c21af4686624543215b4e5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8186d9b9b7880309c27230bbb5e69d"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a></td></tr>
+<tr class="separator:a0c8186d9b9b7880309c27230bbb5e69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d75932431ade21e7752c9da7e8b55c"><td class="memItemLeft" align="right" valign="top">typedef std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a></td></tr>
+<tr class="separator:a28d75932431ade21e7752c9da7e8b55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34bb4046ae84db7dd62786842e44a48a"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structtag_r_g_b_t_r_i_p_l_e.html">tagRGBTRIPLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a></td></tr>
+<tr class="separator:a34bb4046ae84db7dd62786842e44a48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a2882fd0aca9ef5f3175025be76f072dc"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structtag_b_i_t_m_a_p_f_i_l_e_h_e_a_d_e_r.html">tagBITMAPFILEHEADER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a2882fd0aca9ef5f3175025be76f072dc">__attribute__</a> ((packed)) BITMAPFILEHEADER</td></tr>
+<tr class="separator:a2882fd0aca9ef5f3175025be76f072dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400185c78d1450142a072186bf000245"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a400185c78d1450142a072186bf000245">loadBMP</a> (const char *fname, int &amp;mx, int &amp;my)</td></tr>
+<tr class="separator:a400185c78d1450142a072186bf000245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1e69b0332bc0788e35261f0256567bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#aa1e69b0332bc0788e35261f0256567bc">normalizeRGBT</a> (int rgbtRed, int rgbtGreen, int rgbtBlue)</td></tr>
+<tr class="separator:aa1e69b0332bc0788e35261f0256567bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b90475fd0a113801f30b8e3ccfebb67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a4b90475fd0a113801f30b8e3ccfebb67">saveBMP</a> (const char *fname, <a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *v, int mx, int my)</td></tr>
+<tr class="separator:a4b90475fd0a113801f30b8e3ccfebb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4095deef06785e6f99a1122f935319c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#ae4095deef06785e6f99a1122f935319c">ex</a> (<a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *v, int &amp;mx, int &amp;my, float x1, float y1)</td></tr>
+<tr class="separator:ae4095deef06785e6f99a1122f935319c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28bbe839827cbfcb9ff40c8b81b7a878"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a28bbe839827cbfcb9ff40c8b81b7a878">reflectionY</a> (<a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *v, int mx, int my)</td></tr>
+<tr class="separator:a28bbe839827cbfcb9ff40c8b81b7a878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9783a95dc81cc5e0083f0da01108e561"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a9783a95dc81cc5e0083f0da01108e561">reflectionX</a> (<a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *v, int mx, int my)</td></tr>
+<tr class="separator:a9783a95dc81cc5e0083f0da01108e561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade28ae5150079fca79407a61cae0c674"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#ade28ae5150079fca79407a61cae0c674">reflectionXY</a> (<a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *v, int mx, int my)</td></tr>
+<tr class="separator:ade28ae5150079fca79407a61cae0c674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963425815db83ff72ac26266fc1aee87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a963425815db83ff72ac26266fc1aee87">rot</a> (<a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *v, int &amp;mx, int &amp;my, int r)</td></tr>
+<tr class="separator:a963425815db83ff72ac26266fc1aee87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723cdf92228b1f795575218321222df3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a723cdf92228b1f795575218321222df3">matrixConvolution</a> (<a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *v, int mx, int my, int matrix[3][3], int div)</td></tr>
+<tr class="separator:a723cdf92228b1f795575218321222df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a296014bc5bde4198fbae0f6549ff6b18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a296014bc5bde4198fbae0f6549ff6b18">matrixConvolution1</a> (<a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *v, int mx, int my, double matrix[3][3], int div)</td></tr>
+<tr class="separator:a296014bc5bde4198fbae0f6549ff6b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49f5f96cf49531216e536181af31768"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#ab49f5f96cf49531216e536181af31768">scale</a> (<a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *v, int &amp;mx, int &amp;my, float z)</td></tr>
+<tr class="separator:ab49f5f96cf49531216e536181af31768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9faa08e74658412d6175b5c0361efeb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a9faa08e74658412d6175b5c0361efeb5">myFlipHorizontal</a> (const char filename[])</td></tr>
+<tr class="separator:a9faa08e74658412d6175b5c0361efeb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa77e2042c8ca2b051991fccaec779b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a7aa77e2042c8ca2b051991fccaec779b">myFlipVertical</a> (const char filename[])</td></tr>
+<tr class="separator:a7aa77e2042c8ca2b051991fccaec779b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf958e2b498a89bb9f93710d09f1892"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#acbf958e2b498a89bb9f93710d09f1892">myFlipBoth</a> (const char filename[])</td></tr>
+<tr class="separator:acbf958e2b498a89bb9f93710d09f1892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab864c0081fba51deb45fa02d7801b835"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#ab864c0081fba51deb45fa02d7801b835">myRotate</a> (const char filename[])</td></tr>
+<tr class="separator:ab864c0081fba51deb45fa02d7801b835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4dd09a2a58d2af9fc050cab075de1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#afe4dd09a2a58d2af9fc050cab075de1d">myBlurFilter</a> (const char filename[])</td></tr>
+<tr class="separator:afe4dd09a2a58d2af9fc050cab075de1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c9463dc5bd87ca70fa1f0bcb7a6b627"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a9c9463dc5bd87ca70fa1f0bcb7a6b627">mySharpnessFilter</a> (const char filename[])</td></tr>
+<tr class="separator:a9c9463dc5bd87ca70fa1f0bcb7a6b627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792a0b4015995c0143783b1be17dc416"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a792a0b4015995c0143783b1be17dc416">myBrightFilter</a> (const char filename[])</td></tr>
+<tr class="separator:a792a0b4015995c0143783b1be17dc416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7dbf3de4b34e7e8c37be7ff75fa3ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a6e7dbf3de4b34e7e8c37be7ff75fa3ec">myDarkFilter</a> (const char filename[])</td></tr>
+<tr class="separator:a6e7dbf3de4b34e7e8c37be7ff75fa3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258f2f34db28e04b45d7b0258d6b55c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a258f2f34db28e04b45d7b0258d6b55c1">myZoom</a> (const char filename[], float z)</td></tr>
+<tr class="separator:a258f2f34db28e04b45d7b0258d6b55c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a2e08c96a9eaebbbb6e5c5f719e61f54a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a2e08c96a9eaebbbb6e5c5f719e61f54a">bfType</a></td></tr>
+<tr class="separator:a2e08c96a9eaebbbb6e5c5f719e61f54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c060f44e25951ed06806c135198ac5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a66c060f44e25951ed06806c135198ac5">bfSize</a></td></tr>
+<tr class="separator:a66c060f44e25951ed06806c135198ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a45e3d4648d75824af5851956a3b405"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a3a45e3d4648d75824af5851956a3b405">bfReserved1</a></td></tr>
+<tr class="separator:a3a45e3d4648d75824af5851956a3b405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1356b84e1bd33f1235e33a52d4b9fc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#ab1356b84e1bd33f1235e33a52d4b9fc5">bfReserved2</a></td></tr>
+<tr class="separator:ab1356b84e1bd33f1235e33a52d4b9fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcffce0ae4e6a7389049bb1ea6528524"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#abcffce0ae4e6a7389049bb1ea6528524">bfOffBits</a></td></tr>
+<tr class="separator:abcffce0ae4e6a7389049bb1ea6528524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ce9dde483333c5b035722f47d2a2ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#ad3ce9dde483333c5b035722f47d2a2ae">biSize</a></td></tr>
+<tr class="separator:ad3ce9dde483333c5b035722f47d2a2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3437f5f085fe70244a4fe9988d23c7ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a9154c0d0c21af4686624543215b4e5f2">LONG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a3437f5f085fe70244a4fe9988d23c7ff">biWidth</a></td></tr>
+<tr class="separator:a3437f5f085fe70244a4fe9988d23c7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbcc6b14c1ec98073e0a715d93aa16c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a9154c0d0c21af4686624543215b4e5f2">LONG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#afbcc6b14c1ec98073e0a715d93aa16c0">biHeight</a></td></tr>
+<tr class="separator:afbcc6b14c1ec98073e0a715d93aa16c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3feb168d4ce19efb710a90e1548965f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a3feb168d4ce19efb710a90e1548965f9">biPlanes</a></td></tr>
+<tr class="separator:a3feb168d4ce19efb710a90e1548965f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff609290aba8cb46163cdc06a9209f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a9ff609290aba8cb46163cdc06a9209f9">biBitCount</a></td></tr>
+<tr class="separator:a9ff609290aba8cb46163cdc06a9209f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aeab2473b1f1f60a95f6a33dbccb94b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a4aeab2473b1f1f60a95f6a33dbccb94b">biCompress</a></td></tr>
+<tr class="separator:a4aeab2473b1f1f60a95f6a33dbccb94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6b3d68595578ca3ad851ab7dbcad36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a9a6b3d68595578ca3ad851ab7dbcad36">biSizeImage</a></td></tr>
+<tr class="separator:a9a6b3d68595578ca3ad851ab7dbcad36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac63e53e1c4cc971f83c4eb9a31373e41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a9154c0d0c21af4686624543215b4e5f2">LONG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#ac63e53e1c4cc971f83c4eb9a31373e41">biXPelsPerMeter</a></td></tr>
+<tr class="separator:ac63e53e1c4cc971f83c4eb9a31373e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2cce74d47156dccda908e8c9d3e2f08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a9154c0d0c21af4686624543215b4e5f2">LONG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#aa2cce74d47156dccda908e8c9d3e2f08">biYPelsPerMeter</a></td></tr>
+<tr class="separator:aa2cce74d47156dccda908e8c9d3e2f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e8152228ab477c06155122b084f96a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a6e8152228ab477c06155122b084f96a6">biClrUsed</a></td></tr>
+<tr class="separator:a6e8152228ab477c06155122b084f96a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b45d92442980953be3df65282aa4a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#a18b45d92442980953be3df65282aa4a8">biClrImportant</a></td></tr>
+<tr class="separator:a18b45d92442980953be3df65282aa4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe6ea397638325311d0131c44d4f1c8d"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_b_f_h.html">BFH</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#afe6ea397638325311d0131c44d4f1c8d">bh</a></td></tr>
+<tr class="separator:afe6ea397638325311d0131c44d4f1c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9fa5390eb2bc31722a2ca297d79a1cc"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_b_i_h.html">BIH</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="2dgraph_8cpp.html#ad9fa5390eb2bc31722a2ca297d79a1cc">bih</a></td></tr>
+<tr class="separator:ad9fa5390eb2bc31722a2ca297d79a1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a class="anchor" id="affe776513b24d84b39af8ab0930fef7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define max</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((a) &gt; (b)) ? (a) : (b))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab99ded389af74001a6298fc9e44e74e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_PATH&#160;&#160;&#160;PATH_MAX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac6afabdc09a49a433ee19d8a9486056d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define min</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((a) &lt; (b)) ? (a) : (b))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9aa60e1ead64be77ad551e745cbfd4d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WINAPI</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Типы</h2>
+<a class="anchor" id="ac3247c51e4e3de674affb32998e133e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned int <a class="el" href="2dgraph_8cpp.html#ac3247c51e4e3de674affb32998e133e2">BOOL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4ae1dab0fb4b072a66584546209e7d58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char <a class="el" href="2dgraph_8cpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0c8186d9b9b7880309c27230bbb5e69d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char <a class="el" href="2dgraph_8cpp.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a28d75932431ade21e7752c9da7e8b55c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::uint32_t <a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa8c0374618b33785ccb02f74bcfebc46"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void* <a class="el" href="2dgraph_8cpp.html#aa8c0374618b33785ccb02f74bcfebc46">HANDLE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9154c0d0c21af4686624543215b4e5f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int <a class="el" href="2dgraph_8cpp.html#a9154c0d0c21af4686624543215b4e5f2">LONG</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a34bb4046ae84db7dd62786842e44a48a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structtag_r_g_b_t_r_i_p_l_e.html">tagRGBTRIPLE</a>  <a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a397080a7c61d90f2fc7d7d085b903cf3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef short <a class="el" href="2dgraph_8cpp.html#a397080a7c61d90f2fc7d7d085b903cf3">WCHAR</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a197942eefa7db30960ae396d68339b97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned short <a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a class="anchor" id="a2882fd0aca9ef5f3175025be76f072dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structtag_b_i_t_m_a_p_i_n_f_o_h_e_a_d_e_r.html">tagBITMAPINFOHEADER</a> __attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(packed)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae4095deef06785e6f99a1122f935319c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a>* ex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>my</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a400185c78d1450142a072186bf000245"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a>* loadBMP </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>my</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a723cdf92228b1f795575218321222df3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a>* matrixConvolution </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>my</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>matrix</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>div</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a296014bc5bde4198fbae0f6549ff6b18"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a>* matrixConvolution1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>my</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>matrix</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>div</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afe4dd09a2a58d2af9fc050cab075de1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void myBlurFilter </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a792a0b4015995c0143783b1be17dc416"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void myBrightFilter </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6e7dbf3de4b34e7e8c37be7ff75fa3ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void myDarkFilter </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acbf958e2b498a89bb9f93710d09f1892"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void myFlipBoth </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9faa08e74658412d6175b5c0361efeb5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void myFlipHorizontal </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7aa77e2042c8ca2b051991fccaec779b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void myFlipVertical </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab864c0081fba51deb45fa02d7801b835"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void myRotate </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9c9463dc5bd87ca70fa1f0bcb7a6b627"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mySharpnessFilter </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a258f2f34db28e04b45d7b0258d6b55c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void myZoom </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa1e69b0332bc0788e35261f0256567bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> normalizeRGBT </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rgbtRed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rgbtGreen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rgbtBlue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9783a95dc81cc5e0083f0da01108e561"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a>* reflectionX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>my</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ade28ae5150079fca79407a61cae0c674"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a>* reflectionXY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>my</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a28bbe839827cbfcb9ff40c8b81b7a878"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a>* reflectionY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>my</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a963425815db83ff72ac26266fc1aee87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a>* rot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>my</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4b90475fd0a113801f30b8e3ccfebb67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool saveBMP </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>my</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab49f5f96cf49531216e536181af31768"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a>* scale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="2dgraph_8cpp.html#a34bb4046ae84db7dd62786842e44a48a">RGBTRIPLE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>my</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a class="anchor" id="abcffce0ae4e6a7389049bb1ea6528524"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a> bfOffBits</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3a45e3d4648d75824af5851956a3b405"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> bfReserved1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab1356b84e1bd33f1235e33a52d4b9fc5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> bfReserved2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a66c060f44e25951ed06806c135198ac5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a> bfSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2e08c96a9eaebbbb6e5c5f719e61f54a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> bfType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afe6ea397638325311d0131c44d4f1c8d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_b_f_h.html">BFH</a>  bh</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9ff609290aba8cb46163cdc06a9209f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> biBitCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a18b45d92442980953be3df65282aa4a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a> biClrImportant</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6e8152228ab477c06155122b084f96a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a> biClrUsed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4aeab2473b1f1f60a95f6a33dbccb94b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a> biCompress</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad9fa5390eb2bc31722a2ca297d79a1cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_b_i_h.html">BIH</a>  bih</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afbcc6b14c1ec98073e0a715d93aa16c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a9154c0d0c21af4686624543215b4e5f2">LONG</a> biHeight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3feb168d4ce19efb710a90e1548965f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> biPlanes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad3ce9dde483333c5b035722f47d2a2ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a> biSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9a6b3d68595578ca3ad851ab7dbcad36"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a28d75932431ade21e7752c9da7e8b55c">DWORD</a> biSizeImage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3437f5f085fe70244a4fe9988d23c7ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a9154c0d0c21af4686624543215b4e5f2">LONG</a> biWidth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac63e53e1c4cc971f83c4eb9a31373e41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a9154c0d0c21af4686624543215b4e5f2">LONG</a> biXPelsPerMeter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa2cce74d47156dccda908e8c9d3e2f08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="2dgraph_8cpp.html#a9154c0d0c21af4686624543215b4e5f2">LONG</a> biYPelsPerMeter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по rAstro. Последние изменения: Вт 24 Май 2016 23:38:53. Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

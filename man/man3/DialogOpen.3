@@ -1,0 +1,72 @@
+.TH "DialogOpen" 3 "Вт 24 Май 2016" "Version 0.5" "rAstro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DialogOpen \- 
+.PP
+The \fBDialogOpen\fP class Реализует диалоговое окно открытия файла\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dialogopen\&.h>\fP
+.PP
+Базовые классы:QDialog\&.
+.SS "Сигналы"
+
+.in +1c
+.ti -1c
+.RI "void \fBFilePath\fP (const QString &str)"
+.br
+.in -1c
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "\fBDialogOpen\fP (QWidget *parent=0)"
+.br
+.ti -1c
+.RI "\fB~DialogOpen\fP ()"
+.br
+.in -1c
+.SS "Закрытые слоты"
+
+.in +1c
+.ti -1c
+.RI "void \fBOkClicked\fP ()"
+.br
+.RI "\fI\fBDialogOpen::OkClicked\fP Действие при нажатии на клавишу Ok\&. При нажатии на клавишу, считывается путь к файлу из строки ввода и отправляется на дальнейшую обработку в FilePath\&. \fP"
+.in -1c
+.SS "Закрытые данные"
+
+.in +1c
+.ti -1c
+.RI "Ui::DialogOpen * \fBui\fP"
+.br
+.in -1c
+.SH "Подробное описание"
+.PP 
+The \fBDialogOpen\fP class Реализует диалоговое окно открытия файла\&. 
+.SH "Конструктор(ы)"
+.PP 
+.SS "DialogOpen::DialogOpen (QWidget *parent = \fC0\fP)\fC [explicit]\fP"
+
+.SS "DialogOpen::~DialogOpen ()"
+
+.SH "Методы"
+.PP 
+.SS "void DialogOpen::FilePath (const QString &str)\fC [signal]\fP"
+
+.SS "void DialogOpen::OkClicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBDialogOpen::OkClicked\fP Действие при нажатии на клавишу Ok\&. При нажатии на клавишу, считывается путь к файлу из строки ввода и отправляется на дальнейшую обработку в FilePath\&. 
+.SH "Данные класса"
+.PP 
+.SS "Ui::DialogOpen* DialogOpen::ui\fC [private]\fP"
+
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для rAstro из исходного текста\&.

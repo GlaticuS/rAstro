@@ -1,0 +1,78 @@
+.TH "2dgraph.h" 3 "Вт 24 Май 2016" "Version 0.5" "rAstro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+2dgraph.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Макросы"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDG_H_INCLUDED\fP"
+.br
+.in -1c
+.SS "Функции"
+
+.in +1c
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBloadBMP\fP (const char *, int, int)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP \fBnormalizeRGBT\fP (int, int, int)"
+.br
+.ti -1c
+.RI "bool \fBsaveBMP\fP (const char *, \fBRGBTRIPLE\fP *, int, int)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBex\fP (\fBRGBTRIPLE\fP *, int, int, float, float)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBreflectionX\fP (\fBRGBTRIPLE\fP *, int, int)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBreflectionY\fP (\fBRGBTRIPLE\fP *, int, int)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBreflectionXY\fP (\fBRGBTRIPLE\fP *, int, int)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBrot\fP (\fBRGBTRIPLE\fP *, int, int, int)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBmatrixConvolution\fP (\fBRGBTRIPLE\fP *, int, int, int **, int)"
+.br
+.ti -1c
+.RI "\fBRGBTRIPLE\fP * \fBmatrixConvolution1\fP (\fBRGBTRIPLE\fP *, int, int, double **, int)"
+.br
+.in -1c
+.SH "Макросы"
+.PP 
+.SS "#define DG_H_INCLUDED"
+
+.SH "Функции"
+.PP 
+.SS "\fBRGBTRIPLE\fP* ex (\fBRGBTRIPLE\fP *, int, int, float, float)"
+
+.SS "\fBRGBTRIPLE\fP* loadBMP (const char *, int, int)"
+
+.SS "\fBRGBTRIPLE\fP* matrixConvolution (\fBRGBTRIPLE\fP *, int, int, int **, int)"
+
+.SS "\fBRGBTRIPLE\fP* matrixConvolution1 (\fBRGBTRIPLE\fP *, int, int, double **, int)"
+
+.SS "\fBRGBTRIPLE\fP normalizeRGBT (int, int, int)"
+
+.SS "\fBRGBTRIPLE\fP* reflectionX (\fBRGBTRIPLE\fP *, int, int)"
+
+.SS "\fBRGBTRIPLE\fP* reflectionXY (\fBRGBTRIPLE\fP *, int, int)"
+
+.SS "\fBRGBTRIPLE\fP* reflectionY (\fBRGBTRIPLE\fP *, int, int)"
+
+.SS "\fBRGBTRIPLE\fP* rot (\fBRGBTRIPLE\fP *, int, int, int)"
+
+.SS "bool saveBMP (const char *, \fBRGBTRIPLE\fP *, int, int)"
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для rAstro из исходного текста\&.

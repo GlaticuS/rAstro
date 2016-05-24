@@ -7,7 +7,13 @@
 #include <QPoint>
 #include <QSize>
 #include <QRect>
+#include <QBrush>
 
+/*!
+ * \brief The DrawingArea class Класс, относящийся к различного рода рисованию на полотне.
+ *
+ * Реализует функции Карандаш, Прямоугольник, Эллипс, Ластик. Можно выбрать цвет и толщину линий.
+ */
 class DrawingArea : public QWidget
 {
     Q_OBJECT
@@ -43,6 +49,7 @@ private:
     void drawLineTo(const QPoint &endPoint);
     void drawFigure(QPoint topLeft, QPoint bottomRight);
     void resizeImage(QImage *image);
+    void fillArea(const QPoint &point, QColor act);
 
     bool modified;
     bool scribbling;

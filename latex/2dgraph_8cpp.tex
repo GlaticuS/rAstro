@@ -1,0 +1,437 @@
+\hypertarget{2dgraph_8cpp}{\section{Файл 2dgraph.cpp}
+\label{2dgraph_8cpp}\index{2dgraph.\+cpp@{2dgraph.\+cpp}}
+}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+\subsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtag_b_i_t_m_a_p_f_i_l_e_h_e_a_d_e_r}{tag\+B\+I\+T\+M\+A\+P\+F\+I\+L\+E\+H\+E\+A\+D\+E\+R}
+\item 
+struct \hyperlink{structtag_b_i_t_m_a_p_i_n_f_o_h_e_a_d_e_r}{tag\+B\+I\+T\+M\+A\+P\+I\+N\+F\+O\+H\+E\+A\+D\+E\+R}
+\item 
+struct \hyperlink{structtag_r_g_b_t_r_i_p_l_e}{tag\+R\+G\+B\+T\+R\+I\+P\+L\+E}
+\item 
+struct \hyperlink{struct_r_g_b__data}{R\+G\+B\+\_\+data}
+\item 
+struct \hyperlink{struct_b_f_h}{B\+F\+H}
+\item 
+struct \hyperlink{struct_b_i_h}{B\+I\+H}
+\end{DoxyCompactItemize}
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{2dgraph_8cpp_a9aa60e1ead64be77ad551e745cbfd4d3}{W\+I\+N\+A\+P\+I}
+\item 
+\#define \hyperlink{2dgraph_8cpp_ab99ded389af74001a6298fc9e44e74e5}{M\+A\+X\+\_\+\+P\+A\+T\+H}~P\+A\+T\+H\+\_\+\+M\+A\+X
+\item 
+\#define \hyperlink{2dgraph_8cpp_ac6afabdc09a49a433ee19d8a9486056d}{min}(a, b)~(((a) $<$ (b)) ? (a) \+: (b))
+\item 
+\#define \hyperlink{2dgraph_8cpp_affe776513b24d84b39af8ab0930fef7f}{max}(a, b)~(((a) $>$ (b)) ? (a) \+: (b))
+\end{DoxyCompactItemize}
+\subsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef short \hyperlink{2dgraph_8cpp_a397080a7c61d90f2fc7d7d085b903cf3}{W\+C\+H\+A\+R}
+\item 
+typedef void $\ast$ \hyperlink{2dgraph_8cpp_aa8c0374618b33785ccb02f74bcfebc46}{H\+A\+N\+D\+L\+E}
+\item 
+typedef unsigned char \hyperlink{2dgraph_8cpp_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E}
+\item 
+typedef unsigned short \hyperlink{2dgraph_8cpp_a197942eefa7db30960ae396d68339b97}{W\+O\+R\+D}
+\item 
+typedef unsigned int \hyperlink{2dgraph_8cpp_ac3247c51e4e3de674affb32998e133e2}{B\+O\+O\+L}
+\item 
+typedef int \hyperlink{2dgraph_8cpp_a9154c0d0c21af4686624543215b4e5f2}{L\+O\+N\+G}
+\item 
+typedef unsigned char \hyperlink{2dgraph_8cpp_a0c8186d9b9b7880309c27230bbb5e69d}{byte}
+\item 
+typedef std\+::uint32\+\_\+t \hyperlink{2dgraph_8cpp_a28d75932431ade21e7752c9da7e8b55c}{D\+W\+O\+R\+D}
+\item 
+typedef struct \hyperlink{structtag_r_g_b_t_r_i_p_l_e}{tag\+R\+G\+B\+T\+R\+I\+P\+L\+E} \hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E}
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtag_b_i_t_m_a_p_f_i_l_e_h_e_a_d_e_r}{tag\+B\+I\+T\+M\+A\+P\+F\+I\+L\+E\+H\+E\+A\+D\+E\+R} \hyperlink{2dgraph_8cpp_a2882fd0aca9ef5f3175025be76f072dc}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((packed)) B\+I\+T\+M\+A\+P\+F\+I\+L\+E\+H\+E\+A\+D\+E\+R
+\item 
+\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$ \hyperlink{2dgraph_8cpp_a400185c78d1450142a072186bf000245}{load\+B\+M\+P} (const char $\ast$fname, int \&mx, int \&my)
+\item 
+\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} \hyperlink{2dgraph_8cpp_aa1e69b0332bc0788e35261f0256567bc}{normalize\+R\+G\+B\+T} (int rgbt\+Red, int rgbt\+Green, int rgbt\+Blue)
+\item 
+bool \hyperlink{2dgraph_8cpp_a4b90475fd0a113801f30b8e3ccfebb67}{save\+B\+M\+P} (const char $\ast$fname, \hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$v, int mx, int my)
+\item 
+\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$ \hyperlink{2dgraph_8cpp_ae4095deef06785e6f99a1122f935319c}{ex} (\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$v, int \&mx, int \&my, float x1, float y1)
+\item 
+\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$ \hyperlink{2dgraph_8cpp_a28bbe839827cbfcb9ff40c8b81b7a878}{reflection\+Y} (\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$v, int mx, int my)
+\item 
+\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$ \hyperlink{2dgraph_8cpp_a9783a95dc81cc5e0083f0da01108e561}{reflection\+X} (\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$v, int mx, int my)
+\item 
+\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$ \hyperlink{2dgraph_8cpp_ade28ae5150079fca79407a61cae0c674}{reflection\+X\+Y} (\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$v, int mx, int my)
+\item 
+\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$ \hyperlink{2dgraph_8cpp_a963425815db83ff72ac26266fc1aee87}{rot} (\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$v, int \&mx, int \&my, int r)
+\item 
+\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$ \hyperlink{2dgraph_8cpp_a723cdf92228b1f795575218321222df3}{matrix\+Convolution} (\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$v, int mx, int my, int matrix\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, int div)
+\item 
+\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$ \hyperlink{2dgraph_8cpp_a296014bc5bde4198fbae0f6549ff6b18}{matrix\+Convolution1} (\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$v, int mx, int my, double matrix\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, int div)
+\item 
+\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$ \hyperlink{2dgraph_8cpp_ab49f5f96cf49531216e536181af31768}{scale} (\hyperlink{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$v, int \&mx, int \&my, float z)
+\item 
+void \hyperlink{2dgraph_8cpp_a9faa08e74658412d6175b5c0361efeb5}{my\+Flip\+Horizontal} (const char filename\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{2dgraph_8cpp_a7aa77e2042c8ca2b051991fccaec779b}{my\+Flip\+Vertical} (const char filename\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{2dgraph_8cpp_acbf958e2b498a89bb9f93710d09f1892}{my\+Flip\+Both} (const char filename\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{2dgraph_8cpp_ab864c0081fba51deb45fa02d7801b835}{my\+Rotate} (const char filename\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{2dgraph_8cpp_afe4dd09a2a58d2af9fc050cab075de1d}{my\+Blur\+Filter} (const char filename\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{2dgraph_8cpp_a9c9463dc5bd87ca70fa1f0bcb7a6b627}{my\+Sharpness\+Filter} (const char filename\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{2dgraph_8cpp_a792a0b4015995c0143783b1be17dc416}{my\+Bright\+Filter} (const char filename\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{2dgraph_8cpp_a6e7dbf3de4b34e7e8c37be7ff75fa3ec}{my\+Dark\+Filter} (const char filename\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{2dgraph_8cpp_a258f2f34db28e04b45d7b0258d6b55c1}{my\+Zoom} (const char filename\mbox{[}$\,$\mbox{]}, float z)
+\end{DoxyCompactItemize}
+\subsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{2dgraph_8cpp_a197942eefa7db30960ae396d68339b97}{W\+O\+R\+D} \hyperlink{2dgraph_8cpp_a2e08c96a9eaebbbb6e5c5f719e61f54a}{bf\+Type}
+\item 
+\hyperlink{2dgraph_8cpp_a28d75932431ade21e7752c9da7e8b55c}{D\+W\+O\+R\+D} \hyperlink{2dgraph_8cpp_a66c060f44e25951ed06806c135198ac5}{bf\+Size}
+\item 
+\hyperlink{2dgraph_8cpp_a197942eefa7db30960ae396d68339b97}{W\+O\+R\+D} \hyperlink{2dgraph_8cpp_a3a45e3d4648d75824af5851956a3b405}{bf\+Reserved1}
+\item 
+\hyperlink{2dgraph_8cpp_a197942eefa7db30960ae396d68339b97}{W\+O\+R\+D} \hyperlink{2dgraph_8cpp_ab1356b84e1bd33f1235e33a52d4b9fc5}{bf\+Reserved2}
+\item 
+\hyperlink{2dgraph_8cpp_a28d75932431ade21e7752c9da7e8b55c}{D\+W\+O\+R\+D} \hyperlink{2dgraph_8cpp_abcffce0ae4e6a7389049bb1ea6528524}{bf\+Off\+Bits}
+\item 
+\hyperlink{2dgraph_8cpp_a28d75932431ade21e7752c9da7e8b55c}{D\+W\+O\+R\+D} \hyperlink{2dgraph_8cpp_ad3ce9dde483333c5b035722f47d2a2ae}{bi\+Size}
+\item 
+\hyperlink{2dgraph_8cpp_a9154c0d0c21af4686624543215b4e5f2}{L\+O\+N\+G} \hyperlink{2dgraph_8cpp_a3437f5f085fe70244a4fe9988d23c7ff}{bi\+Width}
+\item 
+\hyperlink{2dgraph_8cpp_a9154c0d0c21af4686624543215b4e5f2}{L\+O\+N\+G} \hyperlink{2dgraph_8cpp_afbcc6b14c1ec98073e0a715d93aa16c0}{bi\+Height}
+\item 
+\hyperlink{2dgraph_8cpp_a197942eefa7db30960ae396d68339b97}{W\+O\+R\+D} \hyperlink{2dgraph_8cpp_a3feb168d4ce19efb710a90e1548965f9}{bi\+Planes}
+\item 
+\hyperlink{2dgraph_8cpp_a197942eefa7db30960ae396d68339b97}{W\+O\+R\+D} \hyperlink{2dgraph_8cpp_a9ff609290aba8cb46163cdc06a9209f9}{bi\+Bit\+Count}
+\item 
+\hyperlink{2dgraph_8cpp_a28d75932431ade21e7752c9da7e8b55c}{D\+W\+O\+R\+D} \hyperlink{2dgraph_8cpp_a4aeab2473b1f1f60a95f6a33dbccb94b}{bi\+Compress}
+\item 
+\hyperlink{2dgraph_8cpp_a28d75932431ade21e7752c9da7e8b55c}{D\+W\+O\+R\+D} \hyperlink{2dgraph_8cpp_a9a6b3d68595578ca3ad851ab7dbcad36}{bi\+Size\+Image}
+\item 
+\hyperlink{2dgraph_8cpp_a9154c0d0c21af4686624543215b4e5f2}{L\+O\+N\+G} \hyperlink{2dgraph_8cpp_ac63e53e1c4cc971f83c4eb9a31373e41}{bi\+X\+Pels\+Per\+Meter}
+\item 
+\hyperlink{2dgraph_8cpp_a9154c0d0c21af4686624543215b4e5f2}{L\+O\+N\+G} \hyperlink{2dgraph_8cpp_aa2cce74d47156dccda908e8c9d3e2f08}{bi\+Y\+Pels\+Per\+Meter}
+\item 
+\hyperlink{2dgraph_8cpp_a28d75932431ade21e7752c9da7e8b55c}{D\+W\+O\+R\+D} \hyperlink{2dgraph_8cpp_a6e8152228ab477c06155122b084f96a6}{bi\+Clr\+Used}
+\item 
+\hyperlink{2dgraph_8cpp_a28d75932431ade21e7752c9da7e8b55c}{D\+W\+O\+R\+D} \hyperlink{2dgraph_8cpp_a18b45d92442980953be3df65282aa4a8}{bi\+Clr\+Important}
+\item 
+struct \hyperlink{struct_b_f_h}{B\+F\+H} \hyperlink{2dgraph_8cpp_afe6ea397638325311d0131c44d4f1c8d}{bh}
+\item 
+struct \hyperlink{struct_b_i_h}{B\+I\+H} \hyperlink{2dgraph_8cpp_ad9fa5390eb2bc31722a2ca297d79a1cc}{bih}
+\end{DoxyCompactItemize}
+
+
+\subsection{Макросы}
+\hypertarget{2dgraph_8cpp_affe776513b24d84b39af8ab0930fef7f}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!max@{max}}
+\index{max@{max}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}\#define max(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(((a) $>$ (b)) ? (a) \+: (b))}}\label{2dgraph_8cpp_affe776513b24d84b39af8ab0930fef7f}
+\hypertarget{2dgraph_8cpp_ab99ded389af74001a6298fc9e44e74e5}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!M\+A\+X\+\_\+\+P\+A\+T\+H@{M\+A\+X\+\_\+\+P\+A\+T\+H}}
+\index{M\+A\+X\+\_\+\+P\+A\+T\+H@{M\+A\+X\+\_\+\+P\+A\+T\+H}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{M\+A\+X\+\_\+\+P\+A\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+P\+A\+T\+H~P\+A\+T\+H\+\_\+\+M\+A\+X}}\label{2dgraph_8cpp_ab99ded389af74001a6298fc9e44e74e5}
+\hypertarget{2dgraph_8cpp_ac6afabdc09a49a433ee19d8a9486056d}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!min@{min}}
+\index{min@{min}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}\#define min(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(((a) $<$ (b)) ? (a) \+: (b))}}\label{2dgraph_8cpp_ac6afabdc09a49a433ee19d8a9486056d}
+\hypertarget{2dgraph_8cpp_a9aa60e1ead64be77ad551e745cbfd4d3}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!W\+I\+N\+A\+P\+I@{W\+I\+N\+A\+P\+I}}
+\index{W\+I\+N\+A\+P\+I@{W\+I\+N\+A\+P\+I}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{W\+I\+N\+A\+P\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+I\+N\+A\+P\+I}}\label{2dgraph_8cpp_a9aa60e1ead64be77ad551e745cbfd4d3}
+
+
+\subsection{Типы}
+\hypertarget{2dgraph_8cpp_ac3247c51e4e3de674affb32998e133e2}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!B\+O\+O\+L@{B\+O\+O\+L}}
+\index{B\+O\+O\+L@{B\+O\+O\+L}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{B\+O\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf B\+O\+O\+L}}}\label{2dgraph_8cpp_ac3247c51e4e3de674affb32998e133e2}
+\hypertarget{2dgraph_8cpp_a4ae1dab0fb4b072a66584546209e7d58}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!B\+Y\+T\+E@{B\+Y\+T\+E}}
+\index{B\+Y\+T\+E@{B\+Y\+T\+E}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{B\+Y\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf B\+Y\+T\+E}}}\label{2dgraph_8cpp_a4ae1dab0fb4b072a66584546209e7d58}
+\hypertarget{2dgraph_8cpp_a0c8186d9b9b7880309c27230bbb5e69d}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!byte@{byte}}
+\index{byte@{byte}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{byte}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf byte}}}\label{2dgraph_8cpp_a0c8186d9b9b7880309c27230bbb5e69d}
+\hypertarget{2dgraph_8cpp_a28d75932431ade21e7752c9da7e8b55c}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!D\+W\+O\+R\+D@{D\+W\+O\+R\+D}}
+\index{D\+W\+O\+R\+D@{D\+W\+O\+R\+D}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{D\+W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::uint32\+\_\+t {\bf D\+W\+O\+R\+D}}}\label{2dgraph_8cpp_a28d75932431ade21e7752c9da7e8b55c}
+\hypertarget{2dgraph_8cpp_aa8c0374618b33785ccb02f74bcfebc46}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!H\+A\+N\+D\+L\+E@{H\+A\+N\+D\+L\+E}}
+\index{H\+A\+N\+D\+L\+E@{H\+A\+N\+D\+L\+E}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{H\+A\+N\+D\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf H\+A\+N\+D\+L\+E}}}\label{2dgraph_8cpp_aa8c0374618b33785ccb02f74bcfebc46}
+\hypertarget{2dgraph_8cpp_a9154c0d0c21af4686624543215b4e5f2}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!L\+O\+N\+G@{L\+O\+N\+G}}
+\index{L\+O\+N\+G@{L\+O\+N\+G}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{L\+O\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf L\+O\+N\+G}}}\label{2dgraph_8cpp_a9154c0d0c21af4686624543215b4e5f2}
+\hypertarget{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!R\+G\+B\+T\+R\+I\+P\+L\+E@{R\+G\+B\+T\+R\+I\+P\+L\+E}}
+\index{R\+G\+B\+T\+R\+I\+P\+L\+E@{R\+G\+B\+T\+R\+I\+P\+L\+E}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{R\+G\+B\+T\+R\+I\+P\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\+R\+G\+B\+T\+R\+I\+P\+L\+E}  {\bf R\+G\+B\+T\+R\+I\+P\+L\+E}}}\label{2dgraph_8cpp_a34bb4046ae84db7dd62786842e44a48a}
+\hypertarget{2dgraph_8cpp_a397080a7c61d90f2fc7d7d085b903cf3}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!W\+C\+H\+A\+R@{W\+C\+H\+A\+R}}
+\index{W\+C\+H\+A\+R@{W\+C\+H\+A\+R}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{W\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef short {\bf W\+C\+H\+A\+R}}}\label{2dgraph_8cpp_a397080a7c61d90f2fc7d7d085b903cf3}
+\hypertarget{2dgraph_8cpp_a197942eefa7db30960ae396d68339b97}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!W\+O\+R\+D@{W\+O\+R\+D}}
+\index{W\+O\+R\+D@{W\+O\+R\+D}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf W\+O\+R\+D}}}\label{2dgraph_8cpp_a197942eefa7db30960ae396d68339b97}
+
+
+\subsection{Функции}
+\hypertarget{2dgraph_8cpp_a2882fd0aca9ef5f3175025be76f072dc}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{\+\_\+\+\_\+attribute\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf tag\+B\+I\+T\+M\+A\+P\+I\+N\+F\+O\+H\+E\+A\+D\+E\+R} \+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(packed)}]{}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a2882fd0aca9ef5f3175025be76f072dc}
+\hypertarget{2dgraph_8cpp_ae4095deef06785e6f99a1122f935319c}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!ex@{ex}}
+\index{ex@{ex}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+G\+B\+T\+R\+I\+P\+L\+E}$\ast$ ex (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$}]{v, }
+\item[{int \&}]{mx, }
+\item[{int \&}]{my, }
+\item[{float}]{x1, }
+\item[{float}]{y1}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_ae4095deef06785e6f99a1122f935319c}
+\hypertarget{2dgraph_8cpp_a400185c78d1450142a072186bf000245}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!load\+B\+M\+P@{load\+B\+M\+P}}
+\index{load\+B\+M\+P@{load\+B\+M\+P}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{load\+B\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+G\+B\+T\+R\+I\+P\+L\+E}$\ast$ load\+B\+M\+P (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{int \&}]{mx, }
+\item[{int \&}]{my}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a400185c78d1450142a072186bf000245}
+\hypertarget{2dgraph_8cpp_a723cdf92228b1f795575218321222df3}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!matrix\+Convolution@{matrix\+Convolution}}
+\index{matrix\+Convolution@{matrix\+Convolution}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{matrix\+Convolution}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+G\+B\+T\+R\+I\+P\+L\+E}$\ast$ matrix\+Convolution (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$}]{v, }
+\item[{int}]{mx, }
+\item[{int}]{my, }
+\item[{int}]{matrix\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, }
+\item[{int}]{div}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a723cdf92228b1f795575218321222df3}
+\hypertarget{2dgraph_8cpp_a296014bc5bde4198fbae0f6549ff6b18}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!matrix\+Convolution1@{matrix\+Convolution1}}
+\index{matrix\+Convolution1@{matrix\+Convolution1}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{matrix\+Convolution1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+G\+B\+T\+R\+I\+P\+L\+E}$\ast$ matrix\+Convolution1 (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$}]{v, }
+\item[{int}]{mx, }
+\item[{int}]{my, }
+\item[{double}]{matrix\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, }
+\item[{int}]{div}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a296014bc5bde4198fbae0f6549ff6b18}
+\hypertarget{2dgraph_8cpp_afe4dd09a2a58d2af9fc050cab075de1d}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!my\+Blur\+Filter@{my\+Blur\+Filter}}
+\index{my\+Blur\+Filter@{my\+Blur\+Filter}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{my\+Blur\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Blur\+Filter (
+\begin{DoxyParamCaption}
+\item[{const char}]{filename\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_afe4dd09a2a58d2af9fc050cab075de1d}
+\hypertarget{2dgraph_8cpp_a792a0b4015995c0143783b1be17dc416}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!my\+Bright\+Filter@{my\+Bright\+Filter}}
+\index{my\+Bright\+Filter@{my\+Bright\+Filter}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{my\+Bright\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Bright\+Filter (
+\begin{DoxyParamCaption}
+\item[{const char}]{filename\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a792a0b4015995c0143783b1be17dc416}
+\hypertarget{2dgraph_8cpp_a6e7dbf3de4b34e7e8c37be7ff75fa3ec}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!my\+Dark\+Filter@{my\+Dark\+Filter}}
+\index{my\+Dark\+Filter@{my\+Dark\+Filter}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{my\+Dark\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Dark\+Filter (
+\begin{DoxyParamCaption}
+\item[{const char}]{filename\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a6e7dbf3de4b34e7e8c37be7ff75fa3ec}
+\hypertarget{2dgraph_8cpp_acbf958e2b498a89bb9f93710d09f1892}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!my\+Flip\+Both@{my\+Flip\+Both}}
+\index{my\+Flip\+Both@{my\+Flip\+Both}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{my\+Flip\+Both}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Flip\+Both (
+\begin{DoxyParamCaption}
+\item[{const char}]{filename\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_acbf958e2b498a89bb9f93710d09f1892}
+\hypertarget{2dgraph_8cpp_a9faa08e74658412d6175b5c0361efeb5}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!my\+Flip\+Horizontal@{my\+Flip\+Horizontal}}
+\index{my\+Flip\+Horizontal@{my\+Flip\+Horizontal}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{my\+Flip\+Horizontal}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Flip\+Horizontal (
+\begin{DoxyParamCaption}
+\item[{const char}]{filename\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a9faa08e74658412d6175b5c0361efeb5}
+\hypertarget{2dgraph_8cpp_a7aa77e2042c8ca2b051991fccaec779b}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!my\+Flip\+Vertical@{my\+Flip\+Vertical}}
+\index{my\+Flip\+Vertical@{my\+Flip\+Vertical}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{my\+Flip\+Vertical}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Flip\+Vertical (
+\begin{DoxyParamCaption}
+\item[{const char}]{filename\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a7aa77e2042c8ca2b051991fccaec779b}
+\hypertarget{2dgraph_8cpp_ab864c0081fba51deb45fa02d7801b835}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!my\+Rotate@{my\+Rotate}}
+\index{my\+Rotate@{my\+Rotate}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{my\+Rotate}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Rotate (
+\begin{DoxyParamCaption}
+\item[{const char}]{filename\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_ab864c0081fba51deb45fa02d7801b835}
+\hypertarget{2dgraph_8cpp_a9c9463dc5bd87ca70fa1f0bcb7a6b627}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!my\+Sharpness\+Filter@{my\+Sharpness\+Filter}}
+\index{my\+Sharpness\+Filter@{my\+Sharpness\+Filter}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{my\+Sharpness\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Sharpness\+Filter (
+\begin{DoxyParamCaption}
+\item[{const char}]{filename\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a9c9463dc5bd87ca70fa1f0bcb7a6b627}
+\hypertarget{2dgraph_8cpp_a258f2f34db28e04b45d7b0258d6b55c1}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!my\+Zoom@{my\+Zoom}}
+\index{my\+Zoom@{my\+Zoom}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{my\+Zoom}]{\setlength{\rightskip}{0pt plus 5cm}void my\+Zoom (
+\begin{DoxyParamCaption}
+\item[{const char}]{filename\mbox{[}$\,$\mbox{]}, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a258f2f34db28e04b45d7b0258d6b55c1}
+\hypertarget{2dgraph_8cpp_aa1e69b0332bc0788e35261f0256567bc}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!normalize\+R\+G\+B\+T@{normalize\+R\+G\+B\+T}}
+\index{normalize\+R\+G\+B\+T@{normalize\+R\+G\+B\+T}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{normalize\+R\+G\+B\+T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+G\+B\+T\+R\+I\+P\+L\+E} normalize\+R\+G\+B\+T (
+\begin{DoxyParamCaption}
+\item[{int}]{rgbt\+Red, }
+\item[{int}]{rgbt\+Green, }
+\item[{int}]{rgbt\+Blue}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_aa1e69b0332bc0788e35261f0256567bc}
+\hypertarget{2dgraph_8cpp_a9783a95dc81cc5e0083f0da01108e561}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!reflection\+X@{reflection\+X}}
+\index{reflection\+X@{reflection\+X}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{reflection\+X}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+G\+B\+T\+R\+I\+P\+L\+E}$\ast$ reflection\+X (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$}]{v, }
+\item[{int}]{mx, }
+\item[{int}]{my}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a9783a95dc81cc5e0083f0da01108e561}
+\hypertarget{2dgraph_8cpp_ade28ae5150079fca79407a61cae0c674}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!reflection\+X\+Y@{reflection\+X\+Y}}
+\index{reflection\+X\+Y@{reflection\+X\+Y}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{reflection\+X\+Y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+G\+B\+T\+R\+I\+P\+L\+E}$\ast$ reflection\+X\+Y (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$}]{v, }
+\item[{int}]{mx, }
+\item[{int}]{my}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_ade28ae5150079fca79407a61cae0c674}
+\hypertarget{2dgraph_8cpp_a28bbe839827cbfcb9ff40c8b81b7a878}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!reflection\+Y@{reflection\+Y}}
+\index{reflection\+Y@{reflection\+Y}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{reflection\+Y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+G\+B\+T\+R\+I\+P\+L\+E}$\ast$ reflection\+Y (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$}]{v, }
+\item[{int}]{mx, }
+\item[{int}]{my}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a28bbe839827cbfcb9ff40c8b81b7a878}
+\hypertarget{2dgraph_8cpp_a963425815db83ff72ac26266fc1aee87}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!rot@{rot}}
+\index{rot@{rot}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{rot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+G\+B\+T\+R\+I\+P\+L\+E}$\ast$ rot (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$}]{v, }
+\item[{int \&}]{mx, }
+\item[{int \&}]{my, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a963425815db83ff72ac26266fc1aee87}
+\hypertarget{2dgraph_8cpp_a4b90475fd0a113801f30b8e3ccfebb67}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!save\+B\+M\+P@{save\+B\+M\+P}}
+\index{save\+B\+M\+P@{save\+B\+M\+P}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{save\+B\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}bool save\+B\+M\+P (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$}]{v, }
+\item[{int}]{mx, }
+\item[{int}]{my}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_a4b90475fd0a113801f30b8e3ccfebb67}
+\hypertarget{2dgraph_8cpp_ab49f5f96cf49531216e536181af31768}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!scale@{scale}}
+\index{scale@{scale}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+G\+B\+T\+R\+I\+P\+L\+E}$\ast$ scale (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+G\+B\+T\+R\+I\+P\+L\+E} $\ast$}]{v, }
+\item[{int \&}]{mx, }
+\item[{int \&}]{my, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)}}\label{2dgraph_8cpp_ab49f5f96cf49531216e536181af31768}
+
+
+\subsection{Переменные}
+\hypertarget{2dgraph_8cpp_abcffce0ae4e6a7389049bb1ea6528524}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bf\+Off\+Bits@{bf\+Off\+Bits}}
+\index{bf\+Off\+Bits@{bf\+Off\+Bits}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bf\+Off\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} bf\+Off\+Bits}}\label{2dgraph_8cpp_abcffce0ae4e6a7389049bb1ea6528524}
+\hypertarget{2dgraph_8cpp_a3a45e3d4648d75824af5851956a3b405}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bf\+Reserved1@{bf\+Reserved1}}
+\index{bf\+Reserved1@{bf\+Reserved1}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bf\+Reserved1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} bf\+Reserved1}}\label{2dgraph_8cpp_a3a45e3d4648d75824af5851956a3b405}
+\hypertarget{2dgraph_8cpp_ab1356b84e1bd33f1235e33a52d4b9fc5}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bf\+Reserved2@{bf\+Reserved2}}
+\index{bf\+Reserved2@{bf\+Reserved2}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bf\+Reserved2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} bf\+Reserved2}}\label{2dgraph_8cpp_ab1356b84e1bd33f1235e33a52d4b9fc5}
+\hypertarget{2dgraph_8cpp_a66c060f44e25951ed06806c135198ac5}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bf\+Size@{bf\+Size}}
+\index{bf\+Size@{bf\+Size}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bf\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} bf\+Size}}\label{2dgraph_8cpp_a66c060f44e25951ed06806c135198ac5}
+\hypertarget{2dgraph_8cpp_a2e08c96a9eaebbbb6e5c5f719e61f54a}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bf\+Type@{bf\+Type}}
+\index{bf\+Type@{bf\+Type}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bf\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} bf\+Type}}\label{2dgraph_8cpp_a2e08c96a9eaebbbb6e5c5f719e61f54a}
+\hypertarget{2dgraph_8cpp_afe6ea397638325311d0131c44d4f1c8d}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bh@{bh}}
+\index{bh@{bh}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bh}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf B\+F\+H}  bh}}\label{2dgraph_8cpp_afe6ea397638325311d0131c44d4f1c8d}
+\hypertarget{2dgraph_8cpp_a9ff609290aba8cb46163cdc06a9209f9}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bi\+Bit\+Count@{bi\+Bit\+Count}}
+\index{bi\+Bit\+Count@{bi\+Bit\+Count}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bi\+Bit\+Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} bi\+Bit\+Count}}\label{2dgraph_8cpp_a9ff609290aba8cb46163cdc06a9209f9}
+\hypertarget{2dgraph_8cpp_a18b45d92442980953be3df65282aa4a8}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bi\+Clr\+Important@{bi\+Clr\+Important}}
+\index{bi\+Clr\+Important@{bi\+Clr\+Important}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bi\+Clr\+Important}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} bi\+Clr\+Important}}\label{2dgraph_8cpp_a18b45d92442980953be3df65282aa4a8}
+\hypertarget{2dgraph_8cpp_a6e8152228ab477c06155122b084f96a6}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bi\+Clr\+Used@{bi\+Clr\+Used}}
+\index{bi\+Clr\+Used@{bi\+Clr\+Used}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bi\+Clr\+Used}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} bi\+Clr\+Used}}\label{2dgraph_8cpp_a6e8152228ab477c06155122b084f96a6}
+\hypertarget{2dgraph_8cpp_a4aeab2473b1f1f60a95f6a33dbccb94b}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bi\+Compress@{bi\+Compress}}
+\index{bi\+Compress@{bi\+Compress}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bi\+Compress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} bi\+Compress}}\label{2dgraph_8cpp_a4aeab2473b1f1f60a95f6a33dbccb94b}
+\hypertarget{2dgraph_8cpp_ad9fa5390eb2bc31722a2ca297d79a1cc}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bih@{bih}}
+\index{bih@{bih}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bih}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf B\+I\+H}  bih}}\label{2dgraph_8cpp_ad9fa5390eb2bc31722a2ca297d79a1cc}
+\hypertarget{2dgraph_8cpp_afbcc6b14c1ec98073e0a715d93aa16c0}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bi\+Height@{bi\+Height}}
+\index{bi\+Height@{bi\+Height}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bi\+Height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+N\+G} bi\+Height}}\label{2dgraph_8cpp_afbcc6b14c1ec98073e0a715d93aa16c0}
+\hypertarget{2dgraph_8cpp_a3feb168d4ce19efb710a90e1548965f9}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bi\+Planes@{bi\+Planes}}
+\index{bi\+Planes@{bi\+Planes}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bi\+Planes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} bi\+Planes}}\label{2dgraph_8cpp_a3feb168d4ce19efb710a90e1548965f9}
+\hypertarget{2dgraph_8cpp_ad3ce9dde483333c5b035722f47d2a2ae}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bi\+Size@{bi\+Size}}
+\index{bi\+Size@{bi\+Size}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bi\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} bi\+Size}}\label{2dgraph_8cpp_ad3ce9dde483333c5b035722f47d2a2ae}
+\hypertarget{2dgraph_8cpp_a9a6b3d68595578ca3ad851ab7dbcad36}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bi\+Size\+Image@{bi\+Size\+Image}}
+\index{bi\+Size\+Image@{bi\+Size\+Image}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bi\+Size\+Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} bi\+Size\+Image}}\label{2dgraph_8cpp_a9a6b3d68595578ca3ad851ab7dbcad36}
+\hypertarget{2dgraph_8cpp_a3437f5f085fe70244a4fe9988d23c7ff}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bi\+Width@{bi\+Width}}
+\index{bi\+Width@{bi\+Width}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bi\+Width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+N\+G} bi\+Width}}\label{2dgraph_8cpp_a3437f5f085fe70244a4fe9988d23c7ff}
+\hypertarget{2dgraph_8cpp_ac63e53e1c4cc971f83c4eb9a31373e41}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bi\+X\+Pels\+Per\+Meter@{bi\+X\+Pels\+Per\+Meter}}
+\index{bi\+X\+Pels\+Per\+Meter@{bi\+X\+Pels\+Per\+Meter}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bi\+X\+Pels\+Per\+Meter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+N\+G} bi\+X\+Pels\+Per\+Meter}}\label{2dgraph_8cpp_ac63e53e1c4cc971f83c4eb9a31373e41}
+\hypertarget{2dgraph_8cpp_aa2cce74d47156dccda908e8c9d3e2f08}{\index{2dgraph.\+cpp@{2dgraph.\+cpp}!bi\+Y\+Pels\+Per\+Meter@{bi\+Y\+Pels\+Per\+Meter}}
+\index{bi\+Y\+Pels\+Per\+Meter@{bi\+Y\+Pels\+Per\+Meter}!2dgraph.\+cpp@{2dgraph.\+cpp}}
+\subsubsection[{bi\+Y\+Pels\+Per\+Meter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+O\+N\+G} bi\+Y\+Pels\+Per\+Meter}}\label{2dgraph_8cpp_aa2cce74d47156dccda908e8c9d3e2f08}
