@@ -1,3 +1,6 @@
+/*!
+  *\authors Evteeva Anastasia
+  */
 #include <stdio.h>
 //#include <tchar.h>
 #include <iostream>

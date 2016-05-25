@@ -1,0 +1,7 @@
+/*! \mainpage rAstro
+ *
+ * \section intro_sec Introduction
+ *
+ * rAstro is a simple bitmap graphic redactor, created by Gladkikh Anna.
+ * It also uses 2D graphics library, created by Anastasia Evteeva.
+ */

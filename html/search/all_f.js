@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['rastro',['rAstro',['../index.html',1,'']]],
   ['rastro',['rAstro',['../md__r_e_a_d_m_e.html',1,'']]],
   ['r',['r',['../struct_r_g_b__data.html#a920ee0f1f2f8814cc81127554971d28b',1,'RGB_data']]],
   ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
