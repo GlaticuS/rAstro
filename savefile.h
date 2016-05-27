@@ -10,6 +10,7 @@ class SaveFile;
 
 /*!
  * \brief The SaveFile class Реализует диалоговое окно сохранения файла.
+ *  \authors Gladkikh Anna
  */
 class SaveFile : public QDialog
 {

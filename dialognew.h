@@ -11,6 +11,7 @@ class DialogNew;
 
 /*!
  * \brief The DialogNew class Реализует диалоговое окно создания нового файла.
+ *  \authors Gladkikh Anna
  */
 class DialogNew : public QDialog
 {

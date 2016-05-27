@@ -9,6 +9,7 @@ class DialogOpen;
 
 /*!
  * \brief The DialogOpen class Реализует диалоговое окно открытия файла.
+ *  \authors Gladkikh Anna
  */
 class DialogOpen : public QDialog
 {
